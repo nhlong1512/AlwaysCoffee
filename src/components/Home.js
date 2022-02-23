@@ -259,7 +259,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen bg-[url('https://images.unsplash.com/photo-1484659619207-9165d119dafe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] bg-no-repeat bg-cover bg-center relative flex items-center justify-center before:absolute before:w-full before:h-full before:content-[''] before:block before:bg-black-rgba-05">
+      <div className="h-screen bg-[url('https://images.unsplash.com/photo-1587755922380-9151dd764ae1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] bg-no-repeat bg-cover bg-center relative flex items-center justify-center before:absolute before:w-full before:h-full before:content-[''] before:block before:bg-black-rgba-05">
         <div className="absolute flex justify-center items-center text-center flex-col">
           <h1 className="text-[50px] text-primary-color mb-[16px] mx-[24px]"
           >
