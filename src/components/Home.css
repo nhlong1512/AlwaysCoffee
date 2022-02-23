@@ -1,0 +1,15 @@
+.font-quintessential{
+  font-family: 'Quintessential', cursive;
+}
+.topActive{
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.row{
+  max-width: 1200px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.active{
+  color: #fda337;
+}
