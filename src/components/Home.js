@@ -4,7 +4,9 @@ import AboutImg2 from '../img/AboutImg2.jpg'
 import { useState, useEffect } from 'react';
 import './Home.css'
 import MenuList from './MenuList'
-import { VscChromeClose, VscThreeBars } from "react-icons/vsc"
+import { VscChromeClose, VscThreeBars, VscStarFull, VscTwitter } from "react-icons/vsc"
+import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube } from "react-icons/io5"
+import { FaCopyright, FaRegCopyright } from "react-icons/fa"
 function Home() {
   const [menuList, setMenuList] = useState([
     {
@@ -244,7 +246,7 @@ function Home() {
     document.querySelector('.another').classList.add('active')
   }
   return (
-    <div className="h-[5000px] font-quintessential" onClick={() => setIsOpenHamburger(false)}>
+    <div className="font-quintessential" onClick={() => setIsOpenHamburger(false)}>
       <div className="activeTop fixed z-[10] bg-main-color top-[0] right-[0] left-[0] ">
         <div className="max-w-[1200px] flex items-center justify-between px-[24px] py-[12px] mx-auto">
           <div className="">
@@ -255,10 +257,9 @@ function Home() {
           >
             <VscThreeBars className="w-full h-full text-primary-color" />
           </div>
-
         </div>
       </div>
-      <div className="w-screen h-screen bg-[url('https://images.unsplash.com/photo-1484659619207-9165d119dafe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] bg-no-repeat bg-cover bg-center relative flex items-center justify-center before:absolute before:w-full before:h-full before:content-[''] before:block before:bg-black-rgba-05">
+      <div className="h-screen bg-[url('https://images.unsplash.com/photo-1484659619207-9165d119dafe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] bg-no-repeat bg-cover bg-center relative flex items-center justify-center before:absolute before:w-full before:h-full before:content-[''] before:block before:bg-black-rgba-05">
         <div className="absolute flex justify-center items-center text-center flex-col">
           <h1 className="text-[50px] text-primary-color mb-[16px] mx-[24px]"
           >
@@ -319,8 +320,7 @@ function Home() {
             <div className="grid grid-cols-2 gap-[16px]">
               <div className="about-content">
                 <h2 className="mb-[16px] text-[32px] text-white">Welcome Muggles To Always</h2>
-                <p className="text-white text-[18px] mb-[16px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores voluptates tenetur dolor commodi voluptate vitae, maiores sequi omnis quo? Itaque, distinctio. Repellat non aspernatur mollitia magni, ex enim ipsa nobis?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam exercitationem quasi explicabo cumque, quidem aperiam optio, harum corrupti sit doloremque accusantium repudiandae! Officia hic blanditiis nobis corporis ipsam nisi? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ipsam corrupti ratione! </p>
+                <p className="text-white text-[18px] mb-[16px]">LLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus lacus rhoncus ipsum consectetur facilisis nec sed nunc. Ut faucibus maximus pellentesque. Sed maximus nunc id iaculis interdum. Phasellus sed neque enim. Fusce sit amet sapien quis ex vehicula porta. Nullam molestie enim quam, ut bibendum odio iaculis ut. Proin tincidunt vehicula urna, nec bibendum velit aliquam quis. Vivamus vitae tellus urna. Aenean sit amet mi tincidunt, dapibus nisi vel, venenatis massa. Pellentesque sit amet diam eget neque finibus consectetur. Quisque ac arcu ut neque luctus placerat in at metus. Pellentesque scelerisque arcu at nunc mollis laoreet ut id magna. Duis eget ultrices urna, vitae tristique nunc. </p>
                 <button className="flex justify-center items-center box-border text-[24px] leading-[24px] px-[40px] py-[20px] text-primary-color bg-transparent rounded-[50px] font-semibold hover:bg-transparent duration-[300ms] border-[2px] border-primary-color border-solid hover:text-black hover:bg-primary-color"
                 >
                   DETAILS
@@ -373,6 +373,115 @@ function Home() {
           <MenuList
             menuList={menuList}
           />
+        </div>
+      </div>
+      <div className="feedback bg-main-color text-white">
+        <div className="flex flex-col justify-center items-center">
+          <div className="row">
+            <div className="flex justify-center items-center">
+              <h2 data-title="Some Feedback" className="text-[50px] text-primary-color mt-[36px] mb-[16px] leading-[50px]">Some Feedback</h2>
+            </div>
+            <div className="feedback-items grid-cols-3 gap-[24px] flex mb-[48px] mt-[16px]">
+              <div className="feedback-item border-[2px] border-solid border-[#0c1023] px-[16px] py-[24px] rounded-[16px]">
+                <div className="flex justify-between mb-[24px]">
+                  <div className="flex flex-col justify-center">
+                    <h1 className="text-[24px] text-primary-color">Huu Long</h1>
+                    <p className="text-[18px]">Luv Cappuccino</p>
+                  </div>
+                  <div>
+                    <img
+                      src="https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/216500312_1431202730612723_8052427917213494357_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=174925&_nc_ohc=h0p8qFooMYQAX8-PY3f&_nc_ht=scontent.fdad1-2.fna&oh=00_AT9JbXQHdzFBR2kW4Q_UYgJk7xdjy-0PWh4-mP7cbCO2gA&oe=621AA7C4" alt="Long-Image"
+                      className="w-[150px] rounded-[100px]" />
+                  </div>
+                </div>
+                <p className="mb-[16px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quaerat ipsa ullam consequuntur, neque animi soluta, at, laborum nesciunt aliquid ipsam ea accusantium error. Possimus perferendis vel harum odio deleniti.
+                </p>
+                <div className="rate-star flex bg-primary text-primary-color text-[40px] ">
+                  {/* reacticon */}
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                </div>
+              </div>
+              <div className="feedback-item border-[2px] border-solid border-[#0c1023] px-[16px] py-[24px] rounded-[16px]">
+                <div className="flex justify-between mb-[24px]">
+                  <div className="flex flex-col justify-center">
+                    <h1 className="text-[24px] text-primary-color">Truong Son</h1>
+                    <p className="text-[18px]">Luv Americano</p>
+                  </div>
+                  <div>
+                    <img
+                      src="https://scontent.fdad1-1.fna.fbcdn.net/v/t39.30808-6/273207302_1790112117992087_6199733184652810403_n.jpg?stp=c0.158.1440.1440a_dst-jpg_s851x315&_nc_cat=100&ccb=1-5&_nc_sid=da31f3&_nc_ohc=na4r4LKnjiMAX81bCUK&_nc_ht=scontent.fdad1-1.fna&oh=00_AT8yDMaDo87gxrctplZyA1S98dZXDEqox-N7C7F7lUZ2kQ&oe=621AD56E" alt="Long-Image"
+                      className="w-[150px] h-[150px] rounded-[100px]" />
+                  </div>
+                </div>
+                <p className="mb-[16px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quaerat ipsa ullam consequuntur, neque animi soluta, at, laborum nesciunt aliquid ipsam ea accusantium error. Possimus perferendis vel harum odio deleniti.
+                </p>
+                <div className="rate-star flex bg-primary text-primary-color text-[40px] ">
+                  {/* reacticon */}
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                </div>
+              </div>
+              <div className="feedback-item border-[2px] border-solid border-[#0c1023] px-[16px] py-[24px] rounded-[16px]">
+                <div className="flex justify-between mb-[24px]">
+                  <div className="flex flex-col justify-center">
+                    <h1 className="text-[24px] text-primary-color">Nhu Quynh</h1>
+                    <p className="text-[18px]">Luv Latte</p>
+                  </div>
+                  <div>
+                    <img
+                      src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.6435-9/169885553_2567350180234848_8764375816459843208_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=vCBrQ02PsnwAX8Hn9Un&tn=mjvnjlQ7eAUAwUux&_nc_ht=scontent-sin6-1.xx&oh=00_AT8NduVPpHpdrQm_79QQn9CQkZqqu9r02YGvZAPPBYolYw&oe=623B46CD" alt="Long-Image"
+                      className="w-[150px] rounded-[100px] h-[150px]" />
+                  </div>
+                </div>
+                <p className="mb-[16px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quaerat ipsa ullam consequuntur, neque animi soluta, at, laborum nesciunt aliquid ipsam ea accusantium error. Possimus perferendis vel harum odio deleniti.
+                </p>
+                <div className="rate-star flex bg-primary text-primary-color text-[40px] ">
+                  {/* reacticon */}
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                  <VscStarFull className="mr-[4px]" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="footer bg-[url('https://images.unsplash.com/photo-1484659619207-9165d119dafe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] relative before:absolute before:w-full before:h-full before:content-[''] before:block before:bg-black-rgba-05 before:z-0 flex flex-col justify-center mx-auto">
+        <div className="footer-items flex justify-center items-center pt-[80px] text-white z-[10]">
+          <div className="footer-item text-center w-4/12">
+            <h2 className="text-[24px] mb-[12px] text-primary-color">Địa Chỉ</h2>
+            <p className="text-[18px] mb-[12px]">8B Hàng Tre<br /> Hoàn Kiếm, Hà Nội</p>
+          </div>
+          <div className="footer-item text-center w-4/12">
+            <h2 className="text-[24px] mb-[12px] text-primary-color">Giờ Mở Cửa</h2>
+            <p className="text-[18px] mb-[12px]">09:30 - 21:00<br /> Các Ngày Trong Tuần</p>
+          </div>
+          <div className="footer-item text-center w-4/12">
+            <h2 className="text-[24px] mb-[12px] text-primary-color">Liên Hệ</h2>
+            <p className="text-[18px] mb-[12px]">Phone: 0123456789<br /> Email: email@gmail.com</p>
+            <div className="flex justify-center mb-[12px] text-[20px] ">
+              <IoLogoFacebook className="mx-[8px] cursor-pointer hover:text-primary-color" />
+              <IoLogoInstagram className="mx-[8px] cursor-pointer hover:text-primary-color" />
+              <IoLogoTwitter className="mx-[8px] cursor-pointer hover:text-primary-color" />
+              <IoLogoYoutube className="mx-[8px] cursor-pointer hover:text-primary-color" />
+            </div>
+          </div>
+        </div>
+        <div className="text-primary-color flex justify-center items-center pb-[16px] pt-[36px] z-[10]">
+          <h1 className="flex text-[18px]">
+            Copyright
+            <span className="mx-[4px]"><FaRegCopyright /></span>
+            2022 Always Coffee. All rights reserved.
+          </h1>
         </div>
       </div>
     </div>
