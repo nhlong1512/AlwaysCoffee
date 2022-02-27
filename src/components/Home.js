@@ -247,7 +247,7 @@ function Home() {
   }
   return (
     <div className="font-quintessential" onClick={() => setIsOpenHamburger(false)}>
-      <div className="activeTop fixed z-[10] bg-main-color top-[0] right-[0] left-[0] w-screen ">
+      <div className="md:activeTop fixed z-[10] bg-main-color top-[0] right-[0] left-[0] w-screen ">
         <div className="max-w-[1200px] flex items-center justify-between px-[24px] py-[12px] mx-auto">
           <div className="">
             <a href=""><img src={Logo} alt="LogoAlways" className="h-[44px]" /></a>
@@ -317,14 +317,10 @@ function Home() {
             </div>
           </div>
           <div className="row mb-[50px]">
-            <div className="grid grid-cols-2 gap-[16px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] mb-[24px]">
               <div className="about-content">
                 <h2 className="mb-[16px] text-[32px] text-white">Welcome Muggles To Always</h2>
-                <p className="text-white text-[18px] mb-[16px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus lacus rhoncus ipsum consectetur facilisis nec sed nunc. Ut faucibus maximus pellentesque. Sed maximus nunc id iaculis interdum. Phasellus sed neque enim. Fusce sit amet sapien quis ex vehicula porta. Nullam molestie enim quam, ut bibendum odio iaculis ut. Proin tincidunt vehicula urna, nec bibendum velit aliquam quis. Vivamus vitae tellus urna. Aenean sit amet mi tincidunt, dapibus nisi vel, venenatis massa. Pellentesque sit amet diam eget neque finibus consectetur. Quisque ac arcu ut neque luctus placerat in at metus. Pellentesque scelerisque arcu at nunc mollis laoreet ut id magna. Duis eget ultrices urna, vitae tristique nunc. </p>
-                <button className="flex justify-center items-center box-border text-[24px] leading-[24px] px-[40px] py-[20px] text-primary-color bg-transparent rounded-[50px] font-semibold hover:bg-transparent duration-[300ms] border-[2px] border-primary-color border-solid hover:text-black hover:bg-primary-color"
-                >
-                  DETAILS
-                </button>
+                <p className="text-white text-[18px] mb-[16px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus lacus rhoncus ipsum consectetur facilisis nec sed nunc. Ut faucibus maximus pellentesque. Sed maximus nunc id iaculis interdum. Phasellus sed neque enim. Fusce sit amet sapien quis ex vehicula porta. Nullam molestie enim quam, ut bibendum odio iaculis ut. Proin tincidunt vehicula urna, nec bibendum velit aliquam quis. Vivamus vitae tellus urna. </p>
               </div>
               <div className="about-img">
                 <div className="relative">
@@ -333,6 +329,12 @@ function Home() {
                 </div>
               </div>
             </div>
+            <div className="mx-auto flex justify-center items-center">
+                <button className="flex justify-center items-center box-border text-[24px] leading-[24px] px-[40px] py-[20px] text-primary-color bg-transparent rounded-[50px] font-semibold hover:bg-transparent duration-[300ms] border-[2px] border-primary-color border-solid hover:text-black hover:bg-primary-color"
+                >
+                  DETAILS
+                </button>
+              </div>
           </div>
         </div>
       </div>
@@ -343,7 +345,7 @@ function Home() {
               <h2 data-title="Order Now" className="text-[50px] text-primary-color mt-[36px] mb-[16px] leading-[50px]">Our Menu</h2>
             </div>
           </div>
-          <div className="row">
+          <div className="max-w-[1200px] md:row">
             <div className="flex justify-center items-center text-white">
               <button
                 className="coffee bg-transparent mx-[12px] my-[10px] text-[20px] hover:text-primary-color active"
@@ -381,7 +383,7 @@ function Home() {
             <div className="flex justify-center items-center">
               <h2 data-title="Some Feedback" className="text-[50px] text-primary-color mt-[36px] mb-[16px] leading-[50px]">Some Feedback</h2>
             </div>
-            <div className="feedback-items grid-cols-1 md:grid-cols-3 gap-[24px] flex mb-[48px] mt-[16px] flex-col md:flex-row">
+            <div className="feedback-items grid-cols-1 lg:grid-cols-3 gap-[24px] flex mb-[48px] mt-[16px] flex-col lg:flex-row">
               <div className="feedback-item border-[2px] border-solid border-[#0c1023] px-[16px] py-[24px] rounded-[16px]">
                 <div className="flex justify-between mb-[24px]">
                   <div className="flex flex-col justify-center">
@@ -477,9 +479,9 @@ function Home() {
           </div>
         </div>
         <div className="text-primary-color flex justify-center items-center pb-[16px] pt-[36px] z-[10]">
-          <h1 className="flex text-[18px]">
+          <h1 className="flex md:text-[18px] text-center">
             Copyright
-            <span className="mx-[4px]"><FaRegCopyright /></span>
+            <span className="md:mx-[4px]"><FaRegCopyright /></span>
             2022 Always Coffee. All rights reserved.
           </h1>
         </div>
