@@ -99,7 +99,7 @@ function Home() {
   const [tea, setTea] = useState([
     {
       id: 0,
-      image: 'http://congaiba.com/wp-content/uploads/2018/05/pha-che-tra-vai.jpg',
+      image: 'http://cdn.tgdd.vn/Files/2020/07/23/1273017/cach-pha-tra-vai-giai-nhiet-mua-he-chuan-nhu-ngoai-hang-202007231125554000.jpg',
       name: 'Trà Vải',
       price: 150000,
     },
@@ -458,7 +458,7 @@ function Home() {
         </div>
       </div>
       <div className="footer bg-[url('https://images.unsplash.com/photo-1484659619207-9165d119dafe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] relative before:absolute before:w-full before:h-full before:content-[''] before:block before:bg-black-rgba-05 before:z-0 flex flex-col justify-center mx-auto">
-        <div className="footer-items flex justify-center items-center pt-[80px] text-white z-[10]">
+        <div className="footer-items flex justify-center items-center pt-[24px] md:pt-[36px] lg:pt-[80px] text-white z-[10]">
           <div className="footer-item text-center w-4/12">
             <h2 className="text-[24px] mb-[12px] text-primary-color">Địa Chỉ</h2>
             <p className="text-[18px] mb-[12px]">8B Hàng Tre<br /> Hoàn Kiếm, Hà Nội</p>
@@ -478,7 +478,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="text-primary-color flex justify-center items-center pb-[16px] pt-[36px] z-[10]">
+        <div className="text-primary-color flex justify-center items-center pb-[16px] pt-[16px] lg:pt-[36px] z-[10]">
           <h1 className="flex md:text-[18px] text-center">
             Copyright
             <span className="md:mx-[4px]"><FaRegCopyright /></span>
