@@ -99,7 +99,7 @@ function Home() {
   const [tea, setTea] = useState([
     {
       id: 0,
-      image: 'http://cdn.tgdd.vn/Files/2020/07/23/1273017/cach-pha-tra-vai-giai-nhiet-mua-he-chuan-nhu-ngoai-hang-202007231125554000.jpg',
+      image: 'https://phunuvietnam.mediacdn.vn/thumb_w/700/179072216278405120/2021/6/1/tra-vai-1622554326746992404395-0-0-563-900-crop-16225544148881196783087.jpg',
       name: 'Trà Vải',
       price: 150000,
     },
