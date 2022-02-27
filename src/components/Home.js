@@ -247,7 +247,7 @@ function Home() {
   }
   return (
     <div className="font-quintessential" onClick={() => setIsOpenHamburger(false)}>
-      <div className="activeTop fixed z-[10] bg-main-color top-[0] right-[0] left-[0] ">
+      <div className="activeTop fixed z-[10] bg-main-color top-[0] right-[0] left-[0] w-screen ">
         <div className="max-w-[1200px] flex items-center justify-between px-[24px] py-[12px] mx-auto">
           <div className="">
             <a href=""><img src={Logo} alt="LogoAlways" className="h-[44px]" /></a>
@@ -390,7 +390,7 @@ function Home() {
                   </div>
                   <div>
                     <img
-                      src="https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/216500312_1431202730612723_8052427917213494357_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=174925&_nc_ohc=h0p8qFooMYQAX8-PY3f&_nc_ht=scontent.fdad1-2.fna&oh=00_AT9JbXQHdzFBR2kW4Q_UYgJk7xdjy-0PWh4-mP7cbCO2gA&oe=621AA7C4" alt="Long-Image"
+                      src="https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/216500312_1431202730612723_8052427917213494357_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=174925&_nc_ohc=GBqKTHmCdfUAX_p3BZG&_nc_ht=scontent.fdad1-2.fna&oh=00_AT9DWqwJvSLyqYjBftjhsT9c3NGgVoN3pLhrfPqUfWfAnA&oe=62209684" alt="Long-Image"
                       className="w-[150px] rounded-[100px]" />
                   </div>
                 </div>
@@ -413,7 +413,7 @@ function Home() {
                   </div>
                   <div>
                     <img
-                      src="https://scontent.fdad1-1.fna.fbcdn.net/v/t39.30808-6/273207302_1790112117992087_6199733184652810403_n.jpg?stp=c0.158.1440.1440a_dst-jpg_s851x315&_nc_cat=100&ccb=1-5&_nc_sid=da31f3&_nc_ohc=na4r4LKnjiMAX81bCUK&_nc_ht=scontent.fdad1-1.fna&oh=00_AT8yDMaDo87gxrctplZyA1S98dZXDEqox-N7C7F7lUZ2kQ&oe=621AD56E" alt="Long-Image"
+                      src="https://scontent.fdad1-1.fna.fbcdn.net/v/t39.30808-6/273207302_1790112117992087_6199733184652810403_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_ohc=1uC7SfEIL3EAX-ST4Wb&_nc_ht=scontent.fdad1-1.fna&oh=00_AT-3E_kjSCuwScCJtsimobJPzgyJm_JFjQoPlb92fuLPFw&oe=6220C42E" alt="Son-Image"
                       className="w-[150px] h-[150px] rounded-[100px]" />
                   </div>
                 </div>
