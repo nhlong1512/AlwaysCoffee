@@ -469,7 +469,7 @@ function Home() {
           </div>
           <div className="footer-item text-center w-4/12">
             <h2 className="text-[24px] mb-[12px] text-primary-color">Liên Hệ</h2>
-            <p className="text-[18px] mb-[12px]">Phone: 0123456789<br /> Email: email@gmail.com</p>
+            <p className="text-[18px] mb-[12px]">Phone: 0123456789<br /> Email: email@gm.com</p>
             <div className="flex justify-center mb-[12px] text-[20px] ">
               <IoLogoFacebook className="mx-[8px] cursor-pointer hover:text-primary-color" />
               <IoLogoInstagram className="mx-[8px] cursor-pointer hover:text-primary-color" />
