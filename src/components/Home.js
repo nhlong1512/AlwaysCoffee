@@ -381,7 +381,7 @@ function Home() {
             <div className="flex justify-center items-center">
               <h2 data-title="Some Feedback" className="text-[50px] text-primary-color mt-[36px] mb-[16px] leading-[50px]">Some Feedback</h2>
             </div>
-            <div className="feedback-items grid-cols-3 gap-[24px] flex mb-[48px] mt-[16px]">
+            <div className="feedback-items grid-cols-1 md:grid-cols-3 gap-[24px] flex mb-[48px] mt-[16px] flex-col md:flex-row">
               <div className="feedback-item border-[2px] border-solid border-[#0c1023] px-[16px] py-[24px] rounded-[16px]">
                 <div className="flex justify-between mb-[24px]">
                   <div className="flex flex-col justify-center">
