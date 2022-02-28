@@ -1,12 +1,13 @@
 import React from 'react';
-import Logo from '../img/LogoAlways.png'
-import AboutImg2 from '../img/AboutImg2.jpg'
 import { useState, useEffect } from 'react';
 import './Home.css'
+import Header from './Header'
+import AboutImg2 from '../img/AboutImg2.jpg'
+import Footer from './Footer'
 import MenuList from './MenuList'
 import { VscChromeClose, VscThreeBars, VscStarFull, VscTwitter } from "react-icons/vsc"
-import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube } from "react-icons/io5"
-import { FaCopyright, FaRegCopyright } from "react-icons/fa"
+import { IoCartOutline } from "react-icons/io5"
+import Logo from '../img/LogoAlways.png'
 function Home() {
   const [menuList, setMenuList] = useState([
     {
@@ -209,14 +210,15 @@ function Home() {
     setIsOpenHamburger(!isOpenHamburger)
     e.stopPropagation()
   }
-  window.addEventListener('scroll', function () {
-    const x = window.scrollY
-    if (x > 120) {
-      document.querySelector('.activeTop').classList.add('topActive')
-    } else {
-      document.querySelector('.activeTop').classList.remove('topActive')
-    }
-  })
+  // window.addEventListener('scroll', function () {
+  //   const x = window.scrollY
+  //   const y = window.pageYOffset
+  //   if (x > 120) {
+  //     document.querySelector('.activeTop').classList.add('topActive')
+  //   } else {
+  //     document.querySelector('.activeTop').classList.remove('topActive')
+  //   }
+  // })
   const handleClickCoffee = () => {
     setMenuList(coffee)
     document.querySelector('.coffee').classList.add('active')
@@ -246,31 +248,39 @@ function Home() {
     document.querySelector('.another').classList.add('active')
   }
   return (
-    <div className="font-quintessential" onClick={() => setIsOpenHamburger(false)}>
-      <div className="md:activeTop fixed z-[10] bg-main-color top-[0] right-[0] left-[0] w-screen ">
+    <div className="" onClick={() => setIsOpenHamburger(false)}>
+      <div className="activeTop fixed z-[10] bg-main-color top-[0] right-[0] left-[0] w-screen ">
         <div className="max-w-[1200px] flex items-center justify-between px-[24px] py-[12px] mx-auto">
-          <div className="">
-            <a href=""><img src={Logo} alt="LogoAlways" className="h-[44px]" /></a>
-          </div>
           <div className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center "
             onClick={handleClickHamburger}
           >
             <VscThreeBars className="w-full h-full text-primary-color" />
           </div>
+          <div className="">
+            <a href=""><img src={Logo} alt="LogoAlways" className="h-[44px]" /></a>
+          </div>
+          <div className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center">
+            <IoCartOutline className="w-full h-full text-primary-color" />
+          </div>
         </div>
       </div>
+      {/* <Header
+        handleClickHamburger={handleClickHamburger}
+        setIsOpenHamburger = {setIsOpenHamburger}
+        isOpenHamburger = {isOpenHamburger}
+      /> */}
       <div className="h-screen bg-[url('https://images.unsplash.com/photo-1587755922380-9151dd764ae1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] bg-no-repeat bg-cover bg-center relative flex items-center justify-center before:absolute before:w-full before:h-full before:content-[''] before:block before:bg-black-rgba-05">
-        <div className="absolute flex justify-center items-center text-center flex-col">
-          <h1 className="text-[50px] text-primary-color mb-[16px] mx-[24px]"
+        <div className="absolute flex justify-center items-center text-center flex-col" >
+          <h1 className="font-quintessential text-[50px] text-primary-color mb-[16px] mx-[24px]"
           >
             Always Coffee
           </h1>
-          <h2 className="text-[24px] text-white mb-[16px] mx-[24px]">
-            A Hidden Place In The Heart Of Ha Noi. Let's Explore Our Special Potions And Get Magic Experience To Be A Wizard!
+          <h2 className="text-[36px] font-medium text-white mb-[24px] mx-[24px]">
+            A Palate-altering Experience
           </h2>
-          <button className="font-quintessential flex justify-center items-center box-border text-[24px] leading-[24px] px-[40px] py-[20px] text-primary-color bg-transparent rounded-[50px] font-semibold hover:bg-transparent duration-[300ms] border-[2px] border-primary-color border-solid hover:text-black hover:bg-primary-color"
+          <button className="flex justify-center items-center box-border text-[24px] leading-[16px] px-[40px] py-[20px] text-primary-color bg-transparent rounded-[50px] font-semibold hover:bg-transparent duration-[300ms] border-[2px] border-primary-color border-solid hover:text-black hover:bg-primary-color"
           >
-            MENU
+            SHOP NOW
           </button>
         </div>
       </div>
@@ -288,22 +298,22 @@ function Home() {
             >
               <VscChromeClose className="w-full h-full text-primary-color relative z-[25] hover:rotate-90 hover:duration-300" />
             </button>
-            <li className="leading-[40px] list-none">
+            <li className="leading-[40px] list-none hover:text-white">
               <a href="">Trang Chủ</a>
             </li>
-            <li className="leading-[40px] list-none">
+            <li className="leading-[40px] list-none hover:text-white">
               <a href="">Về Chúng Tôi</a>
             </li>
-            <li className="leading-[40px] list-none">
+            <li className="leading-[40px] list-none hover:text-white">
               <a href="">Hệ Thống Cửa Hàng</a>
             </li>
-            <li className="leading-[40px] list-none">
+            <li className="leading-[40px] list-none hover:text-white">
               <a href="">Hình Ảnh</a>
             </li>
-            <li className="leading-[40px] list-none">
+            <li className="leading-[40px] list-none hover:text-white">
               <a href="">Tin Tức</a>
             </li>
-            <li className="leading-[40px] list-none">
+            <li className="leading-[40px] list-none hover:text-white">
               <a href="">Liên Hệ</a>
             </li>
           </div>
@@ -313,7 +323,7 @@ function Home() {
         <div className="flex justify-center items-center flex-col">
           <div className="row">
             <div>
-              <h2 data-title="Our Story" className="text-[50px] text-primary-color mt-[36px] mb-[16px] leading-[50px]">About Us</h2>
+              <h2 data-title="ABout Us" className="font-quintessential text-[50px] text-primary-color mt-[36px] mb-[16px] leading-[50px]">About Us</h2>
             </div>
           </div>
           <div className="row mb-[50px]">
@@ -325,16 +335,16 @@ function Home() {
               <div className="about-img">
                 <div className="relative">
                   <span className="absolute top-[50%] left-[50%] text-white text-[30px] translate-x-[-50%] translate-y-[-50%] italic">10+ Years Experience</span>
-                  <img src={AboutImg2} alt="About Image" className="rounded-[16px]" />
+                  <img src="https://s24990.pcdn.co/wp-content/uploads/2020/02/Coffee-Shop-Business-1.jpg" alt="About Image" className="rounded-[16px]" />
                 </div>
               </div>
             </div>
             <div className="mx-auto flex justify-center items-center">
-                <button className="flex justify-center items-center box-border text-[24px] leading-[24px] px-[40px] py-[20px] text-primary-color bg-transparent rounded-[50px] font-semibold hover:bg-transparent duration-[300ms] border-[2px] border-primary-color border-solid hover:text-black hover:bg-primary-color"
-                >
-                  DETAILS
-                </button>
-              </div>
+              <button className="flex justify-center items-center box-border text-[24px] leading-[24px] px-[40px] py-[20px] text-primary-color bg-transparent rounded-[50px] font-semibold hover:bg-transparent duration-[300ms] border-[2px] border-primary-color border-solid hover:text-black hover:bg-primary-color"
+              >
+                DETAILS
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -342,7 +352,7 @@ function Home() {
         <div className="flex flex-col justify-center items-center">
           <div className="row">
             <div className="flex justify-center items-center">
-              <h2 data-title="Order Now" className="text-[50px] text-primary-color mt-[36px] mb-[16px] leading-[50px]">Our Menu</h2>
+              <h2 data-title="Order Now" className="font-quintessential text-[50px] text-primary-color mt-[36px] mb-[16px] leading-[50px]">Our Menu</h2>
             </div>
           </div>
           <div className="max-w-[1200px] md:row">
@@ -381,7 +391,7 @@ function Home() {
         <div className="flex flex-col justify-center items-center">
           <div className="row">
             <div className="flex justify-center items-center">
-              <h2 data-title="Some Feedback" className="text-[50px] text-primary-color mt-[36px] mb-[16px] leading-[50px]">Some Feedback</h2>
+              <h2 data-title="Some Feedback" className="font-quintessential text-[50px] text-primary-color mt-[36px] mb-[16px] leading-[50px]">Some Feedback</h2>
             </div>
             <div className="feedback-items grid-cols-1 lg:grid-cols-3 gap-[24px] flex mb-[48px] mt-[16px] flex-col lg:flex-row">
               <div className="feedback-item border-[2px] border-solid border-[#0c1023] px-[16px] py-[24px] rounded-[16px]">
@@ -457,35 +467,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="footer bg-[url('https://images.unsplash.com/photo-1484659619207-9165d119dafe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] relative before:absolute before:w-full before:h-full before:content-[''] before:block before:bg-black-rgba-05 before:z-0 flex flex-col justify-center mx-auto">
-        <div className="footer-items flex justify-center items-center pt-[24px] md:pt-[36px] lg:pt-[80px] text-white z-[10]">
-          <div className="footer-item text-center w-4/12">
-            <h2 className="text-[24px] mb-[12px] text-primary-color">Địa Chỉ</h2>
-            <p className="text-[18px] mb-[12px]">8B Hàng Tre<br /> Hoàn Kiếm, Hà Nội</p>
-          </div>
-          <div className="footer-item text-center w-4/12">
-            <h2 className="text-[24px] mb-[12px] text-primary-color">Giờ Mở Cửa</h2>
-            <p className="text-[18px] mb-[12px]">09:30 - 21:00<br /> Các Ngày Trong Tuần</p>
-          </div>
-          <div className="footer-item text-center w-4/12">
-            <h2 className="text-[24px] mb-[12px] text-primary-color">Liên Hệ</h2>
-            <p className="text-[18px] mb-[12px]">Phone: 0123456789<br /> Email: email@gm.com</p>
-            <div className="flex justify-center mb-[12px] text-[20px] ">
-              <IoLogoFacebook className="mx-[8px] cursor-pointer hover:text-primary-color" />
-              <IoLogoInstagram className="mx-[8px] cursor-pointer hover:text-primary-color" />
-              <IoLogoTwitter className="mx-[8px] cursor-pointer hover:text-primary-color" />
-              <IoLogoYoutube className="mx-[8px] cursor-pointer hover:text-primary-color" />
-            </div>
-          </div>
-        </div>
-        <div className="text-primary-color flex justify-center items-center pb-[16px] pt-[16px] lg:pt-[36px] z-[10]">
-          <h1 className="flex md:text-[18px] text-center">
-            Copyright
-            <span className="md:mx-[4px]"><FaRegCopyright /></span>
-            2022 Always Coffee. All rights reserved.
-          </h1>
-        </div>
-      </div>
+      <Footer />
     </div>
   )
 }
