@@ -12,7 +12,7 @@ function Footer() {
       <div className="footer-items flex justify-center items-center pt-[24px] md:pt-[36px] lg:pt-[80px] text-white z-[8]">
         <div className="footer-item text-center w-4/12">
           <h2 className="text-[24px] mb-[12px] text-primary-color">Địa Chỉ</h2>
-          <p className="text-[18px] mb-[12px]">8B Hàng Tre<br /> Hoàn Kiếm, Hà Nội</p>
+          <p className="text-[18px] mb-[12px]">35 Trần Phú<br /> Đông Hà, Quảng Trị</p>
         </div>
         <div className="footer-item text-center w-4/12">
           <h2 className="text-[24px] mb-[12px] text-primary-color">Giờ Mở Cửa</h2>
@@ -20,7 +20,7 @@ function Footer() {
         </div>
         <div className="footer-item text-center w-4/12">
           <h2 className="text-[24px] mb-[12px] text-primary-color">Liên Hệ</h2>
-          <p className="text-[18px] mb-[12px]">Phone: 0123456789<br /> Email: email@gm.com</p>
+          <p className="text-[18px] mb-[12px]">Phone: 0123456789<br /> Email: e@gm.com</p>
           <div className="flex justify-center mb-[12px] text-[20px] ">
             <IoLogoFacebook className="mx-[8px] cursor-pointer hover:text-primary-color" />
             <IoLogoInstagram className="mx-[8px] cursor-pointer hover:text-primary-color" />
