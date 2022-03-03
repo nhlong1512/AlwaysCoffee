@@ -1,9 +1,14 @@
 import React from 'react'
-import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube} from "react-icons/io5"
+import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube } from "react-icons/io5"
 import { FaRegCopyright } from "react-icons/fa"
+import { useState, useEffect, useContext } from 'react';
+import InitContext from '../store/InitContext'
 function Footer() {
+  const init = useContext(InitContext)
   return (
-    <div className="footer bg-[url('https://images.unsplash.com/photo-1484659619207-9165d119dafe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] relative before:absolute before:w-full before:h-full before:content-[''] before:block before:bg-black-rgba-05 before:z-0 flex flex-col justify-center mx-auto">
+    <div className="footer bg-[url('https://images.unsplash.com/photo-1484659619207-9165d119dafe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] relative before:absolute before:w-full before:h-full before:content-[''] before:block before:bg-black-rgba-05 before:z-0 flex flex-col justify-center mx-auto"
+      onClick={() => init.setIsOpenHamburger(false)}
+    >
       <div className="footer-items flex justify-center items-center pt-[24px] md:pt-[36px] lg:pt-[80px] text-white z-[8]">
         <div className="footer-item text-center w-4/12">
           <h2 className="text-[24px] mb-[12px] text-primary-color">Địa Chỉ</h2>

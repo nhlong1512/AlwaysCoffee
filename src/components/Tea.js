@@ -4,9 +4,9 @@ import MenuList from './MenuList';
 import InitContext from '../store/InitContext'
 
 
-function Coffee() {
+function Tea() {
   const init = useContext(InitContext)
-  init.setMenuList(init.coffee);
+  init.setMenuList(init.tea)
   return (
     <div className="menu bg-[#0C1023] pt-[48px] pb-[48px]"
       onClick={() => init.setIsOpenHamburger(false)}
@@ -19,4 +19,4 @@ function Coffee() {
     </div>
   )
 }
-export default Coffee;
+export default Tea;

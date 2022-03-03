@@ -6,12 +6,15 @@ import App from './App';
 import Footer from './components/Footer'
 import Header from './components/Header'
 import reportWebVitals from './reportWebVitals';
+import { ProviderContext } from './store/InitContext'
 
 ReactDOM.render(
   <BrowserRouter>
-    <Header />
-    <App />
-    <Footer />
+    <ProviderContext>
+      <Header />
+      <App />
+      <Footer />
+    </ProviderContext>
   </BrowserRouter>,
   document.getElementById('root')
 );
