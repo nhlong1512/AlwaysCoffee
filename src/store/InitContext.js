@@ -200,8 +200,15 @@ export const ProviderContext = ({ children }) => {
       price: 669000,
     },
   ])
+  const [menuChildren, setMenuChildren] = useState({
+
+  })
+  const handleClickMenuChildren = (id) => {
+    setMenuChildren(menuList.filter(menu => menu.id === id))
+    console.log(menuList.filter(menu => menu.id === id));
+  }
   return (
-    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother }}>
+    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren }}>
       {children}
     </InitContext.Provider>
   )

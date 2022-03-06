@@ -59,15 +59,15 @@ function Header() {
             <Link to="/another" className="leading-[40px] list-none hover:text-white">
               <a href="">Món Khác</a>
             </Link>
-            <li className="leading-[40px] list-none hover:text-white">
+            <Link to ="/" className="leading-[40px] list-none hover:text-white">
               <a href="">Always Chuyện</a>
-            </li>
-            <li className="leading-[40px] list-none hover:text-white">
+            </Link>
+            <Link to ="/" className="leading-[40px] list-none hover:text-white">
               <a href="">Tin Tức</a>
-            </li>
-            <li className="leading-[40px] list-none hover:text-white">
+            </Link>
+            <Link to ="/" className="leading-[40px] list-none hover:text-white">
               <a href="">Liên Hệ</a>
-            </li>
+            </Link>
           </div>
         )
       }

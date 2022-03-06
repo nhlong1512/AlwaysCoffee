@@ -13,3 +13,7 @@
 .active{
   color: #fda337;
 }
+
+.flex-col-100{
+  flex: 0 0 100%;
+}
