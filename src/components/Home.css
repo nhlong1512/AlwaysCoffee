@@ -21,3 +21,7 @@
 .w-100pt-24{
   width: calc(100% - 24px);
 }
+.w-100pt-48{
+  width: calc(100% - 48px);
+}
+

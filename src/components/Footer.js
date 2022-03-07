@@ -1,7 +1,7 @@
 import React from 'react'
 import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube } from "react-icons/io5"
 import { FaRegCopyright } from "react-icons/fa"
-import { useState, useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import InitContext from '../store/InitContext'
 function Footer() {
   const init = useContext(InitContext)

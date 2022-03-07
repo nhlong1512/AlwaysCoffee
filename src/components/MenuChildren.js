@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './Home.css'
 import InitContext from '../store/InitContext'
 import { BiCoffeeTogo } from "react-icons/bi";
@@ -9,26 +9,28 @@ function MenuChildren() {
   return (
 
     <div className="flex flex-col justify-center items-center">
-      <div className="flex row flex-row justify-start text-[20px] mt-[24px] font-semibold w-100pt-24 flex-wrap leading-[36px]">
-        <Link to="/menu" className="hover:text-primary-color cursor-pointer"
-        >
-          Menu
-        </Link>
-        <span> &nbsp;/ &nbsp;</span>
-        <Link
-          to={init.menuChildren[0].type === 'Cà Phê' ? '/coffee' :(init.menuChildren[0].type === 'Trà' ? '/tea' : (init.menuChildren[0].type === 'Bánh & Snack' ? '/cakeAndSnack' : (init.menuChildren[0].type === 'Các Món Khác' ? '/another' : '/'))) } className="hover:text-primary-color cursor-pointer"
-        >
-          {init.menuChildren[0].type}
-        </Link>
-        <span>&nbsp;/ &nbsp;</span>
-        <h1 className="text-primary-color" >{init.menuChildren[0].name}</h1>
+      <div className ="row w-100pt-48">
+        <div className="flex text-[20px] mt-[24px] font-semibold md:w-100pt-48 flex-wrap leading-[36px]">
+          <Link to="/menu" className="hover:text-primary-color cursor-pointer"
+          >
+            Menu
+          </Link>
+          <span> &nbsp;/ &nbsp;</span>
+          <Link
+            to={init.menuChildren[0].type === 'Cà Phê' ? '/coffee' : (init.menuChildren[0].type === 'Trà' ? '/tea' : (init.menuChildren[0].type === 'Bánh & Snack' ? '/cakeAndSnack' : (init.menuChildren[0].type === 'Các Món Khác' ? '/another' : '/')))} className="hover:text-primary-color cursor-pointer"
+          >
+            {init.menuChildren[0].type}
+          </Link>
+          <span>&nbsp;/ &nbsp;</span>
+          <h1 className="text-primary-color" >{init.menuChildren[0].name}</h1>
+        </div>
       </div>
 
-      <div className="flex row my-[24px] justify-center w-100pt-24 flex-col md:flex-row">
-        <div className="grow-0 shrink-0 basis-[50%] pr-[12px] ml-[24px] mb-[16px] md:mb-0">
+      <div className="flex row my-[24px] justify-center w-100pt-48 flex-col md:flex-row">
+        <div className="grow-0 shrink-0 basis-[50%] md:pr-[12px] mb-[16px] md:mb-0">
           <img src={init.menuChildren[0].image} alt="{init.menuChildren[0].name}" className="rounded-[4px]" />
         </div>
-        <div className="grow-0 shrink-0 basis-[50%] pr-[24px] ml-[12px]">
+        <div className="grow-0 shrink-0 basis-[50%] md:ml-[12px]">
           <h1 className="text-[24px] font-semibold mb-[4px]">{init.menuChildren[0].name}</h1>
           <h2 className="text-[24px] text-[#e57905] font-semibold leading-[24px]">{init.menuChildren[0].price} đ</h2>
           <div>

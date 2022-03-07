@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import './Home.css'
 import MenuList from './MenuList'
 import InitContext from '../store/InitContext'
-import {VscStarFull, VscTwitter } from "react-icons/vsc"
+import {VscStarFull } from "react-icons/vsc"
 function Home() {
   const init = useContext(InitContext)
   const handleClickCoffee = () => {

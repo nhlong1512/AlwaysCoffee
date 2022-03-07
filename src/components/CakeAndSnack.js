@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import MenuList from './MenuList';
 import InitContext from '../store/InitContext'
 

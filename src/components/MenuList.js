@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Menu from './Menu'
 import InitContext from '../store/InitContext'
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 function MenuList({ menuList }) {
   const init = useContext(InitContext)
   return (
