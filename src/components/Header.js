@@ -47,6 +47,9 @@ function Header() {
             <Link to="/" className="leading-[40px] list-none hover:text-white">
               <a href=".">Trang Chủ</a>
             </Link>
+            <Link to="/menu" className="leading-[40px] list-none hover:text-white">
+              <a href="">Menu</a>
+            </Link>
             <Link to="/coffee" className="leading-[40px] list-none hover:text-white">
               <a href="">Cà Phê</a>
             </Link>

@@ -17,3 +17,7 @@
 .flex-col-100{
   flex: 0 0 100%;
 }
+
+.w-100pt-24{
+  width: calc(100% - 24px);
+}

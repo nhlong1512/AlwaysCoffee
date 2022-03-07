@@ -9,6 +9,7 @@ module.exports = {
         'black-rgba-07': 'rgba(0, 0, 0, 0.7)',
         'primary-color': '#fda337',
         'main-color':'#191F3A',
+        'main-2-color':'#fff7e6',
         'main-rgba-05':'rgba(25, 31, 58, 0.5)',
         'main-rgba-07':'rgba(25, 31, 58, 0.7)',
         'white-rgba-07':'rgba(255, 255, 255, 0.7)',

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Routes, Route, Link } from "react-router-dom";
 import './Home.css'
 import InitContext from '../store/InitContext'
 import { BiCoffeeTogo } from "react-icons/bi";
@@ -6,22 +7,29 @@ import { RiEBike2Line } from "react-icons/ri";
 function MenuChildren() {
   const init = useContext(InitContext)
   return (
-    // <div className="food-items text-primary-color flex justify-between flex-col md:flex-row items-center px-[15px] py-[20px] relative before:content-[''] before:block before:absolute before:left-[15px] before:right-[15px] before:bottom-0 before:border-[0.5px] before:border-white-rgba-05 before:border-solid hover:cursor-pointer "
-    // >
-    //   <div className="food-item flex flex-col md:flex-row items-center">
-    //     <img src={init.menuChildren[0].image} alt={init.menuChildren[0].name} className="md:w-[150px] md:mr-[25px] md:max-h-[80px] rounded-[10px] mb-[8px] md:mb-[0]"/>
-    //     <p className="text-[20px] mb-[8px] md:mb-[0] hover:text-primary-color">{init.menuChildren[0].name}</p>
-    //   </div>
-    //   <div className="food-price text-[20px]">
-    //     <p>{init.menuChildren[0].price} VND</p>
-    //   </div>
-    // </div>
-    <div className="flex items-center flex-col ">
-      <div className="row flex flex-row gap-[24px] my-[24px] justify-start">
-        <div className="grow-0 shrink-0 basis-[50%]">
+
+    <div className="flex flex-col justify-center items-center">
+      <div className="flex row flex-row justify-start text-[20px] mt-[24px] font-semibold w-100pt-24">
+        <Link to="/menu" className="hover:text-primary-color cursor-pointer"
+        >
+          Menu
+        </Link>
+        <span> &nbsp;/ &nbsp;</span>
+        <Link
+          to={init.menuChildren[0].type === 'Cà Phê' ? '/coffee' :(init.menuChildren[0].type === 'Trà' ? '/tea' : (init.menuChildren[0].type === 'Bánh & Snack' ? '/cakeAndSnack' : (init.menuChildren[0].type === 'Các Món Khác' ? '/another' : '/'))) } className="hover:text-primary-color cursor-pointer"
+        >
+          {init.menuChildren[0].type}
+        </Link>
+        <span>&nbsp;/ &nbsp;</span>
+        <h1 className="text-primary-color" >{init.menuChildren[0].name}</h1>
+      </div>
+
+
+      <div className="flex row my-[24px] justify-center w-100pt-24">
+        <div className="grow-0 shrink-0 basis-[50%] pr-[12px] ml-[24px]">
           <img src={init.menuChildren[0].image} alt="{init.menuChildren[0].name}" className="rounded-[4px]" />
         </div>
-        <div className="grow-0 shrink-0 basis-[50%]">
+        <div className="grow-0 shrink-0 basis-[50%] pr-[24px] ml-[12px]">
           <h1 className="text-[24px] font-semibold mb-[4px]">{init.menuChildren[0].name}</h1>
           <h2 className="text-[24px] text-[#e57905] font-semibold leading-[24px]">{init.menuChildren[0].price} đ</h2>
           <div>
@@ -33,8 +41,8 @@ function MenuChildren() {
               <p>&nbsp;Vừa</p>
             </button>
           </div>
-          <div className="w-[100%] flex">
-            <button className="mt-[24px] flex justify-center items-center bg-[#e57905] text-white font-semibold text-[16px] rounded-[12px] px-[24px] py-[12px] flex-col-100">
+          <div className="flex">
+            <button className="mt-[24px] flex justify-center items-center bg-[#e57905] text-white font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-100">
               <span className="text-[24px]">
                 <RiEBike2Line />
               </span>
