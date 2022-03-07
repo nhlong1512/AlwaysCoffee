@@ -9,7 +9,7 @@ function MenuChildren() {
   return (
 
     <div className="flex flex-col justify-center items-center">
-      <div className="flex row flex-row justify-start text-[20px] mt-[24px] font-semibold w-100pt-24">
+      <div className="flex row flex-row justify-start text-[20px] mt-[24px] font-semibold w-100pt-24 flex-wrap leading-[36px]">
         <Link to="/menu" className="hover:text-primary-color cursor-pointer"
         >
           Menu
@@ -24,9 +24,8 @@ function MenuChildren() {
         <h1 className="text-primary-color" >{init.menuChildren[0].name}</h1>
       </div>
 
-
-      <div className="flex row my-[24px] justify-center w-100pt-24">
-        <div className="grow-0 shrink-0 basis-[50%] pr-[12px] ml-[24px]">
+      <div className="flex row my-[24px] justify-center w-100pt-24 flex-col md:flex-row">
+        <div className="grow-0 shrink-0 basis-[50%] pr-[12px] ml-[24px] mb-[16px] md:mb-0">
           <img src={init.menuChildren[0].image} alt="{init.menuChildren[0].name}" className="rounded-[4px]" />
         </div>
         <div className="grow-0 shrink-0 basis-[50%] pr-[24px] ml-[12px]">
@@ -53,7 +52,7 @@ function MenuChildren() {
           </div>
         </div>
       </div>
-      <div className="row flex flex-row gap-[24px] my-[24px] justify-between">
+      <div className="row flex gap-[24px] my-[24px] justify-between flex-col md:flex-row">
         <div className="grow-0 shrink-0 basis-[30%]">
           <h1 className="text-[20px] font-semibold">Thông Tin</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laudantium veniam, doloribus voluptatibus quasi, tempora in deleniti hic ipsa magnam eum porro eaque! Quaerat, iste. Nesciunt aspernatur nisi deleniti exercitationem!</p>
