@@ -14,8 +14,25 @@
   color: #fda337;
 }
 
+.active-btn{
+  background-color: #e57905;
+   color:white;
+}
+
 .flex-col-100{
   flex: 0 0 100%;
+}
+
+.flex-col-50{
+  flex: 0 0 50%;
+}
+
+.flex-col-33-30{
+  flex: 0 0 calc(33.333% - 30px)
+}
+
+.flex-col-50-16{
+  flex: 0 0 calc(50% - 16px)
 }
 
 .w-100pt-24{
@@ -23,5 +40,16 @@
 }
 .w-100pt-48{
   width: calc(100% - 48px);
+}
+
+.box-shadow-custom{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu{
+    flex: 0 0 calc(33.333% - 30px);
+    margin: 0 15px 40px;
+  }
 }
 

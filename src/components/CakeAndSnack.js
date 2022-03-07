@@ -8,7 +8,7 @@ function CakeAndSnack() {
   const init = useContext(InitContext)
   init.setMenuList(init.cakeAndSnack)
   return (
-    <div className="menu bg-[#0C1023] pt-[48px] pb-[48px]"
+    <div className="bg-white pt-[48px] pb-[48px]"
       onClick={() => init.setIsOpenHamburger(false)}
     >
       <div className="flex flex-col justify-center items-center">

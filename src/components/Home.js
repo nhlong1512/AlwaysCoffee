@@ -81,7 +81,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="menu bg-[#0C1023] min-h-[680px]">
+      <div className="bg-white">
         <div className="flex flex-col justify-center items-center">
           <div className="row">
             <div className="flex justify-center items-center">
@@ -89,7 +89,7 @@ function Home() {
             </div>
           </div>
           <div className="max-w-[1200px] md:row">
-            <div className="flex justify-center items-center text-white">
+            <div className="flex justify-center items-center text-black">
               <button
                 className="coffee bg-transparent mx-[12px] my-[10px] text-[20px] hover:text-primary-color active"
                 onClick={handleClickCoffee}

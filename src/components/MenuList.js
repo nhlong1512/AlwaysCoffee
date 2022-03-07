@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 function MenuList({ menuList }) {
   const init = useContext(InitContext)
   return (
-    <div>
-      <div className="flex row flex-row justify-start text-[20px] mt-[24px] font-semibold w-100pt-24 text-white">
+    <div className ="row">
+      <div className="flex justify-start text-[20px] mb-[24px] mx-[18px] font-semibold text-black">
         <Link to="/menu" className="hover:text-primary-color cursor-pointer"
         >
           Menu&nbsp;
@@ -15,12 +15,12 @@ function MenuList({ menuList }) {
         <h1
           className="text-primary-color cursor-pointer"
         >
-          <span className="text-white"> {init.menuList.length > 7 ? '' : '/'}</span>
+          <span className="text-black"> {init.menuList.length > 20 ? '' : '/'}</span>
           &nbsp;
-          {init.menuList.length > 7 ? '' : init.menuList[0].type}
+          {init.menuList.length > 20 ? '' : init.menuList[0].type}
         </h1>
       </div>
-      <div className="row flex flex-col md:flex-row flex-wrap mb-[24px]">
+      <div className="flex flex-col md:flex-row flex-wrap mb-[24px]">
         {menuList.map(menu => (
           <Menu
             key={menu.id}

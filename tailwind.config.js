@@ -4,6 +4,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      flex: {
+        'flex-col-100': '0 0 100%',
+        'flex-col-50': '0 0 50%',
+        'flex-col-33-30': '0 0 calc(33.333% - 30px)',
+        'flex-col-50-16': '0 0 calc(50% - 16px)',
+      },
       colors: {
         'black-rgba-05': 'rgba(0, 0, 0, 0.5)',
         'black-rgba-07': 'rgba(0, 0, 0, 0.7)',
