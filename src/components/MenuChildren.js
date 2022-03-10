@@ -35,9 +35,9 @@ function MenuChildren() {
     document.querySelector('.btn5').classList.toggle('active-btn')
   }
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center pt-[74px]">
       <div className="row w-100pt-48">
-        <div className="flex text-[20px] mt-[24px] font-semibold md:w-100pt-48 flex-wrap leading-[36px]">
+        <div className="flex text-[20px] mt-[26px] font-semibold md:w-100pt-48 flex-wrap leading-[36px]">
           <Link to="/menu" className="hover:text-primary-color cursor-pointer"
           >
             Menu
