@@ -8,7 +8,7 @@ function Tea() {
   const init = useContext(InitContext)
   init.setMenuList(init.tea)
   return (
-    <div className="bg-white pt-[48px] pb-[48px]"
+    <div className="bg-white pb-[48px]"
       onClick={() => init.setIsOpenHamburger(false)}
     >
       <div className="flex flex-col justify-center items-center">

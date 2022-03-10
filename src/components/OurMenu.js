@@ -6,7 +6,7 @@ function OurMenu({ourMenu}) {
   const init = useContext(InitContext)
   return (
     <Link to ="/menuChildren" 
-    className="menu text-white flex justify-between flex-col flex-col-50-16 mx-[8px] mb-[24px] min-h-[145px]"
+    className="menu text-black flex justify-between flex-col flex-col-50-16 mx-[8px] mb-[24px] min-h-[145px]"
     onClick={() =>init.handleClickMenuChildren(ourMenu.id)}
     >
       <div className="flex flex-col items-center">

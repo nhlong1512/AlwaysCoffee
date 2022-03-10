@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './Home.css'
 import { Link } from "react-router-dom"
-import { VscChromeClose, VscThreeBars} from "react-icons/vsc"
+import { VscChromeClose, VscThreeBars } from "react-icons/vsc"
 import Logo from '../img/LogoAlways.png'
 import { IoCartOutline } from "react-icons/io5"
 import InitContext from '../store/InitContext'
@@ -12,10 +12,10 @@ function Header() {
     e.stopPropagation()
   }
   return (
-    <div className="pb-[74px]"
+    <div className=""
       onClick={() => init.setIsOpenHamburger(false)}
     >
-      <div className="fixed z-[10] bg-main-color top-[0] left-[0] w-screen ">
+      <div className="fixed z-[10] bg-white-rgba-08 top-[0] left-[0] w-screen border-b-custom">
         <div className="max-w-[1200px] flex items-center justify-between px-[24px] py-[12px] mx-auto">
           <div className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center "
             onClick={handleClickHamburger}
@@ -62,13 +62,13 @@ function Header() {
             <Link to="/another" className="leading-[40px] list-none hover:text-white">
               <a href="">Món Khác</a>
             </Link>
-            <Link to ="/" className="leading-[40px] list-none hover:text-white">
+            <Link to="/" className="leading-[40px] list-none hover:text-white">
               <a href="">Always Chuyện</a>
             </Link>
-            <Link to ="/" className="leading-[40px] list-none hover:text-white">
+            <Link to="/" className="leading-[40px] list-none hover:text-white">
               <a href="">Tin Tức</a>
             </Link>
-            <Link to ="/" className="leading-[40px] list-none hover:text-white">
+            <Link to="/" className="leading-[40px] list-none hover:text-white">
               <a href="">Liên Hệ</a>
             </Link>
           </div>

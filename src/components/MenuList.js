@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function MenuList({ menuList }) {
   const init = useContext(InitContext)
   return (
-    <div className="row">
+    <div className="row pt-[100px]">
       <div className="flex justify-start text-[20px] mb-[24px] mx-[18px] font-semibold text-black">
         {init.menuList[0].type === init.menuList[7].type &&
           (<div className="flex">

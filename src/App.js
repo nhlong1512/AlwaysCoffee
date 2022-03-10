@@ -10,7 +10,7 @@ import InitMenu from './components/InitMenu'
 
 function App() {
   return (
-    <Routes>
+    <Routes >
       <Route path="/" element={<Home />} />
       <Route path="/menu" element={<InitMenu />} />
       <Route path="/coffee" element={<Coffee />} />

@@ -1,70 +1,76 @@
-.font-quintessential{
+.font-quintessential {
   font-family: 'Quintessential', cursive;
 }
-.topActive{
+
+.topActive {
   background-color: transparent;
   transition: all 0.3s ease;
 }
-.row{
+
+.row {
   max-width: 1200px;
   margin-left: 24px;
   margin-right: 24px;
 }
-.active{
+
+.active {
   color: #fda337;
 }
 
-.active-btn{
+.active-btn {
   background-color: #e57905;
-   color:white;
+  color: white;
 }
 
-.flex-col-100{
+.flex-col-100 {
   flex: 0 0 100%;
 }
 
-.flex-col-50{
+.flex-col-50 {
   flex: 0 0 50%;
 }
 
-.flex-col-33-30{
+.flex-col-33-30 {
   flex: 0 0 calc(33.333% - 30px)
 }
 
-.flex-col-50-16{
+.flex-col-50-16 {
   flex: 0 0 calc(50% - 16px)
 }
 
-.w-100pt-24{
+.w-100pt-24 {
   width: calc(100% - 24px);
 }
 
-.w-50pt-24{
+.w-50pt-24 {
   width: calc(50% - 24px);
 }
 
-.w-100pt-48{
+.w-100pt-48 {
   width: calc(100% - 48px);
 }
 
-.box-shadow-custom{
+.box-shadow-custom {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.border-b-custom {
+  border-bottom: 1px solid #00000026;
+}
+
 @media only screen and (min-width: 1024px) {
-  .menu{
+  .menu {
     flex: 0 0 calc(33.333% - 30px);
     margin: 0 15px 40px;
   }
-  .btn-buy{
+
+  .btn-buy {
     width: calc(100% - 24px);
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .btn-buy{
+  .btn-buy {
     width: calc(100% - 24px);
   }
 }
-
-

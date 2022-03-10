@@ -6,9 +6,7 @@ function OurMenuList({ ourMenuList }) {
   const init = useContext(InitContext)
   return (
     <div className="row">
-      <div className="flex justify-start text-[20px] mb-[24px] mx-[18px] font-semibold text-white">
-      </div>
-      <div className="flex flex-col md:flex-row flex-wrap mb-[24px]">
+      <div className="flex flex-col md:flex-row flex-wrap">
         {ourMenuList.map(ourMenu => (
           <OurMenu
             key={ourMenu.id}
