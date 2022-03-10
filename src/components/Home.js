@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import './Home.css'
-import MenuList from './MenuList'
+import OurMenuList from './OurMenuList'
 import InitContext from '../store/InitContext'
-import {VscStarFull } from "react-icons/vsc"
+import { VscStarFull } from "react-icons/vsc"
 function Home() {
   const init = useContext(InitContext)
   const handleClickCoffee = () => {
@@ -34,8 +34,8 @@ function Home() {
     document.querySelector('.another').classList.add('active')
   }
   return (
-    <div className="" 
-    onClick={() => init.setIsOpenHamburger(false)}
+    <div className=""
+      onClick={() => init.setIsOpenHamburger(false)}
     >
       <div className="h-screen bg-[url('https://images.unsplash.com/photo-1587755922380-9151dd764ae1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] bg-no-repeat bg-cover bg-center relative flex items-center justify-center before:absolute before:w-full before:h-full before:content-[''] before:block before:bg-black-rgba-05">
         <div className="absolute flex justify-center items-center text-center flex-col" >
@@ -81,7 +81,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-white">
+      <div className="bg-main-2-color">
         <div className="flex flex-col justify-center items-center">
           <div className="row">
             <div className="flex justify-center items-center">
@@ -115,8 +115,9 @@ function Home() {
               </button>
             </div> */}
           </div>
-          <MenuList
-            menuList={init.ourMenu}
+          <OurMenuList
+            className="bg-[#191F3A]"
+            ourMenuList={init.ourMenu}
           />
         </div>
       </div>
