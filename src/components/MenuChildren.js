@@ -113,8 +113,8 @@ function MenuChildren() {
               </p>
             </button>
           </div>
-          <div className="w-[100%] flex gap-[24px] w-100pt-24">
-            <button className="mt-[24px] flex justify-center items-center bg-[#fff7e6] text-[#e57905] font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-50 box-shadow-custom hover:opacity-[0.7]">
+          <div className="w-[100%] flex gap-[24px] md:w-[100%-24px] flex-col md:flex-row mt-[24px] justify-center">
+            <button className="flex justify-center items-center bg-[#fff7e6] text-[#e57905] font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-50 box-shadow-custom hover:opacity-[0.7]">
               <span className="text-[24px]">
                 <IoStorefrontOutline />
               </span>
@@ -122,7 +122,7 @@ function MenuChildren() {
                 &nbsp;Mua Tại Cửa Hàng
               </p>
             </button>
-            <button className="mt-[24px] flex justify-center items-center bg-[#fff7e6] text-[#e57905] font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-50 box-shadow-custom hover:opacity-[0.7]">
+            <button className="flex justify-center items-center bg-[#fff7e6] text-[#e57905] font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-50 box-shadow-custom hover:opacity-[0.7]">
               <span className="text-[24px]">
                 <IoIosPhonePortrait />
               </span>
