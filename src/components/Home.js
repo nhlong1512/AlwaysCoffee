@@ -85,7 +85,7 @@ function Home() {
         <div className="flex flex-col justify-center items-center mb-[50px]">
           <div className="row">
             <div className="flex justify-center items-center">
-              <h2 data-title="Order Now" className="font-quintessential text-[50px] text-primary-color mt-[36px] mb-[16px] leading-[50px]">Our Menu</h2>
+              <h2 data-title="Order Now" className="font-quintessential text-[50px] text-primary-color mt-[36px] mb-[24px] leading-[50px]">Our Menu</h2>
             </div>
           </div>
           <OurMenuList
