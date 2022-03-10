@@ -89,7 +89,7 @@ function Home() {
             </div>
           </div>
           <div className="max-w-[1200px] md:row">
-            <div className="flex justify-center items-center text-black">
+            {/* <div className="flex justify-center items-center text-black">
               <button
                 className="coffee bg-transparent mx-[12px] my-[10px] text-[20px] hover:text-primary-color active"
                 onClick={handleClickCoffee}
@@ -113,10 +113,10 @@ function Home() {
                 onClick={handleClickAnother}
               >Món Khác
               </button>
-            </div>
+            </div> */}
           </div>
           <MenuList
-            menuList={init.menuList}
+            menuList={init.ourMenu}
           />
         </div>
       </div>

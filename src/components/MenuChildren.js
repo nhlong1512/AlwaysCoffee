@@ -62,7 +62,7 @@ function MenuChildren() {
           <div>
             <p className="mb-[8px] mt-[24px] font-medium">Kích Thước</p>
             <div className="flex flex-col lg:flex-row">
-              <button className="btn1 px-[24px] py-[12px] bg-white text-[#666] font-semibold rounded-[2px] text-[16px] flex flex-row leading-[16px] justify-center items-center border-[1px] border-[#bdb1ac] mr-[16px] mb-[12px] hover:bg-[#e57905] hover:text-white"
+              <button className="active-btn btn1 px-[24px] py-[12px] bg-white text-[#666] font-semibold rounded-[2px] text-[16px] flex flex-row leading-[16px] justify-center items-center border-[1px] border-[#bdb1ac] mr-0 lg:mr-[16px] mb-[12px] hover:bg-[#e57905] hover:text-white"
                 onClick={handleClickBtn1}
               >
                 <span className="text-[20px]">
@@ -70,7 +70,7 @@ function MenuChildren() {
                 </span>
                 <p>&nbsp;Nhỏ</p>
               </button>
-              <button className="btn2 px-[24px] py-[12px] bg-white text-[#666] hover:bg-[#e57905] hover:text-white font-semibold rounded-[2px] text-[16px] flex flex-row leading-[16px] justify-center items-center border-[1px] border-[#bdb1ac] mr-[16px] mb-[12px]"
+              <button className="btn2 px-[24px] py-[12px] bg-white text-[#666] hover:bg-[#e57905] hover:text-white font-semibold rounded-[2px] text-[16px] flex flex-row leading-[16px] justify-center items-center border-[1px] border-[#bdb1ac] mr-0 lg:mr-[16px] mb-[12px]"
                 onClick={handleClickBtn2}
               >
                 <span className="text-[20px]">
@@ -78,7 +78,7 @@ function MenuChildren() {
                 </span>
                 <p>&nbsp;Vừa + 5.000 đ</p>
               </button>
-              <button className="btn3 px-[24px] py-[12px] bg-white text-[#666] font-semibold rounded-[2px] text-[16px] flex flex-row leading-[16px] justify-center items-center border-[1px] border-[#bdb1ac] mr-[16px] mb-[12px] hover:bg-[#e57905] hover:text-white"
+              <button className="btn3 px-[24px] py-[12px] bg-white text-[#666] font-semibold rounded-[2px] text-[16px] flex flex-row leading-[16px] justify-center items-center border-[1px] border-[#bdb1ac] mr-0 md:lg-[16px] mb-[12px] hover:bg-[#e57905] hover:text-white"
                 onClick={handleClickBtn3}
               >
                 <span className="text-[20px]">
@@ -91,12 +91,12 @@ function MenuChildren() {
           <div>
             <p className="mb-[8px] mt-[12px] font-medium">Topping</p>
             <div className="flex flex-col lg:flex-row">
-              <button className="btn4 px-[24px] py-[12px] bg-white text-[#666] font-semibold rounded-[2px] text-[16px] flex flex-row leading-[16px] justify-center items-center border-[1px] border-[#bdb1ac] mr-[16px] mb-[12px] hover:bg-[#e57905] hover:text-white"
+              <button className="btn4 px-[24px] py-[12px] bg-white text-[#666] font-semibold rounded-[2px] text-[16px] flex flex-row leading-[16px] justify-center items-center border-[1px] border-[#bdb1ac] mr-0 lg:mr-[16px] mb-[12px] hover:bg-[#e57905] hover:text-white"
                 onClick={handleClickBtn4}
               >
                 <p>&nbsp;Espresso + 10.000đ</p>
               </button>
-              <button className="btn5 px-[24px] py-[12px] bg-white text-[#666] font-semibold rounded-[2px] text-[16px] flex flex-row leading-[16px] justify-center items-center border-[1px] border-[#bdb1ac] mr-[16px] mb-[12px] hover:bg-[#e57905] hover:text-white"
+              <button className="btn5 px-[24px] py-[12px] bg-white text-[#666] font-semibold rounded-[2px] text-[16px] flex flex-row leading-[16px] justify-center items-center border-[1px] border-[#bdb1ac] mr-0 lg:mr-[16px] mb-[12px] hover:bg-[#e57905] hover:text-white"
                 onClick={handleClickBtn5}
               >
                 <p>&nbsp;Extra foam + 10.000đ</p>
@@ -113,23 +113,25 @@ function MenuChildren() {
               </p>
             </button>
           </div>
-          <div className="w-[100%] flex gap-[24px] md:w-[100%-24px] flex-col md:flex-row mt-[24px] justify-center">
-            <button className="flex justify-center items-center bg-[#fff7e6] text-[#e57905] font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-50 box-shadow-custom hover:opacity-[0.7]">
-              <span className="text-[24px]">
-                <IoStorefrontOutline />
-              </span>
-              <p>
-                &nbsp;Mua Tại Cửa Hàng
-              </p>
-            </button>
-            <button className="flex justify-center items-center bg-[#fff7e6] text-[#e57905] font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-50 box-shadow-custom hover:opacity-[0.7]">
-              <span className="text-[24px]">
-                <IoIosPhonePortrait />
-              </span>
-              <p>
-                &nbsp;Mua Mang Đi
-              </p>
-            </button>
+          <div className="w-[100%] flex justify-center items-center">
+            <div className="btn-buy flex gap-[24px] flex-col w-[100%] md:flex-row mt-[24px] justify-center">
+              <button className="flex justify-center items-center bg-[#fff7e6] text-[#e57905] font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-50 box-shadow-custom hover:opacity-[0.7]">
+                <span className="text-[24px]">
+                  <IoStorefrontOutline />
+                </span>
+                <p>
+                  &nbsp;Mua Tại Cửa Hàng
+                </p>
+              </button>
+              <button className="flex justify-center items-center bg-[#fff7e6] text-[#e57905] font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-50 box-shadow-custom hover:opacity-[0.7]">
+                <span className="text-[24px]">
+                  <IoIosPhonePortrait />
+                </span>
+                <p>
+                  &nbsp;Mua Mang Đi
+                </p>
+              </button>
+            </div>
           </div>
         </div>
       </div>

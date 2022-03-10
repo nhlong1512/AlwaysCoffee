@@ -38,6 +38,11 @@
 .w-100pt-24{
   width: calc(100% - 24px);
 }
+
+.w-50pt-24{
+  width: calc(50% - 24px);
+}
+
 .w-100pt-48{
   width: calc(100% - 48px);
 }
@@ -51,5 +56,15 @@
     flex: 0 0 calc(33.333% - 30px);
     margin: 0 15px 40px;
   }
+  .btn-buy{
+    width: calc(100% - 24px);
+  }
 }
+
+@media only screen and (min-width: 768px) {
+  .btn-buy{
+    width: calc(100% - 24px);
+  }
+}
+
 

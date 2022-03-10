@@ -345,89 +345,134 @@ export const ProviderContext = ({ children }) => {
   const [menuList, setMenuList] = useState([
     {
       id: 0,
-      image: 'https://product.hstatic.net/1000075078/product/bac-siu-da_9bf82220a1a54847aa7357de541e7552_large.jpg',
-      name: 'Bạc Sỉu Đá',
-      price: 29000,
-      type: 'Cà Phê',
-    },
-    {
-      id: 1,
       image: 'https://product.hstatic.net/1000075078/product/ca-phe-den-da_6e25255ae31c4f3bbbb502f77e2c100d_large.jpg',
       name: 'Cà Phê Đen Đá',
       price: 29000,
       type: 'Cà Phê',
     },
     {
-      id: 2,
-      image: 'https://product.hstatic.net/1000075078/product/ca-phe-sua-da_b00c53d18cd84144a164790323106a2f_large.jpg',
-      name: 'Cà Phê Sữa Đá',
-      price: 29000,
-      type: 'Cà Phê',
-    },
-    {
-      id: 3,
-      image: 'https://product.hstatic.net/1000075078/product/mocha-da_538820_400x400_73100250cb904ad0aad79a36a59aeea7_large.jpg',
-      name: 'Mocha Đá',
-      price: 49000,
-      type: 'Cà Phê',
-    },
-    {
-      id: 4,
-      image: 'https://product.hstatic.net/1000075078/product/espressonong_612688_400x400_8fdb6dc2f37a4445b43a7ce3ee4aebb0_large.jpg',
-      name: 'Espresso Nóng',
-      price: 40000,
-      type: 'Cà Phê',
-    },
-    {
-      id: 5,
-      image: 'https://product.hstatic.net/1000075078/product/cfdenda-espressoda_185438_400x400_bc9c244c3c644eccb3edad8578569126_large.jpg',
-      name: 'Espresso Đá',
-      price: 45000,
-      type: 'Cà Phê',
-    },
-    {
-      id: 6,
-      image: 'https://product.hstatic.net/1000075078/product/cappuccino_621532_400x400_67c12956866c442585a6d47d0771a978_large.jpg',
-      name: 'Cappuccino Nóng',
-      price: 49000,
-      type: 'Cà Phê',
-    },
-    {
-      id: 7,
-      image: 'https://product.hstatic.net/1000075078/product/capu-da_487470_400x400_e11f07c213814171b07a5801722e3bb3_large.jpg',
-      name: 'Cappuccino Đá',
-      price: 49000,
-      type: 'Cà Phê',
-    },
-    {
-      id: 8,
-      image: 'https://product.hstatic.net/1000075078/product/americano-nong-app_652009_400x400_c4cc077adacd4340bb41a6e1e4710a95_large.jpg',
-      name: 'Americano Nóng',
-      price: 40000,
-      type: 'Cà Phê',
-    },
-    {
-      id: 9,
-      image: 'https://product.hstatic.net/1000075078/product/latte-da_438410_400x400_a48fbcd0a33f4ceba1803acbbe1292f4_large.jpg',
-      name: 'Latte Đá',
-      price: 49000,
-      type: 'Cà Phê',
-    },
-    {
-      id: 10,
+      id: 1,
       image: 'https://product.hstatic.net/1000075078/product/caramel-macchiato-da_fa2503073e5c4f7a98516f1c9d39253b_large.jpg',
       name: 'Caramel Macchiato Đá',
       price: 49000,
       type: 'Cà Phê',
     },
     {
-      id: 11,
-      image: 'https://product.hstatic.net/1000075078/product/latte_851143_400x400_7305aaa080df4202a26dedf898e7196b_large.jpg',
-      name: 'Latte Nóng',
+      id: 2,
+      image: 'https://product.hstatic.net/1000075078/product/tra-sua-mac-ca_377522_400x400_123ab6b1593d4e5c83776a54f6862bbd_large.jpg',
+      name: 'Trà Sữa Mắc Ca Trân Châu Trắng',
+      price: 49000,
+      type: 'Trà',
+    },
+    {
+      id: 3,
+      image: 'https://product.hstatic.net/1000075078/product/tra-sen_905594_400x400_c82fd1b3786d45f380cf4c15e9af7ab9_large.jpg',
+      name: 'Trà Hạt Sen Đá',
+      price: 45000,
+      type: 'Trà',
+    },
+    {
+      id: 4,
+      image: 'https://product.hstatic.net/1000075078/product/banh-mi-vn-thit-nguoi_5e777a62ef2841bd9a5baf85c6970166_large.jpg',
+      name: 'Bánh Mì VN Thịt Nguội',
+      price: 29000,
+      type: 'Bánh & Snack',
+    },
+    {
+      id: 5,
+      image: 'https://product.hstatic.net/1000075078/product/croissant-trung-muoi_880850_400x400_0d8d5e787de8423cb0e60455651a17ee_large.jpg',
+      name: 'Croissant Trứng Muối',
+      price: 35000,
+      type: 'Bánh & Snack',
+    },
+    {
+      id: 6,
+      image: 'https://product.hstatic.net/1000075078/product/mousse-gau-chocolate_e25675d96c504dacb88f4e56a54ab48b_large.jpg',
+      name: 'Mousse Gấu Chocolate',
+      price: 39000,
+      type: 'Bánh & Snack',
+    },
+    {
+      id: 7,
+      image: 'https://product.hstatic.net/1000075078/product/chanh-sa-da-xay_170980_400x400_2c8af8d0cfff43b78a93924d28a1215f_large.jpg',
+      name: 'Chanh Sả Đá Xay',
+      price: 49000,
+      type: 'Các Món Khác',
+    },
+    {
+      id: 8,
+      image: 'https://product.hstatic.net/1000075078/product/daovietquat_033985_400x400_20bfc56b971c47dca8734514a4765675_large.jpg',
+      name: 'Đào Việt Quất Đá Xay',
+      price: 58000,
+      type: 'Các Món Khác',
+    },
+  ])
+  const [ourMenu, setOurMenu] = useState(
+    [
+    {
+      id: 0,
+      image: 'https://product.hstatic.net/1000075078/product/ca-phe-den-da_6e25255ae31c4f3bbbb502f77e2c100d_large.jpg',
+      name: 'Cà Phê Đen Đá',
+      price: 29000,
+      type: 'Cà Phê',
+    },
+    {
+      id: 1,
+      image: 'https://product.hstatic.net/1000075078/product/caramel-macchiato-da_fa2503073e5c4f7a98516f1c9d39253b_large.jpg',
+      name: 'Caramel Macchiato Đá',
       price: 49000,
       type: 'Cà Phê',
     },
-  ])
+    {
+      id: 2,
+      image: 'https://product.hstatic.net/1000075078/product/tra-sua-mac-ca_377522_400x400_123ab6b1593d4e5c83776a54f6862bbd_large.jpg',
+      name: 'Trà Sữa Mắc Ca Trân Châu Trắng',
+      price: 49000,
+      type: 'Trà',
+    },
+    {
+      id: 3,
+      image: 'https://product.hstatic.net/1000075078/product/tra-sen_905594_400x400_c82fd1b3786d45f380cf4c15e9af7ab9_large.jpg',
+      name: 'Trà Hạt Sen Đá',
+      price: 45000,
+      type: 'Trà',
+    },
+    {
+      id: 4,
+      image: 'https://product.hstatic.net/1000075078/product/banh-mi-vn-thit-nguoi_5e777a62ef2841bd9a5baf85c6970166_large.jpg',
+      name: 'Bánh Mì VN Thịt Nguội',
+      price: 29000,
+      type: 'Bánh & Snack',
+    },
+    {
+      id: 5,
+      image: 'https://product.hstatic.net/1000075078/product/croissant-trung-muoi_880850_400x400_0d8d5e787de8423cb0e60455651a17ee_large.jpg',
+      name: 'Croissant Trứng Muối',
+      price: 35000,
+      type: 'Bánh & Snack',
+    },
+    {
+      id: 6,
+      image: 'https://product.hstatic.net/1000075078/product/mousse-gau-chocolate_e25675d96c504dacb88f4e56a54ab48b_large.jpg',
+      name: 'Mousse Gấu Chocolate',
+      price: 39000,
+      type: 'Bánh & Snack',
+    },
+    {
+      id: 7,
+      image: 'https://product.hstatic.net/1000075078/product/chanh-sa-da-xay_170980_400x400_2c8af8d0cfff43b78a93924d28a1215f_large.jpg',
+      name: 'Chanh Sả Đá Xay',
+      price: 49000,
+      type: 'Các Món Khác',
+    },
+    {
+      id: 8,
+      image: 'https://product.hstatic.net/1000075078/product/daovietquat_033985_400x400_20bfc56b971c47dca8734514a4765675_large.jpg',
+      name: 'Đào Việt Quất Đá Xay',
+      price: 58000,
+      type: 'Các Món Khác',
+    },
+    ])
   const [coffee, setCoffee] = useState([
     {
       id: 0,
@@ -779,7 +824,7 @@ export const ProviderContext = ({ children }) => {
     setMenuChildren(menuList.filter(menu => menu.id === id))
   }
   return (
-    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu }}>
+    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu }}>
       {children}
     </InitContext.Provider>
   )
