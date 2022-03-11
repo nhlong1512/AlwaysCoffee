@@ -15,7 +15,7 @@ function Header() {
     <div className=""
       onClick={() => init.setIsOpenHamburger(false)}
     >
-      <div className="fixed z-[10] bg-white-rgba-08 top-[0] left-[0] w-screen border-b-custom">
+      <div className="fixed z-[10] bg-white-rgba-09 top-[0] left-[0] w-screen border-b-custom">
         <div className="max-w-[1200px] flex items-center justify-between px-[24px] py-[12px] mx-auto">
           <div className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center "
             onClick={handleClickHamburger}
@@ -33,13 +33,13 @@ function Header() {
       {
         init.isOpenHamburger && (
           <div
-            className="font-quintessential text-primary-color fixed w-[300px] h-screen bg-black-rgba-07 top-[0]  flex justify-center items-center flex-col z-[10] font-bold text-[20px] right-0 duration-[500ms] animate-fade-in-right-to-left "
+            className="font-quintessential text-primary-color fixed w-[300px] h-screen bg-black-rgba-07 top-[0]  flex justify-center items-center flex-col z-[10] font-bold text-[20px] left-0 duration-[500ms] animate-fade-in-left-to-right"
             onClick={(e) => {
               e.stopPropagation()
             }}
           >
             <button
-              className="w-[50px] h-[50px] absolute top-[12px] left-[12px] opacity-[1] z-[20] cursor-pointer flex justify-center items-center"
+              className="w-[50px] h-[50px] absolute top-[12px] right-[12px] opacity-[1] z-[20] cursor-pointer flex justify-center items-center"
               onClick={() => init.setIsOpenHamburger(false)}
             >
               <VscChromeClose className="w-full h-full text-primary-color relative z-[25] hover:rotate-90 hover:duration-300" />

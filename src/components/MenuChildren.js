@@ -135,7 +135,7 @@ function MenuChildren() {
           </div>
         </div>
       </div>
-      <div className="row flex gap-[24px] my-[24px] justify-between flex-col md:flex-row">
+      <div className="row flex gap-[24px] my-[36px] justify-between flex-col md:flex-row">
         <div className="grow-0 shrink-0 basis-[30%]">
           <h1 className="text-[20px] font-semibold">Thông Tin</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laudantium veniam, doloribus voluptatibus quasi, tempora in deleniti hic ipsa magnam eum porro eaque! Quaerat, iste. Nesciunt aspernatur nisi deleniti exercitationem!</p>

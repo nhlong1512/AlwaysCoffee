@@ -53,14 +53,14 @@ module.exports = {
             transform: 'translateX(0)'
           },
         },
-        'fade-out-left-to-right': {
+        'fade-in-left-to-right': {
           '0%': {
-            opacity: '1',
-            transform: 'translateX(0)'
+            opacity: '0',
+            transform: 'translateX(-200px)'
           },
           '100%': {
-            opacity: '0',
-            transform: 'translateX(200px)'
+            opacity: '1',
+            transform: 'translateX(0px)'
           },
         },
         'headerAnimation': {
@@ -89,7 +89,7 @@ module.exports = {
       animation: {
         'fade-in-down': 'fade-in-down 0.5s ease',
         'fade-in-right-to-left':'fade-in-right-to-left 0.5s ease',
-        'fade-out-left-to-right':'fade-out-left-to-right 0.5s ease',
+        'fade-in-left-to-right':'fade-in-left-to-right 0.5s ease',
         'headerAnimation': 'headerAnimation 3s ease infinite',
         'inOut': 'inOut 3s ease infinite',
       }

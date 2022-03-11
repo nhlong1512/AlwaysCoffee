@@ -156,12 +156,12 @@ function Home() {
               <div className="feedback-item border-[2px] border-solid border-[#0c1023] px-[16px] py-[24px] rounded-[16px]">
                 <div className="flex justify-between mb-[24px]">
                   <div className="flex flex-col justify-center">
-                    <h1 className="text-[24px] text-primary-color font-semibold">Nhu Quynh</h1>
+                    <h1 className="text-[24px] text-primary-color font-semibold">Beckham</h1>
                     <p className="text-[18px]">Luv Latte</p>
                   </div>
                   <div>
                     <img
-                      src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.6435-9/169885553_2567350180234848_8764375816459843208_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=vCBrQ02PsnwAX8Hn9Un&tn=mjvnjlQ7eAUAwUux&_nc_ht=scontent-sin6-1.xx&oh=00_AT8NduVPpHpdrQm_79QQn9CQkZqqu9r02YGvZAPPBYolYw&oe=623B46CD" alt="Quynh-Image"
+                      src="https://icdn.dantri.com.vn/k:2016/33fbd8e400000578-0-image-a-37-1462803925584-1462855260870/david-beckham-lai-khien-fan-nu-lao-dao-vi-qua-dep-trai.jpg" alt="Beckham-Image"
                       className="w-[150px] rounded-[100px] h-[150px]" />
                   </div>
                 </div>
