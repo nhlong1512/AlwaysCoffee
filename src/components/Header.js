@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import './Home.css'
 import { Link } from "react-router-dom"
 import { VscChromeClose, VscThreeBars } from "react-icons/vsc"
-import Logo from '../img/LogoAlwaysEdit3.png'
+import Logo from '../img/LogoAlwaysEdit4.png'
 import { IoCartOutline } from "react-icons/io5"
 import InitContext from '../store/InitContext'
 function Header() {
