@@ -3,6 +3,7 @@ import './Home.css'
 import { Link } from "react-router-dom"
 import OurMenuList from './OurMenuList'
 import InitContext from '../store/InitContext'
+import { RiEBike2Line } from "react-icons/ri";
 import { VscStarFull } from "react-icons/vsc"
 function Home() {
   const init = useContext(InitContext)
@@ -93,7 +94,7 @@ function Home() {
             className="bg-[#191F3A]"
             ourMenuList={init.ourMenu}
           />
-          <Link to="/menu" className="mx-auto flex justify-center items-center">
+          <Link to="/menu" className="flex">
             <button className="flex justify-center items-center box-border text-[24px] leading-[24px] px-[40px] py-[20px] text-primary-color bg-transparent rounded-[50px] font-semibold hover:bg-transparent duration-[300ms] border-[2px] border-primary-color border-solid hover:text-black hover:bg-primary-color"
             >
               VIEW MORE

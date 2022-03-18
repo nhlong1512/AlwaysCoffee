@@ -3,7 +3,7 @@ import './Home.css'
 import { Link } from "react-router-dom"
 import { VscChromeClose, VscThreeBars } from "react-icons/vsc"
 import Logo from '../img/LogoAlwaysEdit4.png'
-import { IoCartOutline } from "react-icons/io5"
+import { IoCartOutline, IoCaretDownOutline } from "react-icons/io5"
 import InitContext from '../store/InitContext'
 function Header() {
   const init = useContext(InitContext)
@@ -17,17 +17,133 @@ function Header() {
     >
       <div className="fixed z-[10] bg-white-rgba-09 top-[0] left-[0] w-screen border-b-custom">
         <div className="max-w-[1200px] flex items-center justify-between px-[24px] py-[12px] mx-auto">
-          <div className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center "
+          {/* <div className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center "
             onClick={handleClickHamburger}
           >
             <VscThreeBars className="w-full h-full text-primary-color" />
-          </div>
+          </div> */}
           <Link to="/" className="">
             <a href=""><img src={Logo} alt="LogoAlways" className="h-[44px]" /></a>
           </Link>
+          <div>
+            <ul className="flex justify-between items-center font-semibold text-[18px]">
+              <Link to="/" className="px-[12px] hover:text-primary-color py-[13px]">
+                <a href="">Trang Chủ</a>
+              </Link>
+              <Link to="/menu" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[13px]">
+                <div className="flex items-center leading-[24px]">
+                  <a href="">Menu</a>
+                  <span className="text-[10px] pt-[4px] pl-[4px]" ><IoCaretDownOutline /></span>
+                </div>
+                <ul className="menu-navbar-hover-list hidden">
+                  <li>
+                    <a href="">Tất Cả</a>
+                  </li>
+                  <li>
+                    <a href="">Cà Phê</a>
+                    <ul>
+                      <li>
+                        <a href="">Cà Phê Việt Nam</a>
+                      </li>
+                      <li>
+                        <a href="">Cà Phê Máy</a>
+                      </li>
+                      <li>
+                        <a href="">Cold Brew</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="">Trà</a>
+                    <ul>
+                      <li>
+                        <a href="">Trà Trái Cây</a>
+                      </li>
+                      <li>
+                        <a href="">Trà Sữa Macchiato</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="">Bánh & Snack</a>
+                    <ul>
+                      <li>
+                        <a href="">Bánh Mặn</a>
+                      </li>
+                      <li>
+                        <a href="">Bánh Ngọt</a>
+                      </li>
+                      <li>
+                        <a href="">Snack</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="">Món Khác</a>
+                    <ul>
+                      <li>
+                        <a href="">Đá Xay</a>
+                      </li>
+                      <li>
+                        <a href="">Matcha - Sô cô la</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </Link>
+              <Link to="/" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[13px]">
+                <div className="flex items-center leading-[24px]">
+                  <a href="">Always Chuyện</a>
+                  <span className="text-[10px] pt-[4px] pl-[4px]" ><IoCaretDownOutline /></span>
+                </div>
+                <ul className="menu-navbar-hover-list hidden">
+                  <li>
+                    <a href="">Coffeeholic</a>
+                    <ul>
+                      <li>
+                        <a href="">#chuyencaphe</a>
+                      </li>
+                      <li>
+                        <a href="">#phacaphe</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="">Teaholic</a>
+                    <ul>
+                      <li>
+                        <a href="">#cauchuyenvetra</a>
+                      </li>
+                      <li>
+                        <a href="">#phatra</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="">Blog</a>
+                    <ul>
+                      <li>
+                        <a href="">#inthemood</a>
+                      </li>
+                      <li>
+                        <a href="">#review</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </Link>
+              <Link to="/" className="px-[12px] hover:text-primary-color py-[13px]">
+                <a href="">Tin Tức</a>
+              </Link>
+              <Link to="/" className="px-[12px] hover:text-primary-color py-[13px]">
+                <a href="">Liên Hệ</a>
+              </Link>
+            </ul>
+          </div>
           <div className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center">
             <IoCartOutline className="w-full h-full text-primary-color" />
           </div>
+
         </div>
       </div>
       {
@@ -45,7 +161,7 @@ function Header() {
               <VscChromeClose className="w-full h-full text-primary-color relative z-[25] hover:rotate-90 hover:duration-300" />
             </button>
             <Link to="/" className="leading-[40px] list-none hover:text-white">
-              <a href=".">Trang Chủ</a>
+              <a href="">Trang Chủ</a>
             </Link>
             <Link to="/menu" className="leading-[40px] list-none hover:text-white">
               <a href="">Menu</a>
