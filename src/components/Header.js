@@ -17,15 +17,15 @@ function Header() {
     >
       <div className="fixed z-[10] bg-white-rgba-09 top-[0] left-[0] w-screen border-b-custom">
         <div className="max-w-[1200px] flex items-center justify-between px-[24px] mx-auto">
-          {/* <div className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center "
+          <div className="navbar-tablet-mobile w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center "
             onClick={handleClickHamburger}
           >
             <VscThreeBars className="w-full h-full text-primary-color" />
-          </div> */}
+          </div>
           <Link to="/" className="">
             <a href=""><img src={Logo} alt="LogoAlways" className="h-[44px]" /></a>
           </Link>
-          <div>
+          <div className="navbar-pc hidden">
             <ul className="flex justify-between items-center font-semibold text-[18px] ">
               <Link to="/" className="px-[12px] hover:text-primary-color py-[25px]">
                 <a href="">Trang Chủ</a>
@@ -36,11 +36,11 @@ function Header() {
                   <span className="text-[10px] pt-[4px] pl-[4px]" ><IoCaretDownOutline /></span>
                 </div>
                 <ul className="menu-navbar-hover-list hidden">
-                  <li className="">
-                    <a className="hover:text-primary-color" href="">Tất Cả</a>
+                  <li to ="/menu" className="menu-navbar-li">
+                    <a className="menu-navbar-a" href="">Tất Cả</a>
                   </li>
-                  <li className="">
-                    <a className="hover:text-primary-color" href="">Cà Phê</a>
+                  <Link to="/coffee" className="menu-navbar-li">
+                    <a className="menu-navbar-a" href="">Cà Phê</a>
                     <ul>
                       <li>
                         <a className="hover:text-primary-color" href="">Cà Phê Việt Nam</a>
@@ -52,9 +52,9 @@ function Header() {
                         <a className="hover:text-primary-color" href="">Cold Brew</a>
                       </li>
                     </ul>
-                  </li>
-                  <li>
-                    <a className="hover:text-primary-color" href="">Trà</a>
+                  </Link>
+                  <Link to = "/tea" className="menu-navbar-li">
+                    <a className="menu-navbar-a" href="">Trà</a>
                     <ul>
                       <li>
                         <a className="hover:text-primary-color" href="">Trà Trái Cây</a>
@@ -63,9 +63,9 @@ function Header() {
                         <a className="hover:text-primary-color" href="">Trà Sữa Macchiato</a>
                       </li>
                     </ul>
-                  </li>
-                  <li>
-                    <a className="hover:text-primary-color" href="">Bánh & Snack</a>
+                  </Link>
+                  <Link to ='/cakeAndSnack' className="menu-navbar-li">
+                    <a className="menu-navbar-a" href="">Bánh & Snack</a>
                     <ul>
                       <li>
                         <a className="hover:text-primary-color" href="">Bánh Mặn</a>
@@ -74,12 +74,12 @@ function Header() {
                         <a className="hover:text-primary-color" href="">Bánh Ngọt</a>
                       </li>
                       <li>
-                        <a href="">Snack</a>
+                        <a className="hover:text-primary-color" href="">Snack</a>
                       </li>
                     </ul>
-                  </li>
-                  <li>
-                    <a className="hover:text-primary-color" href="">Món Khác</a>
+                  </Link>
+                  <Link to="/another" className="menu-navbar-li">
+                    <a className="menu-navbar-a" href="">Món Khác</a>
                     <ul>
                       <li>
                         <a className="hover:text-primary-color" href="">Đá Xay</a>
@@ -88,7 +88,7 @@ function Header() {
                         <a className="hover:text-primary-color" href="">Matcha - Sô cô la</a>
                       </li>
                     </ul>
-                  </li>
+                  </Link>
                 </ul>
               </Link>
               <Link to="/" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[25px]">
@@ -97,10 +97,10 @@ function Header() {
                   <span className="text-[10px] pt-[4px] pl-[4px]" ><IoCaretDownOutline /></span>
                 </div>
                 <ul className="menu-navbar-hover-list hidden">
-                  <li>
-                    <a className="hover:text-primary-color" href="">Coffeeholic</a>
+                  <li className="menu-navbar-li">
+                    <a className="menu-navbar-a" href="">Coffeeholic</a>
                     <ul>
-                      <li>
+                      <li className="">
                         <a className="hover:text-primary-color" href="">#chuyencaphe</a>
                       </li>
                       <li>
@@ -108,8 +108,8 @@ function Header() {
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a className="hover:text-primary-color" href="">Teaholic</a>
+                  <li className="menu-navbar-li">
+                    <a className="menu-navbar-a" href="">Teaholic</a>
                     <ul>
                       <li>
                         <a className="hover:text-primary-color" href="">#cauchuyenvetra</a>
@@ -119,8 +119,8 @@ function Header() {
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a className="hover:text-primary-color" href="">Blog</a>
+                  <li className="menu-navbar-li">
+                    <a className="menu-navbar-a" href="">Blog</a>
                     <ul>
                       <li>
                         <a className="hover:text-primary-color" href="">#inthemood</a>
