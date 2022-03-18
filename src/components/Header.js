@@ -16,7 +16,7 @@ function Header() {
       onClick={() => init.setIsOpenHamburger(false)}
     >
       <div className="fixed z-[10] bg-white-rgba-09 top-[0] left-[0] w-screen border-b-custom">
-        <div className="max-w-[1200px] flex items-center justify-between px-[24px] py-[12px] mx-auto">
+        <div className="max-w-[1200px] flex items-center justify-between px-[24px] mx-auto">
           {/* <div className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center "
             onClick={handleClickHamburger}
           >
@@ -26,52 +26,52 @@ function Header() {
             <a href=""><img src={Logo} alt="LogoAlways" className="h-[44px]" /></a>
           </Link>
           <div>
-            <ul className="flex justify-between items-center font-semibold text-[18px]">
-              <Link to="/" className="px-[12px] hover:text-primary-color py-[13px]">
+            <ul className="flex justify-between items-center font-semibold text-[18px] ">
+              <Link to="/" className="px-[12px] hover:text-primary-color py-[25px]">
                 <a href="">Trang Chủ</a>
               </Link>
-              <Link to="/menu" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[13px]">
+              <Link to="/menu" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[25px]">
                 <div className="flex items-center leading-[24px]">
-                  <a href="">Menu</a>
+                  <a className="after-menu" href="">Menu</a>
                   <span className="text-[10px] pt-[4px] pl-[4px]" ><IoCaretDownOutline /></span>
                 </div>
                 <ul className="menu-navbar-hover-list hidden">
-                  <li>
-                    <a href="">Tất Cả</a>
+                  <li className="">
+                    <a className="hover:text-primary-color" href="">Tất Cả</a>
                   </li>
-                  <li>
-                    <a href="">Cà Phê</a>
+                  <li className="">
+                    <a className="hover:text-primary-color" href="">Cà Phê</a>
                     <ul>
                       <li>
-                        <a href="">Cà Phê Việt Nam</a>
+                        <a className="hover:text-primary-color" href="">Cà Phê Việt Nam</a>
                       </li>
                       <li>
-                        <a href="">Cà Phê Máy</a>
+                        <a className="hover:text-primary-color" href="">Cà Phê Máy</a>
                       </li>
                       <li>
-                        <a href="">Cold Brew</a>
+                        <a className="hover:text-primary-color" href="">Cold Brew</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="">Trà</a>
+                    <a className="hover:text-primary-color" href="">Trà</a>
                     <ul>
                       <li>
-                        <a href="">Trà Trái Cây</a>
+                        <a className="hover:text-primary-color" href="">Trà Trái Cây</a>
                       </li>
                       <li>
-                        <a href="">Trà Sữa Macchiato</a>
+                        <a className="hover:text-primary-color" href="">Trà Sữa Macchiato</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="">Bánh & Snack</a>
+                    <a className="hover:text-primary-color" href="">Bánh & Snack</a>
                     <ul>
                       <li>
-                        <a href="">Bánh Mặn</a>
+                        <a className="hover:text-primary-color" href="">Bánh Mặn</a>
                       </li>
                       <li>
-                        <a href="">Bánh Ngọt</a>
+                        <a className="hover:text-primary-color" href="">Bánh Ngọt</a>
                       </li>
                       <li>
                         <a href="">Snack</a>
@@ -79,63 +79,63 @@ function Header() {
                     </ul>
                   </li>
                   <li>
-                    <a href="">Món Khác</a>
+                    <a className="hover:text-primary-color" href="">Món Khác</a>
                     <ul>
                       <li>
-                        <a href="">Đá Xay</a>
+                        <a className="hover:text-primary-color" href="">Đá Xay</a>
                       </li>
                       <li>
-                        <a href="">Matcha - Sô cô la</a>
+                        <a className="hover:text-primary-color" href="">Matcha - Sô cô la</a>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </Link>
-              <Link to="/" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[13px]">
+              <Link to="/" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[25px]">
                 <div className="flex items-center leading-[24px]">
-                  <a href="">Always Chuyện</a>
+                  <a className="after-always-story" href="">Always Chuyện</a>
                   <span className="text-[10px] pt-[4px] pl-[4px]" ><IoCaretDownOutline /></span>
                 </div>
                 <ul className="menu-navbar-hover-list hidden">
                   <li>
-                    <a href="">Coffeeholic</a>
+                    <a className="hover:text-primary-color" href="">Coffeeholic</a>
                     <ul>
                       <li>
-                        <a href="">#chuyencaphe</a>
+                        <a className="hover:text-primary-color" href="">#chuyencaphe</a>
                       </li>
                       <li>
-                        <a href="">#phacaphe</a>
+                        <a className="hover:text-primary-color" href="">#phacaphe</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="">Teaholic</a>
+                    <a className="hover:text-primary-color" href="">Teaholic</a>
                     <ul>
                       <li>
-                        <a href="">#cauchuyenvetra</a>
+                        <a className="hover:text-primary-color" href="">#cauchuyenvetra</a>
                       </li>
                       <li>
-                        <a href="">#phatra</a>
+                        <a className="hover:text-primary-color" href="">#phatra</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="">Blog</a>
+                    <a className="hover:text-primary-color" href="">Blog</a>
                     <ul>
                       <li>
-                        <a href="">#inthemood</a>
+                        <a className="hover:text-primary-color" href="">#inthemood</a>
                       </li>
                       <li>
-                        <a href="">#review</a>
+                        <a className="hover:text-primary-color" href="">#review</a>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </Link>
-              <Link to="/" className="px-[12px] hover:text-primary-color py-[13px]">
+              <Link to="/" className="px-[12px] hover:text-primary-color py-[25px]">
                 <a href="">Tin Tức</a>
               </Link>
-              <Link to="/" className="px-[12px] hover:text-primary-color py-[13px]">
+              <Link to="/" className="px-[12px] hover:text-primary-color py-[25px]">
                 <a href="">Liên Hệ</a>
               </Link>
             </ul>
@@ -143,7 +143,6 @@ function Header() {
           <div className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center">
             <IoCartOutline className="w-full h-full text-primary-color" />
           </div>
-
         </div>
       </div>
       {

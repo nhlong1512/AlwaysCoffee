@@ -57,6 +57,28 @@
 .border-b-custom {
   border-bottom: 1px solid #00000026;
 }
+/* 
+.after-menu::after {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  right: 552px;
+  top: 54px;
+  border-width: 23px 500px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.after-always-story::after {
+  cursor: pointer;
+    content: "";
+    position: absolute;
+    right: 442px;
+    top: 54px;
+    border-width: 23px 500px;
+    border-style: solid;
+    border-color: transparent;
+} */
 
 .menu-navbar:hover .menu-navbar-hover-list {
   top: 100%;
@@ -73,6 +95,17 @@
   left: 0;
   z-index: 99;
   color: #000;
+}
+
+.menu-navbar-hover-list::after {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: -30px;
+  border-width: 20px 26px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
 }
 
 .menu-navbar-hover-list>li {
@@ -101,8 +134,8 @@
 .menu-navbar-hover-list>li>ul>li>a {
   font-weight: 400;
   color: rgba(0, 0, 0, 0.6);
-  font-size:16px;
-  line-height:22px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 @media only screen and (min-width: 1024px) {
