@@ -140,7 +140,7 @@
   color: #e57905;
 }
 
-.menu-navbar-hover-list .menu-navbar-li>ul>li>a {
+.navbar-a-child {
   font-weight: 400;
   color: rgba(0, 0, 0, 0.6);
   font-size: 16px;

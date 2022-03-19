@@ -42,14 +42,14 @@ function Header() {
                   <Link to="/coffee" className="menu-navbar-li">
                     <a className="menu-navbar-a" href="">Cà Phê</a>
                     <ul>
-                      <li>
-                        <a className="hover:text-primary-color" href="">Cà Phê Việt Nam</a>
+                      <li className="">
+                        <a className="navbar-a-child" href="">Cà Phê Việt Nam</a>
                       </li>
                       <li>
-                        <a className="hover:text-primary-color" href="">Cà Phê Máy</a>
+                        <a className="navbar-a-child" href="">Cà Phê Máy</a>
                       </li>
                       <li>
-                        <a className="hover:text-primary-color" href="">Cold Brew</a>
+                        <a className="navbar-a-child" href="">Cold Brew</a>
                       </li>
                     </ul>
                   </Link>
@@ -57,10 +57,10 @@ function Header() {
                     <a className="menu-navbar-a" href="">Trà</a>
                     <ul>
                       <li>
-                        <a className="hover:text-primary-color" href="">Trà Trái Cây</a>
+                        <a className="navbar-a-child" href="">Trà Trái Cây</a>
                       </li>
                       <li>
-                        <a className="hover:text-primary-color" href="">Trà Sữa Macchiato</a>
+                        <a className="navbar-a-child" href="">Trà Sữa Macchiato</a>
                       </li>
                     </ul>
                   </Link>
@@ -68,13 +68,13 @@ function Header() {
                     <a className="menu-navbar-a" href="">Bánh & Snack</a>
                     <ul>
                       <li>
-                        <a className="hover:text-primary-color" href="">Bánh Mặn</a>
+                        <a className="navbar-a-child" href="">Bánh Mặn</a>
                       </li>
                       <li>
-                        <a className="hover:text-primary-color" href="">Bánh Ngọt</a>
+                        <a className="navbar-a-child" href="">Bánh Ngọt</a>
                       </li>
                       <li>
-                        <a className="hover:text-primary-color" href="">Snack</a>
+                        <a className="navbar-a-child" href="">Snack</a>
                       </li>
                     </ul>
                   </Link>
@@ -82,10 +82,10 @@ function Header() {
                     <a className="menu-navbar-a" href="">Món Khác</a>
                     <ul>
                       <li>
-                        <a className="hover:text-primary-color" href="">Đá Xay</a>
+                        <a className="navbar-a-child" href="">Đá Xay</a>
                       </li>
                       <li>
-                        <a className="hover:text-primary-color" href="">Matcha - Sô cô la</a>
+                        <a className="navbar-a-child" href="">Matcha - Sô cô la</a>
                       </li>
                     </ul>
                   </Link>
@@ -101,10 +101,10 @@ function Header() {
                     <a className="menu-navbar-a" href="">Coffeeholic</a>
                     <ul>
                       <li className="">
-                        <a className="hover:text-primary-color" href="">#chuyencaphe</a>
+                        <a className="navbar-a-child" href="">#chuyencaphe</a>
                       </li>
                       <li>
-                        <a className="hover:text-primary-color" href="">#phacaphe</a>
+                        <a className="navbar-a-child" href="">#phacaphe</a>
                       </li>
                     </ul>
                   </li>
@@ -112,10 +112,10 @@ function Header() {
                     <a className="menu-navbar-a" href="">Teaholic</a>
                     <ul>
                       <li>
-                        <a className="hover:text-primary-color" href="">#cauchuyenvetra</a>
+                        <a className="navbar-a-child" href="">#cauchuyenvetra</a>
                       </li>
                       <li>
-                        <a className="hover:text-primary-color" href="">#phatra</a>
+                        <a className="navbar-a-child" href="">#phatra</a>
                       </li>
                     </ul>
                   </li>
@@ -123,10 +123,10 @@ function Header() {
                     <a className="menu-navbar-a" href="">Blog</a>
                     <ul>
                       <li>
-                        <a className="hover:text-primary-color" href="">#inthemood</a>
+                        <a className="navbar-a-child" href="">#inthemood</a>
                       </li>
                       <li>
-                        <a className="hover:text-primary-color" href="">#review</a>
+                        <a className="navbar-a-child" href="">#review</a>
                       </li>
                     </ul>
                   </li>
