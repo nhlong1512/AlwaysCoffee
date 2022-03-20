@@ -58,6 +58,14 @@
   border-bottom: 1px solid #00000026;
 }
 
+.border-l-custom {
+  border-left: 2px solid #00000026;
+}
+
+.border-r-custom {
+  border-right: 2px solid #00000026;
+}
+
 /* 
 .after-menu::after {
   cursor: pointer;
@@ -136,7 +144,7 @@
   margin-bottom: 4px;
 }
 
-.menu-navbar-li >ul>li>a:hover {
+.menu-navbar-li>ul>li>a:hover {
   color: #e57905;
 }
 
@@ -147,9 +155,21 @@
   line-height: 22px;
 }
 
-.navbar-a-child:hover{
-  color:#e57905;
+.navbar-a-child:hover {
+  color: #e57905;
 }
+
+.sliderbar-menu-a::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  left: 30px;
+  top: 9px;
+}
+
 
 @media only screen and (min-width: 1024px) {
   .menu {

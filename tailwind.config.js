@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         'black-rgba-03': 'rgba(0, 0, 0, 0.3)',
         'black-rgba-05': 'rgba(0, 0, 0, 0.5)',
+        'black-rgba-06': 'rgba(0, 0, 0, 0.6)',
         'black-rgba-07': 'rgba(0, 0, 0, 0.7)',
         'primary-color': '#e57905',
         'main-color': '#fff7e6',
