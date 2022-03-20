@@ -8,7 +8,7 @@ function Coffee() {
   const init = useContext(InitContext)
   init.setMenuList(init.coffee);
   return (
-    <div className="bg-white pb-[48px] "
+    <div className="bg-white lg:pb-[48px] "
       onClick={() => init.setIsOpenHamburger(false)}
     >
       <div className="flex flex-col justify-center items-center">
