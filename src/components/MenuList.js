@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import Menu from './Menu'
 import InitContext from '../store/InitContext'
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
 function MenuList({ menuList }) {
   const init = useContext(InitContext)
   return (
@@ -25,14 +26,21 @@ function MenuList({ menuList }) {
           )
         }
       </div>
+
       <div className="w-[20%] hidden pr-[36px] border-r-custom lg:flex">
         <div className="sliderbar-menu">
           <ul className="flex flex-col">
-            <Link to ="/menu">
-              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="">Tất Cả</a>
+            <Link to="/menu">
+              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="" id={uuidv4()} onClick={(e) => {e.target.classList.toggle('active')}}
+              >
+                Tất Cả
+              </a>
             </Link>
-            <Link to ="/coffee">
-              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="">Cà Phê</a>
+            <Link to="/coffee">
+              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="" id={uuidv4()} onClick={(e) => {e.target.classList.toggle('active')}}
+              >
+                Cà Phê
+              </a>
               <ul>
                 <li>
                   <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Cà Phê Việt Nam</a>
@@ -46,7 +54,10 @@ function MenuList({ menuList }) {
               </ul>
             </Link>
             <Link to="/tea">
-              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="">Trà</a>
+              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="" id={uuidv4()} onClick={(e) => {e.target.classList.toggle('active')}}
+              >
+                Trà
+              </a>
               <ul>
                 <li>
                   <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Trà Trái Cây</a>
@@ -56,8 +67,11 @@ function MenuList({ menuList }) {
                 </li>
               </ul>
             </Link>
-            <Link to = "/cakeAndSnack">
-              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="">Bánh & Snack</a>
+            <Link to="/cakeAndSnack">
+              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="" id={uuidv4()} onClick={(e) => {e.target.classList.toggle('active')}}
+              >
+                Bánh & Snack
+              </a>
               <ul>
                 <li>
                   <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Bánh Mặn</a>
@@ -70,8 +84,11 @@ function MenuList({ menuList }) {
                 </li>
               </ul>
             </Link>
-            <Link to ="/another">
-              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="">Món Khác</a>
+            <Link to="/another">
+              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="" id={uuidv4()} onClick={(e) => {e.target.classList.toggle('active')}}
+              >
+                Món Khác
+              </a>
               <ul>
                 <li>
                   <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Đá Xay</a>
@@ -85,6 +102,9 @@ function MenuList({ menuList }) {
         </div>
       </div>
       <div className="lg:w-[80%] flex flex-col md:flex-row flex-wrap mb-[24px] lg:pl-[36px] ">
+        <div className="coffee-banner mx-[8px] mb-[40px] md:mx-[15px]">
+          <img className="" src="https://t4.ftcdn.net/jpg/02/34/63/15/360_F_234631554_fFopmou1B5oeEIeFZZUWLPjfXupNG5am.jpg" alt="" />
+        </div>
         {menuList.map(menu => (
           <Menu
             key={menu.id}
