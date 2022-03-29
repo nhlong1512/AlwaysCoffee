@@ -16,6 +16,9 @@
 .active {
   color: #fda337;
 }
+a.active{
+  background-color: #e57905;
+}
 
 .active-btn {
   background-color: #e57905;

@@ -4,6 +4,7 @@ const InitContext = createContext();
 // Provide Context
 export const ProviderContext = ({ children }) => {
   const [isOpenHamburger, setIsOpenHamburger] = useState(false)
+  const [activeId, setActiveId] = useState(0)
   const [initMenu, setInitMenu] = useState([
     {
       id: 0,
@@ -824,7 +825,7 @@ export const ProviderContext = ({ children }) => {
     setMenuChildren(menuList.filter(menu => menu.id === id))
   }
   return (
-    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu }}>
+    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, }}>
       {children}
     </InitContext.Provider>
   )
