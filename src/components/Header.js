@@ -5,6 +5,7 @@ import { VscChromeClose, VscThreeBars } from "react-icons/vsc"
 import Logo from '../img/LogoAlwaysEdit4.png'
 import { IoCartOutline, IoCaretDownOutline } from "react-icons/io5"
 import InitContext from '../store/InitContext'
+import CartDetail from './CartDetail'
 function Header() {
   const init = useContext(InitContext)
   const handleClickHamburger = (e) => {
@@ -140,9 +141,9 @@ function Header() {
               </Link>
             </ul>
           </div>
-          <div className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center">
+          <Link to ="/cartDetail" className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center">
             <IoCartOutline className="w-full h-full text-primary-color" />
-          </div>
+          </Link>
         </div>
       </div>
       {
