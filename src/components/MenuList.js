@@ -13,9 +13,6 @@ function MenuList({ menuList }) {
     { id: 4, content: 'Món Khác', link: '/another', contentItems: ['Đá Xay', 'Matcha - Sô cô la',], },
   ]
   
-  // { (activeId === navItem.id) ?
-  //   (document.getElementsByClassName('long').classList.add('active')) : (document.getElementsByClassName('long').classList.add(''))
-  // }
   return (
     <div className="row pt-[80px] lg:pt-[120px] block lg:flex">
       <div className="flex justify-start text-[20px] mb-[24px] mx-[18px] font-semibold text-black lg:hidden">
