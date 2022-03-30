@@ -158,7 +158,7 @@ a.active{
   line-height: 22px;
 }
 
-.navbar-a-child:hover {
+.navbar-a-child:hover .menu-navbar-a {
   color: #e57905;
 }
 

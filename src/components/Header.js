@@ -46,17 +46,16 @@ function Header() {
                 </div>
                 <ul className="menu-navbar-hover-list hidden">
                   {init.navItems.map((navItem) => (
-
                     <Link to={navItem.link}
                       className="menu-navbar-li"
                       key={navItem.id}
                       onClick={() => init.setActiveId(navItem.id)}
                     >
-                      <a className="menu-navbar-a" href="">{navItem.content}</a>
+                      <a className="menu-navbar-a">{navItem.content}</a>
                       <ul>
                         {navItem.contentItems.map((contentItem => (
                           <li>
-                            <a className="navbar-a-child" href="">{contentItem}</a>
+                            <a className="navbar-a-child">{contentItem}</a>
                           </li>
                         )))}
                       </ul>
