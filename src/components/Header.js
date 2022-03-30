@@ -31,13 +31,38 @@ function Header() {
               <Link to="/" className="px-[12px] hover:text-primary-color py-[25px]">
                 <a href="">Trang Chủ</a>
               </Link>
-              <Link to="/menu" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[25px]">
+              <Link
+                to="/menu"
+                className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[25px]"
+              >
                 <div className="flex items-center leading-[24px]">
-                  <a className="after-menu" href="">Menu</a>
+                  <a
+                    className="after-menu"
+                    onClick={() => init.setActiveId(0)}
+                  >
+                    Menu
+                  </a>
                   <span className="text-[10px] pt-[4px] pl-[4px]" ><IoCaretDownOutline /></span>
                 </div>
                 <ul className="menu-navbar-hover-list hidden">
-                  <li to ="/menu" className="menu-navbar-li">
+                  {init.navItems.map((navItem) => (
+
+                    <Link to={navItem.link}
+                      className="menu-navbar-li"
+                      key={navItem.id}
+                      onClick={() => init.setActiveId(navItem.id)}
+                    >
+                      <a className="menu-navbar-a" href="">{navItem.content}</a>
+                      <ul>
+                        {navItem.contentItems.map((contentItem => (
+                          <li>
+                            <a className="navbar-a-child" href="">{contentItem}</a>
+                          </li>
+                        )))}
+                      </ul>
+                    </Link>
+                  ))}
+                  {/* <li to="/menu" className="menu-navbar-li">
                     <a className="menu-navbar-a" href="">Tất Cả</a>
                   </li>
                   <Link to="/coffee" className="menu-navbar-li">
@@ -54,7 +79,7 @@ function Header() {
                       </li>
                     </ul>
                   </Link>
-                  <Link to = "/tea" className="menu-navbar-li">
+                  <Link to="/tea" className="menu-navbar-li">
                     <a className="menu-navbar-a" href="">Trà</a>
                     <ul>
                       <li>
@@ -65,7 +90,7 @@ function Header() {
                       </li>
                     </ul>
                   </Link>
-                  <Link to ='/cakeAndSnack' className="menu-navbar-li">
+                  <Link to='/cakeAndSnack' className="menu-navbar-li">
                     <a className="menu-navbar-a" href="">Bánh & Snack</a>
                     <ul>
                       <li>
@@ -89,7 +114,7 @@ function Header() {
                         <a className="navbar-a-child" href="">Matcha - Sô cô la</a>
                       </li>
                     </ul>
-                  </Link>
+                  </Link> */}
                 </ul>
               </Link>
               <Link to="/" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[25px]">
@@ -141,7 +166,7 @@ function Header() {
               </Link>
             </ul>
           </div>
-          <Link to ="/cartDetail" className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center">
+          <Link to="/cartDetail" className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center">
             <IoCartOutline className="w-full h-full text-primary-color" />
           </Link>
         </div>

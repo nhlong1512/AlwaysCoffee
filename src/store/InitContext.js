@@ -824,10 +824,16 @@ export const ProviderContext = ({ children }) => {
   const handleClickMenuChildren = (id) => {
     setMenuChildren(menuList.filter(menu => menu.id === id))
   }
-
+  const navItems = [
+    { id: 0, content: 'Tất Cả', link: '/menu', contentItems: [], },
+    { id: 1, content: 'Cà Phê', link: '/coffee', contentItems: ['Cà Phê Việt Nam', 'Cà Phê Máy', 'Cold Brew'], },
+    { id: 2, content: 'Trà', link: '/tea', contentItems: ['Trà Trái Cây', 'Trà Sữa Macchiato',] },
+    { id: 3, content: 'Bánh & Snack', link: '/cakeAndSnack', contentItems: ['Bánh Mặn', 'Bánh Ngọt', 'Snack'], },
+    { id: 4, content: 'Món Khác', link: '/another', contentItems: ['Đá Xay', 'Matcha - Sô cô la',], },
+  ]
   const [cartItems, setCartItems] = useState([])
   return (
-    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, }}>
+    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems}}>
       {children}
     </InitContext.Provider>
   )

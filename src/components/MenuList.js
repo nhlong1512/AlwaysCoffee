@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 function MenuList({ menuList }) {
   const init = useContext(InitContext)
-  const navItems = [
-    { id: 0, content: 'Tất Cả', link: '/menu', contentItems: [], },
-    { id: 1, content: 'Cà Phê', link: '/coffee', contentItems: ['Cà Phê Việt Nam', 'Cà Phê Máy', 'Cold Brew'], },
-    { id: 2, content: 'Trà', link: '/tea', contentItems: ['Trà Trái Cây', 'Trà Sữa Macchiato',] },
-    { id: 3, content: 'Bánh & Snack', link: '/cakeAndSnack', contentItems: ['Bánh Mặn', 'Bánh Ngọt', 'Snack'], },
-    { id: 4, content: 'Món Khác', link: '/another', contentItems: ['Đá Xay', 'Matcha - Sô cô la',], },
-  ]
+  // const navItems = [
+  //   { id: 0, content: 'Tất Cả', link: '/menu', contentItems: [], },
+  //   { id: 1, content: 'Cà Phê', link: '/coffee', contentItems: ['Cà Phê Việt Nam', 'Cà Phê Máy', 'Cold Brew'], },
+  //   { id: 2, content: 'Trà', link: '/tea', contentItems: ['Trà Trái Cây', 'Trà Sữa Macchiato',] },
+  //   { id: 3, content: 'Bánh & Snack', link: '/cakeAndSnack', contentItems: ['Bánh Mặn', 'Bánh Ngọt', 'Snack'], },
+  //   { id: 4, content: 'Món Khác', link: '/another', contentItems: ['Đá Xay', 'Matcha - Sô cô la',], },
+  // ]
   
   return (
     <div className="row pt-[80px] lg:pt-[120px] block lg:flex">
@@ -38,7 +38,7 @@ function MenuList({ menuList }) {
       <div className="w-[20%] hidden pr-[36px] border-r-custom lg:flex">
         <div className="sliderbar-menu">
           <ul className="flex flex-col">
-            {navItems.map((navItem) => (
+            {init.navItems.map((navItem) => (
               <Link to={navItem.link}
                 key={navItem.id}
                 onClick={()=>init.setActiveId(navItem.id)}
