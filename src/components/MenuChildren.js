@@ -104,7 +104,10 @@ function MenuChildren() {
             </div>
           </div>
           <div className="flex">
-            <button className="mt-[12px] flex justify-center items-center bg-[#e57905] text-white font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-100 box-shadow-custom hover:opacity-[0.8]">
+            <button 
+            className="mt-[12px] flex justify-center items-center bg-[#e57905] text-white font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-100 box-shadow-custom hover:opacity-[0.8]"
+            onClick = {() => init.onAdd(init.menuChildren[0])}
+            >
               <span className="text-[24px]">
                 <RiEBike2Line />
               </span>

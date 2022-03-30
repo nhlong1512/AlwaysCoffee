@@ -818,9 +818,9 @@ export const ProviderContext = ({ children }) => {
       type: 'Các Món Khác',
     },
   ])
-  const [menuChildren, setMenuChildren] = useState({
+  const [menuChildren, setMenuChildren] = useState([
 
-  })
+  ])
   const handleClickMenuChildren = (id) => {
     setMenuChildren(menuList.filter(menu => menu.id === id))
   }
@@ -832,8 +832,31 @@ export const ProviderContext = ({ children }) => {
     { id: 4, content: 'Món Khác', link: '/another', contentItems: ['Đá Xay', 'Matcha - Sô cô la',], },
   ]
   const [cartItems, setCartItems] = useState([])
+
+  const onAdd = (menuChildren) => {
+    const exist = cartItems.find(x => x.id === menuChildren.id)
+    if(exist) {
+      setCartItems(cartItems.map(x => x.id === x.menuChildren.id ? {...exist, qty: exist.qty + 1} : x))
+    } else {
+      setCartItems([...cartItems, {...menuChildren, qty: 1}])
+    }
+  }
+
+  const onRemove = (menuChildren) => {
+    const exist = cartItems.find((x) => x.id === menuChildren.id);
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== menuChildren.id));
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === menuChildren.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    }
+  };
+
   return (
-    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems}}>
+    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems, onAdd, }}>
       {children}
     </InitContext.Provider>
   )
