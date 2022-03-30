@@ -61,6 +61,11 @@ a.active{
   border-bottom: 1px solid #00000026;
 }
 
+.border-b-custom-95 {
+  border-bottom: 1px solid #00000026;
+  width: 95%;
+}
+
 .border-l-custom {
   border-left: 2px solid #00000026;
 }
@@ -190,6 +195,10 @@ a.active{
 
   .navbar-pc {
     display: flex;
+  }
+
+  .border-E0E{
+    border: 1px solid #E0E0E0E0;
   }
 }
 
