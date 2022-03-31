@@ -27,8 +27,8 @@ function CartDetail() {
           <div className="pt-[120px]">
             <div className="row h-[100%] rounded-[16px] bg-[#fff] ">
               {init.cartItems.map((item) => (
-                <div >
-                  <div key={item.id} className="flex py-[20px] bg-[#fff]">
+                <div key={item.id}>
+                  <div className="flex py-[20px] bg-[#fff]">
                     <div className="flex basis-[8%] justify-center items-center ">
 
                     </div>
@@ -51,7 +51,7 @@ function CartDetail() {
                           <div className="h-[30px] border-E0E rounded-[5px] flex justify-center items-center ">
                             <button
                               className="px-[6px] text-[30px] leading-[30px]"
-                              onClick={() => init.onRemove(item)}
+                              onClick={() => console.log(item.qty)}
                             >
                               -
                             </button>
