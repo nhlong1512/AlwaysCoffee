@@ -5,6 +5,27 @@ import { IoTrashOutline } from "react-icons/io5";
 function CartDetail() {
   const init = useContext(InitContext)
   const itemsPrice = init.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
+  const onAdd = (item) => {
+    const exist = init.cartItems.find(x => x.id === item.id)
+    if(exist) {
+      init.setCartItems(init.cartItems.map(x => x.id === item.id ? {...exist, qty: exist.qty + 1} : x))
+    } else {
+      init.setCartItems([...init.cartItems, {...item, qty: 1}])
+    }
+  }
+
+  const onRemove = (item) => {
+    const exist = init.cartItems.find((x) => x.id === item.id);
+    if (exist.qty === 1) {
+      init.setCartItems(init.cartItems.filter((x) => x.id !== item.id));
+    } else {
+      init.setCartItems(
+        init.cartItems.map((x) =>
+          x.id === item.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    }
+  };
   { console.log(init.cartItems) }
   return (
     <div className="bg-[#f0f0f0] pb-[80px]">
@@ -51,14 +72,14 @@ function CartDetail() {
                           <div className="h-[30px] border-E0E rounded-[5px] flex justify-center items-center ">
                             <button
                               className="px-[6px] text-[30px] leading-[30px]"
-                              onClick={() => console.log(item.id)}
+                              onClick={() => onRemove(item)}
                             >
                               -
                             </button>
                             <h2>{item.qty}</h2>
                             <button
                               className="px-[6px] text-[24px] leading-[30px]"
-                              onClick={() => init.onAdd(item)}
+                              onClick={() => onAdd(item)}
                             >
                               +
                             </button>
