@@ -24,8 +24,8 @@ function CartDetail() {
       {
         init.cartItems.length !== 0 &&
         (
-          <div className="pt-[120px]">
-            <div className="row h-[100%] rounded-[16px] bg-[#fff] ">
+          <div className="pt-[120px] flex justify-center items-center">
+            <div className="h-[100%] rounded-[16px] bg-[#fff] row">
               {init.cartItems.map((item) => (
                 <div key={item.id}>
                   <div className="flex py-[20px] bg-[#fff]">
@@ -51,7 +51,7 @@ function CartDetail() {
                           <div className="h-[30px] border-E0E rounded-[5px] flex justify-center items-center ">
                             <button
                               className="px-[6px] text-[30px] leading-[30px]"
-                              onClick={() => console.log(item.qty)}
+                              onClick={() => console.log(item.id)}
                             >
                               -
                             </button>
