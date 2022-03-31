@@ -23,7 +23,7 @@ function CartDetail() {
         init.cartItems.map((x) =>
           x.id === item.id ? { ...exist, qty: exist.qty - 1 } : x
         )
-      );
+      )
     }
   }
 
@@ -50,7 +50,7 @@ function CartDetail() {
         init.cartItems.length !== 0 &&
         (
           <div className="flex justify-center items-center">
-            <div className="h-[100%] rounded-[16px] row">
+            <div className="h-[100%] row">
               <div className="mb-[24px] text-[18px]">
                 GIỎ HÀNG ({init.cartItems.length} sản phẩm)
               </div>
@@ -78,12 +78,15 @@ function CartDetail() {
                         <div className="flex-[2] px-[10px]">
                           <div className="h-[30px] border-E0E rounded-[5px] flex justify-center items-center ">
                             <button
-                              className="px-[6px] text-[30px] leading-[30px] hover:text-primary-color"
+                              className="px-[6px] text-[30px] leading-[30px] hover:text-primary-color flex justify-center items-center text-center m-auto"
                               onClick={() => onRemove(item)}
                             >
                               -
                             </button>
-                            <h2>{item.qty}</h2>
+                            <input type="text" 
+                            value = {item.qty}
+                            className = "px-[4px] w-[30px] flex justify-center items-center text-center border-E0E-x h-[100%]"
+                            />
                             <button
                               className="px-[6px] text-[24px] leading-[30px] hover:text-primary-color"
                               onClick={() => onAdd(item)}
@@ -111,7 +114,10 @@ function CartDetail() {
                   </div>
                 </div>
               ))}
-
+              <div className="my-[24px] text-[18px]">
+                TỔNG THANH TOÁN ({init.cartItems.length} sản phẩm): &nbsp;
+                <span className="text-primary-color font-bold text-[20px]">{itemsPrice.toLocaleString()} đ</span>
+              </div>
             </div>
           </div>
         )
