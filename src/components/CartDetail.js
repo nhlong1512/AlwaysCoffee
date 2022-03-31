@@ -71,7 +71,7 @@ function CartDetail() {
                           <a>{item.name}</a>
                         </div>
                         <div>
-                          <h2 className="font-bold hover:text-primary-color">{item.price.toLocaleString()}</h2>
+                          <h2 className="font-bold hover:text-primary-color">{item.price.toLocaleString()} đ</h2>
                         </div>
                       </div>
                       <div className="flex basis-[35%] m-auto justify-center items-center">
