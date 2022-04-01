@@ -34,8 +34,30 @@ function MenuChildren() {
     document.querySelector('.btn4').classList.remove('active-btn')
     document.querySelector('.btn5').classList.toggle('active-btn')
   }
+  const onAdd = (item) => {
+    const exist = init.cartItems.find(x => x.id === item.id)
+    if (exist) {
+      init.setCartItems(init.cartItems.map(x => x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x))
+    } else {
+      init.setCartItems([...init.cartItems, { ...item, qty: 1 }])
+    }
+  }
+
+  const onRemove = (item) => {
+    const exist = init.cartItems.find((x) => x.id === item.id);
+    if (exist.qty === 1) {
+      return;
+    } else {
+      init.setCartItems(
+        init.cartItems.map((x) =>
+          x.id === item.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      )
+    }
+  }
   return (
-    <div className="flex flex-col justify-center items-center pt-[74px]">
+    <div className="flex flex-col justify-center items-center pt-[74px]"
+    onAdd = {onAdd} onRemove = {onRemove}>
       <div className="row w-100pt-48">
         <div className="flex text-[20px] mt-[26px] font-semibold md:w-100pt-48 flex-wrap leading-[36px]">
           <Link to="/menu" className="hover:text-primary-color cursor-pointer"
@@ -106,7 +128,7 @@ function MenuChildren() {
           <div className="flex">
             <button 
             className="mt-[12px] flex justify-center items-center bg-[#e57905] text-white font-semibold text-[16px] rounded-[12px] py-[12px] flex-col-100 box-shadow-custom hover:opacity-[0.8]"
-            onClick = {() => init.onAdd(init.menuChildren[0])}
+            onClick = {() => onAdd(init.menuChildren[0])}
             >
               <span className="text-[24px]">
                 <RiEBike2Line />

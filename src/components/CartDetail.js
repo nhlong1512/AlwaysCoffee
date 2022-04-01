@@ -4,7 +4,7 @@ import { IoTrashOutline } from "react-icons/io5";
 
 const CART_ITEMS_STORAGE = 'CART_ITEMS'
 
-function CartDetail() {
+function CartDetail( onAdd, onRemove ) {
   const init = useContext(InitContext)
   const itemsPrice = init.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
 
@@ -16,39 +16,21 @@ function CartDetail() {
     const storagedCartItems = localStorage.getItem(CART_ITEMS_STORAGE)
     if (storagedCartItems) {
       init.setCartItems(JSON.parse(storagedCartItems))
+      console.log(init.cartItems);
     }
   }, [])
   console.log(init.cartItems)
-
-  const onAdd = (item) => {
-    const exist = init.cartItems.find(x => x.id === item.id)
-    if (exist) {
-      init.setCartItems(init.cartItems.map(x => x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x))
-    } else {
-      init.setCartItems([...init.cartItems, { ...item, qty: 1 }])
-    }
-  }
-
-  const onRemove = (item) => {
-    const exist = init.cartItems.find((x) => x.id === item.id);
-    if (exist.qty === 1) {
-      return;
-    } else {
-      init.setCartItems(
-        init.cartItems.map((x) =>
-          x.id === item.id ? { ...exist, qty: exist.qty - 1 } : x
-        )
-      )
-    }
-  }
-
   const onDelete = (item) => {
     init.setCartItems(init.cartItems.filter((x) => x.id !== item.id));
   }
 
 
   return (
-    <div className="bg-[#f0f0f0] pb-[80px] pt-[120px] ">
+    <div
+      className="bg-[#f0f0f0] pb-[80px] pt-[120px] "
+      onAdd={onAdd}
+      onRemove={onRemove}
+    >
 
       {init.cartItems.length === 0 &&
         (<div className="pt-[120px] mx-auto flex flex-col justify-center items-center">
