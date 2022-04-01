@@ -819,7 +819,7 @@ export const ProviderContext = ({ children }) => {
       type: 'Các Món Khác',
     },
   ])
-  const [menuChildren, setMenuChildren] = useState([
+  const [menuChildren, setMenuChildren] = useLocalStorage('DETAILS_MENU_CHILDREN', [
 
   ])
   const handleClickMenuChildren = (id) => {
