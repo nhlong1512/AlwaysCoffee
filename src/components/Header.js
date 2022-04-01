@@ -5,7 +5,6 @@ import { VscChromeClose, VscThreeBars } from "react-icons/vsc"
 import Logo from '../img/LogoAlwaysEdit4.png'
 import { IoCartOutline, IoCaretDownOutline } from "react-icons/io5"
 import InitContext from '../store/InitContext'
-import CartDetail from './CartDetail'
 function Header() {
   const init = useContext(InitContext)
   const handleClickHamburger = (e) => {

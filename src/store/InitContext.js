@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react'
-import { v4 as uuidv4 } from 'uuid';
+import useLocalStorage from '../hooks/useLocalStorage'
 // Initiate Context
 const InitContext = createContext();
 // Provide Context
@@ -832,9 +832,33 @@ export const ProviderContext = ({ children }) => {
     { id: 3, content: 'Bánh & Snack', link: '/cakeAndSnack', contentItems: ['Bánh Mặn', 'Bánh Ngọt', 'Snack'], },
     { id: 4, content: 'Món Khác', link: '/another', contentItems: ['Đá Xay', 'Matcha - Sô cô la',], },
   ]
-  const [cartItems, setCartItems] = useState([])
+  const [cartItems, setCartItems] = useLocalStorage('CART_ITEMS', [
+
+  ])
+  const onAdd = (item) => {
+    const exist = cartItems.find(x => x.id === item.id)
+    if (exist) {
+      setCartItems(cartItems.map(x => x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x))
+    } else {
+      setCartItems([...cartItems, { ...item, qty: 1 }])
+    }
+  }
+
+  const onRemove = (item) => {
+    const exist = cartItems.find((x) => x.id === item.id);
+    if (exist.qty === 1) {
+      return;
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === item.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      )
+    }
+  }
+
   return (
-    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems,}}>
+    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems, onAdd, onRemove,}}>
       {children}
     </InitContext.Provider>
   )

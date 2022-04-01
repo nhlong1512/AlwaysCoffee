@@ -1,25 +1,33 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext} from 'react'
 import InitContext from '../store/InitContext'
 import { IoTrashOutline } from "react-icons/io5";
 
-const CART_ITEMS_STORAGE = 'CART_ITEMS'
-
-function CartDetail( onAdd, onRemove ) {
+function CartDetail() {
   const init = useContext(InitContext)
   const itemsPrice = init.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
 
-  useEffect(() => {
-    localStorage.setItem(CART_ITEMS_STORAGE, JSON.stringify(init.cartItems))
-  }, [init.cartItems])
-
-  useEffect(() => {
-    const storagedCartItems = localStorage.getItem(CART_ITEMS_STORAGE)
-    if (storagedCartItems) {
-      init.setCartItems(JSON.parse(storagedCartItems))
-      console.log(init.cartItems);
+  const onAdd = (item) => {
+    const exist = init.cartItems.find(x => x.id === item.id)
+    if (exist) {
+      init.setCartItems(init.cartItems.map(x => x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x))
+    } else {
+      init.setCartItems([...init.cartItems, { ...item, qty: 1 }])
     }
-  }, [])
-  console.log(init.cartItems)
+  }
+
+  const onRemove = (item) => {
+    const exist = init.cartItems.find((x) => x.id === item.id);
+    if (exist.qty === 1) {
+      return;
+    } else {
+      init.setCartItems(
+        init.cartItems.map((x) =>
+          x.id === item.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      )
+    }
+  }
+
   const onDelete = (item) => {
     init.setCartItems(init.cartItems.filter((x) => x.id !== item.id));
   }

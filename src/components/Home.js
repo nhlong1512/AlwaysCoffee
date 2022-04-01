@@ -3,7 +3,6 @@ import './Home.css'
 import { Link } from "react-router-dom"
 import OurMenuList from './OurMenuList'
 import InitContext from '../store/InitContext'
-import { RiEBike2Line } from "react-icons/ri";
 import { VscStarFull } from "react-icons/vsc"
 function Home() {
   const init = useContext(InitContext)
