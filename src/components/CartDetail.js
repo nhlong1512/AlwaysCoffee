@@ -1,10 +1,25 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import InitContext from '../store/InitContext'
 import { IoTrashOutline } from "react-icons/io5";
+
+const CART_ITEMS_STORAGE = 'CART_ITEMS'
 
 function CartDetail() {
   const init = useContext(InitContext)
   const itemsPrice = init.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
+
+  useEffect(() => {
+    localStorage.setItem(CART_ITEMS_STORAGE, JSON.stringify(init.cartItems))
+  }, [init.cartItems])
+
+  useEffect(() => {
+    const storagedCartItems = localStorage.getItem(CART_ITEMS_STORAGE)
+    if (storagedCartItems) {
+      init.setCartItems(JSON.parse(storagedCartItems))
+    }
+  }, [])
+  console.log(init.cartItems)
+
   const onAdd = (item) => {
     const exist = init.cartItems.find(x => x.id === item.id)
     if (exist) {
@@ -30,6 +45,8 @@ function CartDetail() {
   const onDelete = (item) => {
     init.setCartItems(init.cartItems.filter((x) => x.id !== item.id));
   }
+
+
   return (
     <div className="bg-[#f0f0f0] pb-[80px] pt-[120px] ">
 
@@ -83,9 +100,9 @@ function CartDetail() {
                             >
                               -
                             </button>
-                            <input type="text" 
-                            value = {item.qty}
-                            className = "px-[4px] w-[30px] flex justify-center items-center text-center border-E0E-x h-[100%]"
+                            <input type="text"
+                              value={item.qty}
+                              className="px-[4px] w-[30px] flex justify-center items-center text-center border-E0E-x h-[100%]"
                             />
                             <button
                               className="px-[6px] text-[24px] leading-[30px] hover:text-primary-color"
