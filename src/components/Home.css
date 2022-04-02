@@ -204,6 +204,13 @@ a.active{
     border-right: 1px solid #E0E0E0E0;
     border-left: 1px solid #E0E0E0E0;
   }
+  .border-product {
+    width: 95%;
+    margin: auto;
+    border-bottom-width: 1px;
+    border-bottom-color: #ededed;
+    border-bottom-style: solid;
+  }
 }
 
 @media only screen and (min-width: 768px) {
