@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 function Menu({menu}) {
   const init = useContext(InitContext)
   return (
-    <Link to ="/menuChildren" 
+    <Link to = "/menuChildren"
     className="menu text-black flex justify-between flex-col flex-col-50-16 mx-[8px] mb-[24px] min-h-[145px]"
     onClick={() =>init.handleClickMenuChildren(menu.id)}
     >

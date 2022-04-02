@@ -39,7 +39,6 @@ function CartDetail() {
       onAdd={onAdd}
       onRemove={onRemove}
     >
-
       {init.cartItems.length === 0 &&
         (<div className="pt-[120px] mx-auto flex flex-col justify-center items-center">
           <div>
@@ -56,8 +55,8 @@ function CartDetail() {
       {
         init.cartItems.length !== 0 &&
         (
-          <div className="flex justify-center items-center">
-            <div className="h-[100%] row">
+          <div className="flex justify-center items-center row">
+            <div className="w-[66.666%]">
               <div className="mb-[24px] text-[18px]">
                 GIỎ HÀNG ({init.cartItems.length} sản phẩm)
               </div>
@@ -125,6 +124,9 @@ function CartDetail() {
                 TỔNG THANH TOÁN ({init.cartItems.length} sản phẩm): &nbsp;
                 <span className="text-primary-color font-bold text-[20px]">{itemsPrice.toLocaleString()} đ</span>
               </div>
+            </div>
+            <div className="w-[33.333%]">
+
             </div>
           </div>
         )
