@@ -78,7 +78,7 @@ function CartDetail() {
                     Thành Tiền
                   </div>
                 </div>
-                <div className="bg-[#fff]">
+                <div className="bg-[#fff] rounded-[8px]">
                   {init.cartItems.map((item) => (
                     <div key={item.id}>
                       <div className="flex py-[20px]">
