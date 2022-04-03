@@ -4,7 +4,7 @@ import { IoTrashOutline } from "react-icons/io5";
 
 function CartDetail() {
   const init = useContext(InitContext)
-  const itemsPrice = init.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
+  // const itemsPrice = init.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
 
   const onAdd = (item) => {
     const exist = init.cartItems.find(x => x.id === item.id)
@@ -14,7 +14,6 @@ function CartDetail() {
       init.setCartItems([...init.cartItems, { ...item, qty: 1 }])
     }
   }
-  console.log(init.cartItems);
 
   const onRemove = (item) => {
     const exist = init.cartItems.find((x) => x.id === item.id);
@@ -33,7 +32,6 @@ function CartDetail() {
     init.setCartItems(init.cartItems.filter((x) => x.id !== item.id));
   }
 
-  console.log(init.cartItems);
 
 
   return (
@@ -146,7 +144,7 @@ function CartDetail() {
                   <div className="priceTotal">
                     <div className="flex text-[16px] px-[16px] py-[12px]">
                       <div className="basis-[65%]">Thành Tiền</div>
-                      <div className="flex basis-[35%] justify-end items-center">{itemsPrice.toLocaleString()} đ</div>
+                      <div className="flex basis-[35%] justify-end items-center">{init.itemsPrice.toLocaleString()} đ</div>
                     </div>
                     <div className="border-product"></div>
                     <div className="text-[16px] flex px-[16px] py-[12px]">
@@ -154,7 +152,7 @@ function CartDetail() {
                         Tổng Số Tiền (Gồm VAT)
                       </div>
                       <div className="flex basis-[35%] justify-end items-center">
-                        <span className="text-[22px] text-primary-color">{itemsPrice.toLocaleString()} đ</span>
+                        <span className="text-[22px] text-primary-color">{init.itemsPrice.toLocaleString()} đ</span>
                       </div>
                     </div>
                   </div>

@@ -111,12 +111,60 @@ function Header() {
               </Link>
             </ul>
           </div>
-          <Link to="/cartDetail" className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center relative">
-            <IoCartOutline className="w-full h-full text-primary-color" />
+          <div className="header-cart relative">
+            <Link to="/cartDetail" className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center">
+              <IoCartOutline className="w-full h-full text-primary-color" />
+            </Link>
             <div className="top_menu_unseen">
               {init.cartItems.length}
             </div>
-          </Link>
+            <div className="header-cart-list hidden">
+              {init.cartItems.length === 0 && (
+                <div className="w-[60%]">
+                  <img src="https://freepikpsd.com/file/2019/10/empty-cart-png-Transparent-Images.png" alt="Empty Cart" />
+                  <h2 className="text-[24px] my-[16px] mx-auto">Chưa Có Sản Phẩm</h2>
+                </div>
+              )}
+              {init.cartItems.length !== 0 && (
+                <div className="text-[#333]">
+                  <div className="my-[8px] text-[16px] mx-[8px] font-semibold">
+                    GIỎ HÀNG ({init.cartItems.length} sản phẩm)
+                  </div>
+                  <div className="border-product"></div>
+                  <ul className="pl-[0] list-none max-h-[50vh] overflow-y-auto">
+                    {init.cartItems.map((item) => (
+                      <li className="flex items-center" key={item.id}>
+                        <img src={item.image} alt={item.name} className="header-cart-img" />
+                        <div className="w-[100%] mr-[12px]">
+                          <div className="flex items-start justify-center flex-col">
+                            <h2 className="header-cart-name">{item.name}</h2>
+                            <div className="flex items-center justify-center">
+                              <h2 className="text-[14px] font-medium text-primary-color ">{item.price.toLocaleString()} đ</h2>
+                              <h2 className="text-[9px] text-[#333] mx-[4px]">x</h2>
+                              <h2 className="text-[12px] text-[#333]">{item.qty}</h2>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="p-[16px] flex justify-between">
+                    <div className="">
+                      <h2 className="text-[#333] text-[16px] font-semibold">Tổng cộng</h2>
+                      <div className="text-primary-color">
+                        <h2 className="font-semibold">{init.itemsPrice.toLocaleString()} đ</h2>
+                      </div>
+                    </div>
+                    <button className="mb-[10px] bg-primary-color rounded-[8px] py-[8px] px-[20px] hover:opacity-[0.8]">
+                      <span className="text-[16px] text-white font-semibold">
+                        Xem Giỏ Hàng
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
       {

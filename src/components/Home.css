@@ -121,6 +121,55 @@ input.checkbox-add-cart[type="checkbox"]:checked:after {
   align-items: center;
 }
 
+.header-cart-list{
+  position: absolute;
+    top: calc(100% + 10px);
+    right: -13px;
+    background-color: #fff;
+    width: 320px;
+    border-radius: 2px;
+    box-shadow: 0 2px 10px #333;
+    /* animation: fadeIn ease-in 0.3s; */
+    /* display: none; */
+}
+
+.header-cart-img{
+  width: 42px;
+  height: 42px;
+  margin: 12px;
+  border: 1px solid #E8E8E8;
+}
+
+.header-cart-name{
+  font-size: 14px;
+  line-height: 20px;
+  max-height: 40px;
+  overflow: hidden;
+  font-weight: 400;
+  margin: 0;
+  flex: 1;
+  padding-right: 16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-align: left;
+}
+
+.header-cart:hover .header-cart-list{
+  display: block;
+}
+
+.header-cart-list::after{
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: -30px;
+  border-width: 20px 26px;
+  border-style: solid;
+  border-color: transparent;
+}
+
 .menu-navbar:hover .menu-navbar-hover-list {
   top: 100%;
   visibility: visible;
