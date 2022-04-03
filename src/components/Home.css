@@ -108,7 +108,7 @@ input.checkbox-add-cart[type="checkbox"]:checked:after {
   vertical-align: top;
   position: absolute;
   top: -5px;
-  right: -5px;
+  right: -8px;
   width: 24px;
   height: 24px;
   color: white;

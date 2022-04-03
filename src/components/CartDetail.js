@@ -14,6 +14,7 @@ function CartDetail() {
       init.setCartItems([...init.cartItems, { ...item, qty: 1 }])
     }
   }
+  console.log(init.cartItems);
 
   const onRemove = (item) => {
     const exist = init.cartItems.find((x) => x.id === item.id);

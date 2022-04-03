@@ -840,7 +840,7 @@ export const ProviderContext = ({ children }) => {
     if (exist) {
       setCartItems(cartItems.map(x => x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x))
     } else {
-      setCartItems([...cartItems, { ...item, qty: 1 }])
+      setCartItems([{ ...item, qty: 1 } ,...cartItems, ])
     }
   }
 
