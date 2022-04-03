@@ -823,7 +823,7 @@ export const ProviderContext = ({ children }) => {
 
   ])
   const handleClickMenuChildren = (id) => {
-    setMenuChildren(menuList.filter(menu => menu.id === id))
+    setMenuChildren(initMenu.filter(menu => menu.id === id))
   }
   const navItems = [
     { id: 0, content: 'Tất Cả', link: '/menu', contentItems: [], },

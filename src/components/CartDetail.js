@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import InitContext from '../store/InitContext'
 import { IoTrashOutline } from "react-icons/io5";
+import { Link } from "react-router-dom"
 
 function CartDetail() {
   const init = useContext(InitContext)
-  // const itemsPrice = init.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
 
   const onAdd = (item) => {
     const exist = init.cartItems.find(x => x.id === item.id)
@@ -79,23 +79,31 @@ function CartDetail() {
                 </div>
                 <div className="bg-[#fff] rounded-[8px]">
                   {init.cartItems.map((item) => (
-                    <div key={item.id}>
+                    <div
+                      key={item.id}
+                    >
                       <div className="flex py-[20px]">
                         <div className="flex basis-[8%] justify-center items-center ">
                           <input type="checkbox" className="checkbox-add-cart" />
                         </div>
-                        <div className="p-0 flex justify-center items-center basis-[16%]">
+                        <Link to="/menuChildren"
+                          className="p-0 flex justify-center items-center basis-[16%]"
+                          onClick={() => init.handleClickMenuChildren(item.id)}
+                        >
                           <a href="">
                             <img src={item.image} alt={item.name} className="" />
                           </a>
-                        </div>
+                        </Link>
                         <div className="basis-[68%] flex">
                           <div className="flex basis-[65%] px-[20px] py-[10px] flex-col justify-between">
-                            <div className="w-[100%] font-semibold hover:text-primary-color">
+                            <Link to="/menuChildren"
+                              className="w-[100%] font-semibold hover:text-primary-color"
+                              onClick={() => init.handleClickMenuChildren(item.id)}
+                            >
                               <a>{item.name}</a>
-                            </div>
+                            </Link>
                             <div>
-                              <h2 className="font-bold hover:text-primary-color">{item.price.toLocaleString()} đ</h2>
+                              <h2 className="font-bold ">{item.price.toLocaleString()} đ</h2>
                             </div>
                           </div>
                           <div className="flex basis-[35%] m-auto justify-center items-center">

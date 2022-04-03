@@ -17,7 +17,7 @@ function Header() {
     >
       <div className="fixed z-[10] bg-white-rgba-09 top-[0] left-[0] w-screen border-b-custom">
         <div className="max-w-[1200px] flex items-center justify-between px-[24px] mx-auto">
-          <div className="navbar-tablet-mobile w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center "
+          <div className="navbar-tablet-mobile w-[64px] h-[64px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center "
             onClick={handleClickHamburger}
           >
             <VscThreeBars className="w-full h-full text-primary-color" />
@@ -43,7 +43,7 @@ function Header() {
                   </a>
                   <span className="text-[10px] pt-[4px] pl-[4px]" ><IoCaretDownOutline /></span>
                 </div>
-                <ul className="menu-navbar-hover-list hidden">
+                <ul className="fadeIn03 menu-navbar-hover-list hidden">
                   {init.navItems.map((navItem) => (
                     <Link to={navItem.link}
                       className="menu-navbar-li"
@@ -67,7 +67,7 @@ function Header() {
                   <a className="after-always-story" href="">Always Chuyện</a>
                   <span className="text-[10px] pt-[4px] pl-[4px]" ><IoCaretDownOutline /></span>
                 </div>
-                <ul className="menu-navbar-hover-list hidden">
+                <ul className="fadeIn03 menu-navbar-hover-list hidden">
                   <li className="menu-navbar-li">
                     <a className="menu-navbar-a" href="">Coffeeholic</a>
                     <ul>
@@ -133,7 +133,11 @@ function Header() {
                   <div className="border-product"></div>
                   <ul className="pl-[0] list-none max-h-[50vh] overflow-y-auto">
                     {init.cartItems.map((item) => (
-                      <li className="flex items-center" key={item.id}>
+                      <Link to ="/menuChildren"
+                        key={item.id}
+                        className="flex items-center"
+                        onClick={() =>init.handleClickMenuChildren(item.id)}
+                      >
                         <img src={item.image} alt={item.name} className="header-cart-img" />
                         <div className="w-[100%] mr-[12px]">
                           <div className="flex items-start justify-center flex-col">
@@ -145,21 +149,21 @@ function Header() {
                             </div>
                           </div>
                         </div>
-                      </li>
+                      </Link>
                     ))}
                   </ul>
-                  <div className="p-[16px] flex justify-between">
-                    <div className="">
+                  <div className="p-[16px] flex justify-between items-center">
+                    <div className="flex flex-col">
                       <h2 className="text-[#333] text-[16px] font-semibold">Tổng cộng</h2>
                       <div className="text-primary-color">
                         <h2 className="font-semibold">{init.itemsPrice.toLocaleString()} đ</h2>
                       </div>
                     </div>
-                    <button className="mb-[10px] bg-primary-color rounded-[8px] py-[8px] px-[20px] hover:opacity-[0.8]">
+                    <Link to="/cartDetail" className="flex justify-center items-center bg-primary-color rounded-[8px] py-[8px] px-[20px] hover:opacity-[0.8]">
                       <span className="text-[16px] text-white font-semibold">
                         Xem Giỏ Hàng
                       </span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               )}
