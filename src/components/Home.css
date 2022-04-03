@@ -74,28 +74,33 @@ a.active{
   border-right: 2px solid #00000026;
 }
 
-/* 
-.after-menu::after {
+input.checkbox-add-cart[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  appearance: none;
+  border: 1px solid #545759;
+  border-radius: 4px;
+  outline: none;
+  transition-duration: 0.1s;
   cursor: pointer;
-  content: "";
-  position: absolute;
-  right: 552px;
-  top: 54px;
-  border-width: 23px 500px;
-  border-style: solid;
-  border-color: transparent;
 }
 
-.after-always-story::after {
-  cursor: pointer;
-    content: "";
-    position: absolute;
-    right: 442px;
-    top: 54px;
-    border-width: 23px 500px;
-    border-style: solid;
-    border-color: transparent;
-} */
+input.checkbox-add-cart[type="checkbox"]:checked {
+  border: 0px solid #545759;
+  background-color: #e57905;
+  content: '\2714\fe0e';
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+input.checkbox-add-cart[type="checkbox"]:checked:after {
+  content: '\2714\fe0e';
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3em;
+}
 
 .menu-navbar:hover .menu-navbar-hover-list {
   top: 100%;
