@@ -60,59 +60,6 @@ function Header() {
                       </ul>
                     </Link>
                   ))}
-                  {/* <li to="/menu" className="menu-navbar-li">
-                    <a className="menu-navbar-a" href="">Tất Cả</a>
-                  </li>
-                  <Link to="/coffee" className="menu-navbar-li">
-                    <a className="menu-navbar-a" href="">Cà Phê</a>
-                    <ul>
-                      <li className="">
-                        <a className="navbar-a-child" href="">Cà Phê Việt Nam</a>
-                      </li>
-                      <li>
-                        <a className="navbar-a-child" href="">Cà Phê Máy</a>
-                      </li>
-                      <li>
-                        <a className="navbar-a-child" href="">Cold Brew</a>
-                      </li>
-                    </ul>
-                  </Link>
-                  <Link to="/tea" className="menu-navbar-li">
-                    <a className="menu-navbar-a" href="">Trà</a>
-                    <ul>
-                      <li>
-                        <a className="navbar-a-child" href="">Trà Trái Cây</a>
-                      </li>
-                      <li>
-                        <a className="navbar-a-child" href="">Trà Sữa Macchiato</a>
-                      </li>
-                    </ul>
-                  </Link>
-                  <Link to='/cakeAndSnack' className="menu-navbar-li">
-                    <a className="menu-navbar-a" href="">Bánh & Snack</a>
-                    <ul>
-                      <li>
-                        <a className="navbar-a-child" href="">Bánh Mặn</a>
-                      </li>
-                      <li>
-                        <a className="navbar-a-child" href="">Bánh Ngọt</a>
-                      </li>
-                      <li>
-                        <a className="navbar-a-child" href="">Snack</a>
-                      </li>
-                    </ul>
-                  </Link>
-                  <Link to="/another" className="menu-navbar-li">
-                    <a className="menu-navbar-a" href="">Món Khác</a>
-                    <ul>
-                      <li>
-                        <a className="navbar-a-child" href="">Đá Xay</a>
-                      </li>
-                      <li>
-                        <a className="navbar-a-child" href="">Matcha - Sô cô la</a>
-                      </li>
-                    </ul>
-                  </Link> */}
                 </ul>
               </Link>
               <Link to="/" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[25px]">
@@ -164,8 +111,11 @@ function Header() {
               </Link>
             </ul>
           </div>
-          <Link to="/cartDetail" className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center">
+          <Link to="/cartDetail" className="w-[50px] h-[50px] opacity-[1] z-[1] cursor-pointer flex justify-center items-center relative">
             <IoCartOutline className="w-full h-full text-primary-color" />
+            <div className="top_menu_unseen">
+              {init.cartItems.length}
+            </div>
           </Link>
         </div>
       </div>

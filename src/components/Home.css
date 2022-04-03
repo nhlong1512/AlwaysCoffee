@@ -102,6 +102,25 @@ input.checkbox-add-cart[type="checkbox"]:checked:after {
   font-size: 1.3em;
 }
 
+.top_menu_unseen {
+  background-color: #e57905;
+  border-radius: 12px;
+  vertical-align: top;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 24px;
+  height: 24px;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 0;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
 .menu-navbar:hover .menu-navbar-hover-list {
   top: 100%;
   visibility: visible;

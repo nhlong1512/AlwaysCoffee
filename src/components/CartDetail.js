@@ -141,7 +141,7 @@ function CartDetail() {
               </div>
               {/* Section Payment */}
               <div className="w-[33.333%] pl-[24px] ">
-                <div className="bg-[#fff] rounded-[8px] pt-[12px] pb-[12px]">
+                <div className="bg-[#fff] rounded-[8px] pt-[12px] pb-[12px] sticky top-[90px]">
                   <div className="priceTotal">
                     <div className="flex text-[16px] px-[16px] py-[12px]">
                       <div className="basis-[65%]">Thành Tiền</div>
@@ -159,7 +159,7 @@ function CartDetail() {
                   </div>
                   <div className="text-center">
                     <div className="px-[16px]">
-                      <button className="w-[100%] mb-[10px] bg-primary-color rounded-[8px] py-[10px] px-[20px]">
+                      <button className="w-[100%] mb-[10px] bg-primary-color rounded-[8px] py-[10px] px-[20px] hover:opacity-[0.8]">
                         <span className="text-[18px] text-white font-semibold">
                           THANH TOÁN
                         </span>
