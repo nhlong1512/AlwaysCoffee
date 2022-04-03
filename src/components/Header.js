@@ -127,11 +127,11 @@ function Header() {
               )}
               {init.cartItems.length !== 0 && (
                 <div className="text-[#333]">
-                  <div className="my-[8px] text-[16px] mx-[8px] font-semibold">
+                  <div className="my-[8px] text-[16px] ml-[12px] mr-[8px] font-semibold">
                     GIỎ HÀNG ({init.cartItems.length} sản phẩm)
                   </div>
                   <div className="border-product"></div>
-                  <ul className="pl-[0] list-none max-h-[50vh] overflow-y-auto">
+                  <ul className="list-none max-h-[50vh] overflow-y-auto mt-[4px]">
                     {init.cartItems.map((item) => (
                       <Link to ="/menuChildren"
                         key={item.id}
