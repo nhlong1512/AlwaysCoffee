@@ -14,7 +14,7 @@ function OurMenu({ourMenu}) {
       </div>
       <p className="text-[16px] mb-[4px] mt-[12px] font-bold hover:text-primary-color">{ourMenu.name}</p>
       <div className="text-[14px] mb-[10px]">
-        <p>{ourMenu.price} đ</p>
+        <p>{ourMenu.price.toLocaleString()} đ</p>
       </div>
     </Link>
   )
