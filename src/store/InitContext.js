@@ -686,7 +686,7 @@ export const ProviderContext = ({ children }) => {
   const [ourMenu, setOurMenu] = useState(
     [
       {
-        id: 1,
+        id: 0,
         image: 'https://product.hstatic.net/1000075078/product/ca-phe-den-da_6e25255ae31c4f3bbbb502f77e2c100d_large.jpg',
         name: 'Cà Phê Đen Đá',
         price: 29000,

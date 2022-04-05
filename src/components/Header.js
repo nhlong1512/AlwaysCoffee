@@ -53,7 +53,9 @@ function Header() {
                       <a className="menu-navbar-a">{navItem.content}</a>
                       <ul>
                         {navItem.contentItems.map((contentItem => (
-                          <li>
+                          <li
+                            key={contentItem.id}
+                          >
                             <a className="navbar-a-child">{contentItem}</a>
                           </li>
                         )))}

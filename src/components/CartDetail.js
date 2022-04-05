@@ -11,7 +11,7 @@ function CartDetail() {
     if (exist) {
       init.setCartItems(init.cartItems.map(x => x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x))
     } else {
-      init.setCartItems([{ ...item, qty: 1, isChecked: false }, ...init.cartItems])
+      init.setCartItems([{ ...item, qty: 1 }, ...init.cartItems])
     }
   }
 
