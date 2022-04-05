@@ -11,6 +11,7 @@ function Header() {
     init.setIsOpenHamburger(!init.isOpenHamburger)
     e.stopPropagation()
   }
+  const totalPrice = init.cartItems.reduce((a, c) => (a + c.qty * c.price), 0)
   return (
     <div className=""
       onClick={() => init.setIsOpenHamburger(false)}
@@ -161,7 +162,7 @@ function Header() {
                     <div className="flex flex-col">
                       <h2 className="text-[#333] text-[16px] font-semibold">Tổng cộng</h2>
                       <div className="text-primary-color">
-                        <h2 className="font-semibold">{init.itemsPrice.toLocaleString()} đ</h2>
+                        <h2 className="font-semibold">{totalPrice.toLocaleString()} đ</h2>
                       </div>
                     </div>
                     <Link to="/cartDetail" className="flex justify-center items-center bg-primary-color rounded-[8px] py-[8px] px-[20px] hover:opacity-[0.8]">

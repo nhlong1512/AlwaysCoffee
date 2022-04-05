@@ -1,4 +1,4 @@
-import React, { useContext, useState, useCallback, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import InitContext from '../store/InitContext'
 import { IoTrashOutline } from "react-icons/io5";
 import { Link } from "react-router-dom"
@@ -72,6 +72,7 @@ function CartDetail() {
     handleOnCheckedToOnCheckedAll();
   }, [init.cartItems])
 
+  const itemsPrice = init.cartItems.reduce((a, c) =>c.isChecked ? (a + c.qty * c.price) : a, 0)
 
   return (
     <div
@@ -201,7 +202,7 @@ function CartDetail() {
                   <div className="priceTotal">
                     <div className="flex text-[16px] px-[16px] py-[12px]">
                       <div className="flex justify-start items-center basis-[65%]">Thành Tiền</div>
-                      <div className="flex basis-[35%] justify-end items-center">{init.itemsPrice.toLocaleString()} đ</div>
+                      <div className="flex basis-[35%] justify-end items-center">{itemsPrice.toLocaleString()} đ</div>
                     </div>
                     <div className="border-product"></div>
                     <div className="text-[16px] flex px-[16px] py-[12px]">
@@ -209,7 +210,7 @@ function CartDetail() {
                         Tổng Số Tiền (Gồm VAT)
                       </div>
                       <div className="flex basis-[35%] justify-end items-center">
-                        <span className="text-[22px] text-primary-color">{init.itemsPrice.toLocaleString()} đ</span>
+                        <span className="text-[22px] text-primary-color font-semibold">{itemsPrice.toLocaleString()} đ</span>
                       </div>
                     </div>
                   </div>

@@ -1138,12 +1138,10 @@ export const ProviderContext = ({ children }) => {
     }
   }
 
-  const itemsPrice = cartItems.reduce((a, c) =>c.isChecked ? (a + c.qty * c.price) : a, 0)
-
   const [isCheckedAll, setIsCheckedAll] = useLocalStorage('IS_CHECKED_ALL', false)
 
   return (
-    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems, onAdd, onRemove, itemsPrice, isCheckedAll, setIsCheckedAll, }}>
+    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems, onAdd, onRemove, isCheckedAll, setIsCheckedAll}}>
       {children}
     </InitContext.Provider>
   )
