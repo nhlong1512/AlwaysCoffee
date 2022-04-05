@@ -32,28 +32,30 @@ function CartDetail() {
     init.setCartItems(init.cartItems.filter((x) => x.id !== item.id));
   }
 
+  //Handle On Checked All
   const handleOnCheckedAll = () => {
     init.setIsCheckedAll(!init.isCheckedAll)
   }
-  
-  useEffect(() => {
-    handleOnCheckedAllToOnChecked();
-  }, [init.isCheckedAll])
-
-  const handleOnChecked = (id) => {
-    init.setCartItems(prev => prev.map(x => x.id === id ? { ...x, isChecked: !x.isChecked } : x)
-    )
-  }
-  useEffect(() => {
-    handleOnCheckedToOnCheckedAll();
-  }, [init.cartItems])
 
   const handleOnCheckedAllToOnChecked = () => {
     if (init.isCheckedAll === true) {
       init.setCartItems(prev => prev.map(item => item.isChecked === false ? { ...item, isChecked: !item.isChecked } : item))
-    } else {
-      init.setCartItems(prev => prev.map(item => item.isChecked === true ? { ...item, isChecked: !item.isChecked } : item))
     }
+    else {
+      if (init.cartItems.find(x => x.isChecked === false) === undefined) {
+        init.setCartItems(prev => prev.map(item => item.isChecked === true ? { ...item, isChecked: !item.isChecked } : item))
+      }
+    }
+  }
+
+  useEffect(() => {
+    handleOnCheckedAllToOnChecked();
+  }, [init.isCheckedAll])
+
+  // Handle On Checked Children
+  const handleOnChecked = (id) => {
+    init.setCartItems(prev => prev.map(x => x.id === id ? { ...x, isChecked: !x.isChecked } : x)
+    )
   }
 
   const handleOnCheckedToOnCheckedAll = () => {
@@ -66,6 +68,9 @@ function CartDetail() {
     init.setIsCheckedAll(flag);
   }
 
+  useEffect(() => {
+    handleOnCheckedToOnCheckedAll();
+  }, [init.cartItems])
 
 
   return (
