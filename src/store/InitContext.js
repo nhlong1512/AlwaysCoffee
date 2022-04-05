@@ -13,6 +13,7 @@ export const ProviderContext = ({ children }) => {
       name: 'Bạc Sỉu Đá',
       price: 29000,
       type: 'Cà Phê',
+      
     },
     {
       id: 1,
@@ -690,6 +691,7 @@ export const ProviderContext = ({ children }) => {
         name: 'Cà Phê Đen Đá',
         price: 29000,
         type: 'Cà Phê',
+
       },
       {
         id: 1,
@@ -697,6 +699,7 @@ export const ProviderContext = ({ children }) => {
         name: 'Caramel Macchiato Đá',
         price: 49000,
         type: 'Cà Phê',
+
       },
       {
         id: 23,
@@ -704,6 +707,7 @@ export const ProviderContext = ({ children }) => {
         name: 'Trà Sữa Mắc Ca Trân Châu Trắng',
         price: 49000,
         type: 'Trà',
+
       },
       {
         id: 14,
@@ -711,6 +715,7 @@ export const ProviderContext = ({ children }) => {
         name: 'Trà Hạt Sen Đá',
         price: 45000,
         type: 'Trà',
+
       },
       {
         id: 25,
@@ -718,6 +723,7 @@ export const ProviderContext = ({ children }) => {
         name: 'Bánh Mì VN Thịt Nguội',
         price: 29000,
         type: 'Bánh & Snack',
+
       },
       {
         id: 27,
@@ -725,6 +731,7 @@ export const ProviderContext = ({ children }) => {
         name: 'Croissant Trứng Muối',
         price: 35000,
         type: 'Bánh & Snack',
+
       },
       {
         id: 32,
@@ -732,6 +739,7 @@ export const ProviderContext = ({ children }) => {
         name: 'Mousse Gấu Chocolate',
         price: 39000,
         type: 'Bánh & Snack',
+
       },
       {
         id: 38,
@@ -739,6 +747,7 @@ export const ProviderContext = ({ children }) => {
         name: 'Chanh Sả Đá Xay',
         price: 49000,
         type: 'Các Món Khác',
+
       },
       {
         id: 41,
@@ -746,6 +755,7 @@ export const ProviderContext = ({ children }) => {
         name: 'Đào Việt Quất Đá Xay',
         price: 58000,
         type: 'Các Món Khác',
+
       },
     ])
   const [coffee, setCoffee] = useState([
@@ -1111,7 +1121,7 @@ export const ProviderContext = ({ children }) => {
     if (exist) {
       setCartItems(cartItems.map(x => x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x))
     } else {
-      setCartItems([{ ...item, qty: 1 }, ...cartItems,])
+      setCartItems([{ ...item, qty: 1, isChecked: false }, ...cartItems])
     }
   }
 

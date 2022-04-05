@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import InitContext from '../store/InitContext'
 import { IoTrashOutline } from "react-icons/io5";
 import { Link } from "react-router-dom"
@@ -11,7 +11,7 @@ function CartDetail() {
     if (exist) {
       init.setCartItems(init.cartItems.map(x => x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x))
     } else {
-      init.setCartItems([...init.cartItems, { ...item, qty: 1 }])
+      init.setCartItems([{ ...item, qty: 1, isChecked: false }, ...init.cartItems])
     }
   }
 
@@ -32,6 +32,7 @@ function CartDetail() {
     init.setCartItems(init.cartItems.filter((x) => x.id !== item.id));
   }
 
+  console.log(init.cartItems);
 
 
   return (
