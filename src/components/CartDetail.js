@@ -37,14 +37,29 @@ function CartDetail() {
     init.setIsCheckedAll(!init.isCheckedAll)
   }
   const handleOnChecked = (id) => {
-    init.setCartItems(prev => prev.map(x => x.id === id ? { ...x, isChecked: !x.isChecked } : x))
+    init.setCartItems(prev => prev.map(x => x.id === id ? { ...x, isChecked: !x.isChecked } : x)
+    )
   }
 
-  if(init.isCheckedAll) {
-    init.setCartItems(prev => prev.map(x => [...x, {isChecked: !x.isChecked}]))
+  const handleOnCheckedAllToOnChecked = () => {
+    if (init.isCheckedAll === true) {
+      init.setCartItems(prev => prev.map(item => item.isChecked === false ? { ...item, isChecked: !item.isChecked } : item))
+    } else {
+      init.setCartItems(prev => prev.map(item => item.isChecked === true ? { ...item, isChecked: !item.isChecked } : item))
+    }
   }
-  console.log(init.isCheckedAll);
-  console.log(init.cartItems);
+
+  const handleOnCheckedToOnCheckedAll = () => {
+    let flag = true;
+    for (let i = 0; i < init.cartItems.length; i++) {
+      if (init.cartItems[i].isChecked === false) {
+        flag = false;
+        init.setIsCheckedAll(false);
+      }
+    }
+    init.setIsCheckedAll(flag);
+  }
+
 
 
   return (
