@@ -120,9 +120,12 @@ function Header() {
             </div>
             <div className="header-cart-list hidden">
               {init.cartItems.length === 0 && (
-                <div className="w-[60%]">
-                  <img src="https://freepikpsd.com/file/2019/10/empty-cart-png-Transparent-Images.png" alt="Empty Cart" />
-                  <h2 className="text-[24px] my-[16px] mx-auto">Chưa Có Sản Phẩm</h2>
+                <div className="w-[100%] flex justify-center items-center flex-col">
+                  <img 
+                  src="https://freepikpsd.com/file/2019/10/empty-cart-png-Transparent-Images.png" 
+                  alt="Empty Cart" 
+                  className = "p-[24px] pb-[0]"/>
+                  <h2 className="text-[24px] mt-[8px] mb-[24px] mx-auto">Chưa Có Sản Phẩm Nào</h2>
                 </div>
               )}
               {init.cartItems.length !== 0 && (
