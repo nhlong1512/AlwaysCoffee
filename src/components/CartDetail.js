@@ -1,4 +1,4 @@
-import React, { useContext, useState, useCallback } from 'react'
+import React, { useContext, useState, useCallback, useEffect } from 'react'
 import InitContext from '../store/InitContext'
 import { IoTrashOutline } from "react-icons/io5";
 import { Link } from "react-router-dom"
@@ -32,14 +32,21 @@ function CartDetail() {
     init.setCartItems(init.cartItems.filter((x) => x.id !== item.id));
   }
 
-
   const handleOnCheckedAll = () => {
     init.setIsCheckedAll(!init.isCheckedAll)
   }
+  
+  useEffect(() => {
+    handleOnCheckedAllToOnChecked();
+  }, [init.isCheckedAll])
+
   const handleOnChecked = (id) => {
     init.setCartItems(prev => prev.map(x => x.id === id ? { ...x, isChecked: !x.isChecked } : x)
     )
   }
+  useEffect(() => {
+    handleOnCheckedToOnCheckedAll();
+  }, [init.cartItems])
 
   const handleOnCheckedAllToOnChecked = () => {
     if (init.isCheckedAll === true) {
@@ -54,7 +61,6 @@ function CartDetail() {
     for (let i = 0; i < init.cartItems.length; i++) {
       if (init.cartItems[i].isChecked === false) {
         flag = false;
-        init.setIsCheckedAll(false);
       }
     }
     init.setIsCheckedAll(flag);
@@ -97,7 +103,7 @@ function CartDetail() {
                       type="checkbox"
                       className="checkbox-add-cart"
                       checked={init.isCheckedAll}
-                      onChange={handleOnCheckedAll}
+                      onClick={handleOnCheckedAll}
                     />
                   </div>
                   <div className="flex basis-[62%] font-medium">
@@ -121,7 +127,7 @@ function CartDetail() {
                             type="checkbox"
                             className="checkbox-add-cart"
                             checked={item.isChecked}
-                            onChange={() => handleOnChecked(item.id)}
+                            onClick={() => handleOnChecked(item.id)}
                           />
                         </div>
                         <Link to="/menuChildren"
@@ -189,12 +195,12 @@ function CartDetail() {
                 <div className="bg-[#fff] rounded-[8px] pt-[12px] pb-[12px] sticky top-[90px]">
                   <div className="priceTotal">
                     <div className="flex text-[16px] px-[16px] py-[12px]">
-                      <div className="basis-[65%]">Thành Tiền</div>
+                      <div className="flex justify-start items-center basis-[65%]">Thành Tiền</div>
                       <div className="flex basis-[35%] justify-end items-center">{init.itemsPrice.toLocaleString()} đ</div>
                     </div>
                     <div className="border-product"></div>
                     <div className="text-[16px] flex px-[16px] py-[12px]">
-                      <div className="basis-[65%] font-semibold">
+                      <div className="flex justify-start items-center basis-[65%] font-semibold">
                         Tổng Số Tiền (Gồm VAT)
                       </div>
                       <div className="flex basis-[35%] justify-end items-center">
