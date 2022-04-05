@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useCallback } from 'react'
 import InitContext from '../store/InitContext'
 import { IoTrashOutline } from "react-icons/io5";
 import { Link } from "react-router-dom"
@@ -11,7 +11,7 @@ function CartDetail() {
     if (exist) {
       init.setCartItems(init.cartItems.map(x => x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x))
     } else {
-      init.setCartItems([{ ...item, qty: 1 }, ...init.cartItems])
+      init.setCartItems([{ ...item, qty: 1, isChecked: false }, ...init.cartItems])
     }
   }
 
@@ -32,13 +32,18 @@ function CartDetail() {
     init.setCartItems(init.cartItems.filter((x) => x.id !== item.id));
   }
 
-  const [isCheckedAll, setIsCheckedAll] = useState(false)
 
   const handleOnCheckedAll = () => {
-    setIsCheckedAll(!isCheckedAll)
+    init.setIsCheckedAll(!init.isCheckedAll)
   }
-  console.log(isCheckedAll);
+  const handleOnChecked = (id) => {
+    init.setCartItems(prev => prev.map(x => x.id === id ? { ...x, isChecked: !x.isChecked } : x))
+  }
 
+  if(init.isCheckedAll) {
+    init.setCartItems(prev => prev.map(x => [...x, {isChecked: !x.isChecked}]))
+  }
+  console.log(init.isCheckedAll);
   console.log(init.cartItems);
 
 
@@ -76,7 +81,7 @@ function CartDetail() {
                     <input
                       type="checkbox"
                       className="checkbox-add-cart"
-                      checked={isCheckedAll}
+                      checked={init.isCheckedAll}
                       onChange={handleOnCheckedAll}
                     />
                   </div>
@@ -97,7 +102,12 @@ function CartDetail() {
                     >
                       <div className="flex py-[20px]">
                         <div className="flex basis-[8%] justify-center items-center ">
-                          <input type="checkbox" className="checkbox-add-cart" />
+                          <input
+                            type="checkbox"
+                            className="checkbox-add-cart"
+                            checked={item.isChecked}
+                            onChange={() => handleOnChecked(item.id)}
+                          />
                         </div>
                         <Link to="/menuChildren"
                           className="p-0 flex justify-center items-center basis-[16%]"
@@ -113,7 +123,7 @@ function CartDetail() {
                               className="w-[100%] font-semibold hover:text-primary-color"
                               onClick={() => init.handleClickMenuChildren(item.id)}
                             >
-                              <div className ="cursor-pointer">{item.name}</div>
+                              <div className="cursor-pointer">{item.name}</div>
                             </Link>
                             <div>
                               <h2 className="font-bold ">{item.price.toLocaleString()} đ</h2>
