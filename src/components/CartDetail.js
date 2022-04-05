@@ -32,6 +32,13 @@ function CartDetail() {
     init.setCartItems(init.cartItems.filter((x) => x.id !== item.id));
   }
 
+  const [isCheckedAll, setIsCheckedAll] = useState(false)
+
+  const handleOnCheckedAll = () => {
+    setIsCheckedAll(!isCheckedAll)
+  }
+  console.log(isCheckedAll);
+
   console.log(init.cartItems);
 
 
@@ -66,7 +73,12 @@ function CartDetail() {
               <div className="w-[66.666%] rounded-[8px]">
                 <div className="flex mb-[16px] rounded-[8px] py-[10px] bg-[#fff]">
                   <div className="flex basis-[8%] justify-center items-center ">
-                    <input type="checkbox" className="checkbox-add-cart" />
+                    <input
+                      type="checkbox"
+                      className="checkbox-add-cart"
+                      checked={isCheckedAll}
+                      onChange={handleOnCheckedAll}
+                    />
                   </div>
                   <div className="flex basis-[62%] font-medium">
                     Chọn Tất Cả ({init.cartItems.length} sản phẩm)
@@ -91,9 +103,9 @@ function CartDetail() {
                           className="p-0 flex justify-center items-center basis-[16%]"
                           onClick={() => init.handleClickMenuChildren(item.id)}
                         >
-                          <a href="">
+                          <div className="cursor-pointer">
                             <img src={item.image} alt={item.name} className="" />
-                          </a>
+                          </div>
                         </Link>
                         <div className="basis-[68%] flex">
                           <div className="flex basis-[65%] px-[20px] py-[10px] flex-col justify-between">
@@ -101,7 +113,7 @@ function CartDetail() {
                               className="w-[100%] font-semibold hover:text-primary-color"
                               onClick={() => init.handleClickMenuChildren(item.id)}
                             >
-                              <a>{item.name}</a>
+                              <div className ="cursor-pointer">{item.name}</div>
                             </Link>
                             <div>
                               <h2 className="font-bold ">{item.price.toLocaleString()} đ</h2>
@@ -137,9 +149,9 @@ function CartDetail() {
                           className="flex basis-[8%] items-center justify-center cursor-pointer"
                           onClick={() => onDelete(item)}
                         >
-                          <a className="text-[24px] hover:text-primary-color">
+                          <div className="text-[24px] hover:text-primary-color cursor-pointer">
                             <IoTrashOutline />
-                          </a>
+                          </div>
                         </div>
                       </div>
                       <div className="border-product"></div>
