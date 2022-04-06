@@ -13,7 +13,7 @@ export const ProviderContext = ({ children }) => {
       name: 'Bạc Sỉu Đá',
       price: 29000,
       type: 'Cà Phê',
-      
+
     },
     {
       id: 1,
@@ -135,7 +135,7 @@ export const ProviderContext = ({ children }) => {
       type: 'Trà',
     },
     {
-      id: 18,
+      id: 10,
       image: 'https://product.hstatic.net/1000075078/product/caramel-macchiato-da_fa2503073e5c4f7a98516f1c9d39253b_large.jpg',
       name: 'Caramel Macchiato Đá',
       price: 49000,
@@ -318,27 +318,13 @@ export const ProviderContext = ({ children }) => {
     },
     {
       id: 44,
-      image: 'https://product.hstatic.net/1000075078/product/chocolate-ice-blended_183602_400x400_142587be6f4f4dd0885ba746fd4a8c1a_large.jpg',
-      name: 'Chocolate Đá Xay',
-      price: 58000,
-      type: 'Các Món Khác',
-    },
-    {
-      id: 45,
-      image: 'https://product.hstatic.net/1000075078/product/matchadaxay_622077_400x400_5c617ff524e64e638ad7c868613a832b_large.jpg',
-      name: 'Matcha Đá Xay',
-      price: 58000,
-      type: 'Các Món Khác',
-    },
-    {
-      id: 46,
       image: 'https://product.hstatic.net/1000075078/product/chocolate-da_877186_400x400_30a43c54fe484ecfbd606937604ef351_large.jpg',
       name: 'Chocolate Đá',
       price: 58000,
       type: 'Các Món Khác',
     },
     {
-      id: 47,
+      id: 45,
       image: 'https://product.hstatic.net/1000075078/product/matcha-latte-da_083173_400x400_5725292025844c5da25a91d6e9b05a4b_large.jpg',
       name: 'Matcha Latte Đá',
       price: 58000,
@@ -352,6 +338,7 @@ export const ProviderContext = ({ children }) => {
       name: 'Bạc Sỉu Đá',
       price: 29000,
       type: 'Cà Phê',
+
     },
     {
       id: 1,
@@ -473,7 +460,7 @@ export const ProviderContext = ({ children }) => {
       type: 'Trà',
     },
     {
-      id: 18,
+      id: 10,
       image: 'https://product.hstatic.net/1000075078/product/caramel-macchiato-da_fa2503073e5c4f7a98516f1c9d39253b_large.jpg',
       name: 'Caramel Macchiato Đá',
       price: 49000,
@@ -656,37 +643,22 @@ export const ProviderContext = ({ children }) => {
     },
     {
       id: 44,
-      image: 'https://product.hstatic.net/1000075078/product/chocolate-ice-blended_183602_400x400_142587be6f4f4dd0885ba746fd4a8c1a_large.jpg',
-      name: 'Chocolate Đá Xay',
-      price: 58000,
-      type: 'Các Món Khác',
-    },
-    {
-      id: 45,
-      image: 'https://product.hstatic.net/1000075078/product/matchadaxay_622077_400x400_5c617ff524e64e638ad7c868613a832b_large.jpg',
-      name: 'Matcha Đá Xay',
-      price: 58000,
-      type: 'Các Món Khác',
-    },
-    {
-      id: 46,
       image: 'https://product.hstatic.net/1000075078/product/chocolate-da_877186_400x400_30a43c54fe484ecfbd606937604ef351_large.jpg',
       name: 'Chocolate Đá',
       price: 58000,
       type: 'Các Món Khác',
     },
     {
-      id: 47,
+      id: 45,
       image: 'https://product.hstatic.net/1000075078/product/matcha-latte-da_083173_400x400_5725292025844c5da25a91d6e9b05a4b_large.jpg',
       name: 'Matcha Latte Đá',
       price: 58000,
       type: 'Các Món Khác',
     },
   ])
-  const [ourMenu, setOurMenu] = useState(
-    [
+  const [ourMenu, setOurMenu] = useState([
       {
-        id: 0,
+        id: 1,
         image: 'https://product.hstatic.net/1000075078/product/ca-phe-den-da_6e25255ae31c4f3bbbb502f77e2c100d_large.jpg',
         name: 'Cà Phê Đen Đá',
         price: 29000,
@@ -694,7 +666,7 @@ export const ProviderContext = ({ children }) => {
 
       },
       {
-        id: 1,
+        id: 10,
         image: 'https://product.hstatic.net/1000075078/product/caramel-macchiato-da_fa2503073e5c4f7a98516f1c9d39253b_large.jpg',
         name: 'Caramel Macchiato Đá',
         price: 49000,
@@ -1140,7 +1112,7 @@ export const ProviderContext = ({ children }) => {
 
 
   return (
-    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems, onAdd, onRemove,}}>
+    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems, onAdd, onRemove, }}>
       {children}
     </InitContext.Provider>
   )

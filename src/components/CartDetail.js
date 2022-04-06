@@ -34,7 +34,6 @@ function CartDetail() {
     init.setCartItems(init.cartItems.filter((x) => x.id !== item.id));
   }
 
-
   //Handle On Checked All
   const handleOnCheckedAll = () => {
     setIsCheckedAll(!isCheckedAll)
