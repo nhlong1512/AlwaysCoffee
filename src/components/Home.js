@@ -88,7 +88,7 @@ function Home() {
                   </div>
                   <div>
                     <img
-                      src="https://f17-zpc.zdn.vn/3726462895640412840/f1c0a8c209dac6849fcb.jpg" alt="Long-Image"
+                      src="https://scontent.fsgn8-1.fna.fbcdn.net/v/t39.30808-6/216500312_1431202730612723_8052427917213494357_n.jpg?_nc_cat=102&_nc_map=control&ccb=1-5&_nc_sid=174925&_nc_ohc=FUJD-KeeTrQAX_cYy3T&_nc_ht=scontent.fsgn8-1.fna&oh=00_AT-zpwF1c67KKRfn9Pw-mq-KoEJJnaC4MDzpHMdb5dKiXg&oe=625206C4" alt="Long-Image"
                       className="w-[150px] rounded-[100px]" />
                   </div>
                 </div>
@@ -111,7 +111,7 @@ function Home() {
                   </div>
                   <div>
                     <img
-                      src="https://f19-zpc.zdn.vn/3288745191852983150/37756e6ccf74002a5965.jpg" alt="Son-Image"
+                      src="https://scontent.fsgn8-2.fna.fbcdn.net/v/t39.30808-6/273207302_1790112117992087_6199733184652810403_n.jpg?_nc_cat=100&_nc_map=control&ccb=1-5&_nc_sid=730e14&_nc_ohc=gsui0qzcd9EAX-0TFYV&_nc_ht=scontent.fsgn8-2.fna&oh=00_AT99wF6gt3VisJIM1opa1BPZEUBEec-S1nvRJuAewUNtog&oe=6252346E" alt="Son-Image"
                       className="w-[150px] h-[150px] rounded-[100px]" />
                   </div>
                 </div>
