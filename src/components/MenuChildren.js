@@ -60,7 +60,7 @@ function MenuChildren() {
         </div>
         <div className="grow-0 shrink-0 basis-[50%] md:ml-[12px]">
           <h1 className="text-[24px] font-semibold mb-[8px]">{init.menuChildren[0].name}</h1>
-          <h2 className="text-[32px] text-[#e57905] font-semibold leading-[24px]">{init.menuChildren[0].price} đ</h2>
+          <h2 className="text-[32px] text-[#e57905] font-semibold leading-[24px]">{init.menuChildren[0].price.toLocaleString()} đ</h2>
           <div>
             <p className="mb-[8px] mt-[24px] font-medium">Kích Thước</p>
             <div className="flex flex-col lg:flex-row">

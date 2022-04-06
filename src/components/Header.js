@@ -124,10 +124,10 @@ function Header() {
             <div className="header-cart-list hidden">
               {init.cartItems.length === 0 && (
                 <div className="w-[100%] flex justify-center items-center flex-col">
-                  <img 
-                  src="https://freepikpsd.com/file/2019/10/empty-cart-png-Transparent-Images.png" 
-                  alt="Empty Cart" 
-                  className = "p-[24px] pb-[0]"/>
+                  <img
+                    src="https://freepikpsd.com/file/2019/10/empty-cart-png-Transparent-Images.png"
+                    alt="Empty Cart"
+                    className="p-[24px] pb-[0]" />
                   <h2 className="text-[24px] mt-[8px] mb-[24px] mx-auto">Chưa Có Sản Phẩm Nào</h2>
                 </div>
               )}
@@ -139,20 +139,20 @@ function Header() {
                   <div className="border-product"></div>
                   <ul className="list-none max-h-[50vh] overflow-y-auto mt-[4px]">
                     {init.cartItems.map((item) => (
-                      <Link to ="/menuChildren"
+                      <Link to="/menuChildren"
                         key={item.id}
                         className="flex items-center"
-                        onClick={() =>init.handleClickMenuChildren(item.id)}
+                        onClick={() => init.handleClickMenuChildren(item.id)}
                       >
                         <img src={item.image} alt={item.name} className="header-cart-img" />
                         <div className="w-[100%] mr-[12px]">
                           <div className="flex items-start justify-center flex-col">
                             <h2 className="header-cart-name">{item.name}</h2>
                             <div className="flex items-center justify-center">
-                              <h2 className="text-[14px] font-medium text-primary-color ">{item.price} đ</h2>
+                              <h2 className="text-[14px] font-medium text-primary-color ">{item.price.toLocaleString()} đ</h2>
                               <h2 className="text-[9px] text-[#333] mx-[4px]">x</h2>
                               <h2 className="text-[12px] text-[#333]">{item.qty}</h2>
-                            </div>
+                            </div> 
                           </div>
                         </div>
                       </Link>
@@ -162,7 +162,7 @@ function Header() {
                     <div className="flex flex-col">
                       <h2 className="text-[#333] text-[16px] font-semibold">Tổng cộng</h2>
                       <div className="text-primary-color">
-                        <h2 className="font-semibold">{totalPrice} đ</h2>
+                        <h2 className="font-semibold">{totalPrice.toLocaleString()} đ</h2>
                       </div>
                     </div>
                     <Link to="/cartDetail" className="flex justify-center items-center bg-primary-color rounded-[8px] py-[8px] px-[20px] hover:opacity-[0.8]">

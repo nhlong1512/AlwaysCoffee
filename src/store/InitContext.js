@@ -657,79 +657,79 @@ export const ProviderContext = ({ children }) => {
     },
   ])
   const [ourMenu, setOurMenu] = useState([
-      {
-        id: 1,
-        image: 'https://product.hstatic.net/1000075078/product/ca-phe-den-da_6e25255ae31c4f3bbbb502f77e2c100d_large.jpg',
-        name: 'Cà Phê Đen Đá',
-        price: 29000,
-        type: 'Cà Phê',
+    {
+      id: 1,
+      image: 'https://product.hstatic.net/1000075078/product/ca-phe-den-da_6e25255ae31c4f3bbbb502f77e2c100d_large.jpg',
+      name: 'Cà Phê Đen Đá',
+      price: 29000,
+      type: 'Cà Phê',
 
-      },
-      {
-        id: 10,
-        image: 'https://product.hstatic.net/1000075078/product/caramel-macchiato-da_fa2503073e5c4f7a98516f1c9d39253b_large.jpg',
-        name: 'Caramel Macchiato Đá',
-        price: 49000,
-        type: 'Cà Phê',
+    },
+    {
+      id: 10,
+      image: 'https://product.hstatic.net/1000075078/product/caramel-macchiato-da_fa2503073e5c4f7a98516f1c9d39253b_large.jpg',
+      name: 'Caramel Macchiato Đá',
+      price: 49000,
+      type: 'Cà Phê',
 
-      },
-      {
-        id: 23,
-        image: 'https://product.hstatic.net/1000075078/product/tra-sua-mac-ca_377522_400x400_123ab6b1593d4e5c83776a54f6862bbd_large.jpg',
-        name: 'Trà Sữa Mắc Ca Trân Châu Trắng',
-        price: 49000,
-        type: 'Trà',
+    },
+    {
+      id: 23,
+      image: 'https://product.hstatic.net/1000075078/product/tra-sua-mac-ca_377522_400x400_123ab6b1593d4e5c83776a54f6862bbd_large.jpg',
+      name: 'Trà Sữa Mắc Ca Trân Châu Trắng',
+      price: 49000,
+      type: 'Trà',
 
-      },
-      {
-        id: 14,
-        image: 'https://product.hstatic.net/1000075078/product/tra-sen_905594_400x400_c82fd1b3786d45f380cf4c15e9af7ab9_large.jpg',
-        name: 'Trà Hạt Sen Đá',
-        price: 45000,
-        type: 'Trà',
+    },
+    {
+      id: 14,
+      image: 'https://product.hstatic.net/1000075078/product/tra-sen_905594_400x400_c82fd1b3786d45f380cf4c15e9af7ab9_large.jpg',
+      name: 'Trà Hạt Sen Đá',
+      price: 45000,
+      type: 'Trà',
 
-      },
-      {
-        id: 25,
-        image: 'https://product.hstatic.net/1000075078/product/banh-mi-vn-thit-nguoi_5e777a62ef2841bd9a5baf85c6970166_large.jpg',
-        name: 'Bánh Mì VN Thịt Nguội',
-        price: 29000,
-        type: 'Bánh & Snack',
+    },
+    {
+      id: 25,
+      image: 'https://product.hstatic.net/1000075078/product/banh-mi-vn-thit-nguoi_5e777a62ef2841bd9a5baf85c6970166_large.jpg',
+      name: 'Bánh Mì VN Thịt Nguội',
+      price: 29000,
+      type: 'Bánh & Snack',
 
-      },
-      {
-        id: 27,
-        image: 'https://product.hstatic.net/1000075078/product/croissant-trung-muoi_880850_400x400_0d8d5e787de8423cb0e60455651a17ee_large.jpg',
-        name: 'Croissant Trứng Muối',
-        price: 35000,
-        type: 'Bánh & Snack',
+    },
+    {
+      id: 27,
+      image: 'https://product.hstatic.net/1000075078/product/croissant-trung-muoi_880850_400x400_0d8d5e787de8423cb0e60455651a17ee_large.jpg',
+      name: 'Croissant Trứng Muối',
+      price: 35000,
+      type: 'Bánh & Snack',
 
-      },
-      {
-        id: 32,
-        image: 'https://product.hstatic.net/1000075078/product/mousse-gau-chocolate_e25675d96c504dacb88f4e56a54ab48b_large.jpg',
-        name: 'Mousse Gấu Chocolate',
-        price: 39000,
-        type: 'Bánh & Snack',
+    },
+    {
+      id: 32,
+      image: 'https://product.hstatic.net/1000075078/product/mousse-gau-chocolate_e25675d96c504dacb88f4e56a54ab48b_large.jpg',
+      name: 'Mousse Gấu Chocolate',
+      price: 39000,
+      type: 'Bánh & Snack',
 
-      },
-      {
-        id: 38,
-        image: 'https://product.hstatic.net/1000075078/product/chanh-sa-da-xay_170980_400x400_2c8af8d0cfff43b78a93924d28a1215f_large.jpg',
-        name: 'Chanh Sả Đá Xay',
-        price: 49000,
-        type: 'Các Món Khác',
+    },
+    {
+      id: 38,
+      image: 'https://product.hstatic.net/1000075078/product/chanh-sa-da-xay_170980_400x400_2c8af8d0cfff43b78a93924d28a1215f_large.jpg',
+      name: 'Chanh Sả Đá Xay',
+      price: 49000,
+      type: 'Các Món Khác',
 
-      },
-      {
-        id: 41,
-        image: 'https://product.hstatic.net/1000075078/product/daovietquat_033985_400x400_20bfc56b971c47dca8734514a4765675_large.jpg',
-        name: 'Đào Việt Quất Đá Xay',
-        price: 58000,
-        type: 'Các Món Khác',
+    },
+    {
+      id: 41,
+      image: 'https://product.hstatic.net/1000075078/product/daovietquat_033985_400x400_20bfc56b971c47dca8734514a4765675_large.jpg',
+      name: 'Đào Việt Quất Đá Xay',
+      price: 58000,
+      type: 'Các Món Khác',
 
-      },
-    ])
+    },
+  ])
   const [coffee, setCoffee] = useState([
     {
       id: 0,
@@ -860,7 +860,7 @@ export const ProviderContext = ({ children }) => {
       type: 'Trà',
     },
     {
-      id: 18,
+      id: 10,
       image: 'https://product.hstatic.net/1000075078/product/caramel-macchiato-da_fa2503073e5c4f7a98516f1c9d39253b_large.jpg',
       name: 'Caramel Macchiato Đá',
       price: 49000,
@@ -1047,27 +1047,13 @@ export const ProviderContext = ({ children }) => {
     },
     {
       id: 44,
-      image: 'https://product.hstatic.net/1000075078/product/chocolate-ice-blended_183602_400x400_142587be6f4f4dd0885ba746fd4a8c1a_large.jpg',
-      name: 'Chocolate Đá Xay',
-      price: 58000,
-      type: 'Các Món Khác',
-    },
-    {
-      id: 45,
-      image: 'https://product.hstatic.net/1000075078/product/matchadaxay_622077_400x400_5c617ff524e64e638ad7c868613a832b_large.jpg',
-      name: 'Matcha Đá Xay',
-      price: 58000,
-      type: 'Các Món Khác',
-    },
-    {
-      id: 46,
       image: 'https://product.hstatic.net/1000075078/product/chocolate-da_877186_400x400_30a43c54fe484ecfbd606937604ef351_large.jpg',
       name: 'Chocolate Đá',
       price: 58000,
       type: 'Các Món Khác',
     },
     {
-      id: 47,
+      id: 45,
       image: 'https://product.hstatic.net/1000075078/product/matcha-latte-da_083173_400x400_5725292025844c5da25a91d6e9b05a4b_large.jpg',
       name: 'Matcha Latte Đá',
       price: 58000,

@@ -5,13 +5,6 @@ import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 function MenuList({ menuList }) {
   const init = useContext(InitContext)
-  // const navItems = [
-  //   { id: 0, content: 'Tất Cả', link: '/menu', contentItems: [], },
-  //   { id: 1, content: 'Cà Phê', link: '/coffee', contentItems: ['Cà Phê Việt Nam', 'Cà Phê Máy', 'Cold Brew'], },
-  //   { id: 2, content: 'Trà', link: '/tea', contentItems: ['Trà Trái Cây', 'Trà Sữa Macchiato',] },
-  //   { id: 3, content: 'Bánh & Snack', link: '/cakeAndSnack', contentItems: ['Bánh Mặn', 'Bánh Ngọt', 'Snack'], },
-  //   { id: 4, content: 'Món Khác', link: '/another', contentItems: ['Đá Xay', 'Matcha - Sô cô la',], },
-  // ]
   
   return (
     <div className="row pt-[80px] lg:pt-[120px] block lg:flex">
@@ -67,76 +60,6 @@ function MenuList({ menuList }) {
               </Link>
             ))}
           </ul>
-          {/*<ul className="flex flex-col">
-            <Link to="/menu" >
-              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color"
-              >
-                Tất Cả
-              </a>
-            </Link>
-            <Link to="/coffee">
-              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color"
-              >
-                Cà Phê
-              </a>
-              <ul>
-                <li>
-                  <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Cà Phê Việt Nam</a>
-                </li>
-                <li>
-                  <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Cà Phê Máy</a>
-                </li>
-                <li>
-                  <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Cold Brew</a>
-                </li>
-              </ul>
-            </Link>
-            <Link to="/tea">
-              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="/tea"
-              >
-                Trà
-              </a>
-              <ul>
-                <li>
-                  <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Trà Trái Cây</a>
-                </li>
-                <li>
-                  <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Trà Sữa Macchiato</a>
-                </li>
-              </ul>
-            </Link>
-            <Link to="/cakeAndSnack">
-              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="/cakeAndSnack"
-              >
-                Bánh & Snack
-              </a>
-              <ul>
-                <li>
-                  <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Bánh Mặn</a>
-                </li>
-                <li>
-                  <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Bánh Ngọt</a>
-                </li>
-                <li>
-                  <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Snack</a>
-                </li>
-              </ul>
-            </Link>
-            <Link to="/another">
-              <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color" href="/another"
-              >
-                Món Khác
-              </a>
-              <ul>
-                <li>
-                  <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Đá Xay</a>
-                </li>
-                <li>
-                  <a className="sliderbar-menu-a text-black-rgba-06 pl-[42px] relative pb-[8px] leading-[22px] hover:text-primary-color" href="">Matcha - Sô cô la</a>
-                </li>
-              </ul>
-            </Link>
-          </ul> */}
         </div>
       </div>
       <div className="lg:w-[80%] flex flex-col md:flex-row flex-wrap mb-[24px] lg:pl-[36px] ">

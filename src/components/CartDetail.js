@@ -157,7 +157,7 @@ function CartDetail() {
                               <div className="cursor-pointer">{item.name}</div>
                             </Link>
                             <div>
-                              <h2 className="font-bold ">{item.price} đ</h2>
+                              <h2 className="font-bold ">{item.price.toLocaleString()} đ</h2>
                             </div>
                           </div>
                           <div className="flex basis-[35%] m-auto justify-center items-center">
@@ -182,7 +182,7 @@ function CartDetail() {
                               </div>
                             </div>
                             <div className="flex flex-[3] items-center justify-center">
-                              <h2 className="text-[16px] text-primary-color font-bold">{(item.price * item.qty)} đ</h2>
+                              <h2 className="text-[16px] text-primary-color font-bold">{(item.price * item.qty).toLocaleString()} đ</h2>
                             </div>
                           </div>
                         </div>
@@ -206,7 +206,7 @@ function CartDetail() {
                   <div className="priceTotal">
                     <div className="flex text-[16px] px-[16px] py-[12px]">
                       <div className="flex justify-start items-center basis-[65%]">Thành Tiền</div>
-                      <div className="flex basis-[35%] justify-end items-center">{itemsPrice} đ</div>
+                      <div className="flex basis-[35%] justify-end items-center">{itemsPrice.toLocaleString()} đ</div>
                     </div>
                     <div className="border-product"></div>
                     <div className="text-[16px] flex px-[16px] py-[12px]">
@@ -214,7 +214,7 @@ function CartDetail() {
                         Tổng Số Tiền (Gồm VAT)
                       </div>
                       <div className="flex basis-[35%] justify-end items-center">
-                        <span className="text-[22px] text-primary-color font-semibold">{itemsPrice} đ</span>
+                        <span className="text-[22px] text-primary-color font-semibold">{itemsPrice.toLocaleString()} đ</span>
                       </div>
                     </div>
                   </div>
