@@ -1,10 +1,12 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import InitContext from '../store/InitContext'
 import { IoTrashOutline } from "react-icons/io5";
 import { Link } from "react-router-dom"
 
 function CartDetail() {
   const init = useContext(InitContext)
+
+  const [isCheckedAll, setIsCheckedAll] = useState(false)
 
   const onAdd = (item) => {
     const exist = init.cartItems.find(x => x.id === item.id)
@@ -35,11 +37,11 @@ function CartDetail() {
 
   //Handle On Checked All
   const handleOnCheckedAll = () => {
-    init.setIsCheckedAll(!init.isCheckedAll)
+    setIsCheckedAll(!isCheckedAll)
   }
 
   const handleOnCheckedAllToOnChecked = () => {
-    if (init.isCheckedAll === true) {
+    if (isCheckedAll === true) {
       init.setCartItems(prev => prev.map(item => item.isChecked === false ? { ...item, isChecked: !item.isChecked } : item))
     }
     else {
@@ -51,7 +53,7 @@ function CartDetail() {
 
   useEffect(() => {
     handleOnCheckedAllToOnChecked();
-  }, [init.isCheckedAll])
+  }, [isCheckedAll])
 
   // Handle On Checked Children
   const handleOnChecked = (id) => {
@@ -67,16 +69,13 @@ function CartDetail() {
         flag = false;
       }
     }
-    init.setIsCheckedAll(flag);
+    setIsCheckedAll(flag);
   }
 
   useEffect(() => {
     handleOnCheckedToOnCheckedAll();
   }, [init.cartItems])
 
-  if (init.cartItems.length === 0) {
-    init.setIsCheckedAll(false)
-  }
 
   const itemsPrice = init.cartItems.reduce((a, c) => c.isChecked ? (a + c.qty * c.price) : a, 0)
 
@@ -114,7 +113,7 @@ function CartDetail() {
                     <input
                       type="checkbox"
                       className="checkbox-add-cart"
-                      checked={init.isCheckedAll}
+                      checked={isCheckedAll}
                       onClick={handleOnCheckedAll}
                     />
                   </div>
