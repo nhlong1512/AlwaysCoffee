@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 function MenuList({ menuList }) {
   const init = useContext(InitContext)
-  
   return (
     <div className="row pt-[80px] lg:pt-[120px] block lg:flex">
       <div className="flex justify-start text-[20px] mb-[24px] mx-[18px] font-semibold text-black lg:hidden">
@@ -34,19 +33,19 @@ function MenuList({ menuList }) {
             {init.navItems.map((navItem) => (
               <Link to={navItem.link}
                 key={navItem.id}
-                onClick={()=>init.setActiveId(navItem.id)}
+                onClick={() => init.setActiveId(navItem.id)}
               >
-              {init.activeId === navItem.id ? (
-                <a className="pl-[26px] pb-[8px] leading-[22px] text-primary-color"
-                >
-                  {navItem.content}
-                </a>
-              ) : (
-                <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color"
-                >
-                  {navItem.content}
-                </a>
-              ) }
+                {init.activeId === navItem.id ? (
+                  <a className="pl-[26px] pb-[8px] leading-[22px] text-primary-color"
+                  >
+                    {navItem.content}
+                  </a>
+                ) : (
+                  <a className="text-black-rgba-06 pl-[26px] pb-[8px] leading-[22px] hover:text-primary-color"
+                  >
+                    {navItem.content}
+                  </a>
+                )}
                 <ul>
                   {navItem.contentItems.map((contentItem) => (
                     <li

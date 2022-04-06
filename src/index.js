@@ -7,13 +7,16 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import reportWebVitals from './reportWebVitals';
 import { ProviderContext } from './store/InitContext'
+import ScrollToTop from './components/scrollToTop';
 
 ReactDOM.render(
   <BrowserRouter>
     <ProviderContext>
+    <ScrollToTop>
       <Header />
       <App />
       <Footer />
+      </ScrollToTop>
     </ProviderContext>
   </BrowserRouter>,
   document.getElementById('root')

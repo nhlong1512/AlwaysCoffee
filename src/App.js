@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, } from "react-router-dom";
 import './App.css';
 import Home from './components/Home'
 import Coffee from './components/Coffee'
@@ -8,7 +8,6 @@ import Another from './components/Another'
 import MenuChildren from './components/MenuChildren'
 import InitMenu from './components/InitMenu'
 import CartDetail from './components/CartDetail'
-
 function App() {
   return (
     <Routes >

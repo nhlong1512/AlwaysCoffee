@@ -6,34 +6,6 @@ import InitContext from '../store/InitContext'
 import { VscStarFull } from "react-icons/vsc"
 function Home() {
   const init = useContext(InitContext)
-  const handleClickCoffee = () => {
-    init.setMenuList(init.coffee)
-    document.querySelector('.coffee').classList.add('active')
-    document.querySelector('.tea').classList.remove('active')
-    document.querySelector('.cakeAndSnack').classList.remove('active')
-    document.querySelector('.another').classList.remove('active')
-  }
-  const handleClickTea = () => {
-    init.setMenuList(init.tea)
-    document.querySelector('.coffee').classList.remove('active')
-    document.querySelector('.tea').classList.add('active')
-    document.querySelector('.cakeAndSnack').classList.remove('active')
-    document.querySelector('.another').classList.remove('active')
-  }
-  const handleClickCakeAndSnack = () => {
-    init.setMenuList(init.cakeAndSnack)
-    document.querySelector('.coffee').classList.remove('active')
-    document.querySelector('.tea').classList.remove('active')
-    document.querySelector('.cakeAndSnack').classList.add('active')
-    document.querySelector('.another').classList.remove('active')
-  }
-  const handleClickAnother = () => {
-    init.setMenuList(init.another)
-    document.querySelector('.coffee').classList.remove('active')
-    document.querySelector('.tea').classList.remove('active')
-    document.querySelector('.cakeAndSnack').classList.remove('active')
-    document.querySelector('.another').classList.add('active')
-  }
   return (
     <div className=""
       onClick={() => init.setIsOpenHamburger(false)}

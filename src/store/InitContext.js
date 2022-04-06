@@ -1096,7 +1096,6 @@ export const ProviderContext = ({ children }) => {
     }
   }
 
-
   return (
     <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems, onAdd, onRemove, }}>
       {children}
