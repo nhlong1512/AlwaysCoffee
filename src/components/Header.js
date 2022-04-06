@@ -149,7 +149,7 @@ function Header() {
                           <div className="flex items-start justify-center flex-col">
                             <h2 className="header-cart-name">{item.name}</h2>
                             <div className="flex items-center justify-center">
-                              <h2 className="text-[14px] font-medium text-primary-color ">{item.price.toLocaleString()} đ</h2>
+                              <h2 className="text-[14px] font-medium text-primary-color ">{item.price} đ</h2>
                               <h2 className="text-[9px] text-[#333] mx-[4px]">x</h2>
                               <h2 className="text-[12px] text-[#333]">{item.qty}</h2>
                             </div>
@@ -162,7 +162,7 @@ function Header() {
                     <div className="flex flex-col">
                       <h2 className="text-[#333] text-[16px] font-semibold">Tổng cộng</h2>
                       <div className="text-primary-color">
-                        <h2 className="font-semibold">{totalPrice.toLocaleString()} đ</h2>
+                        <h2 className="font-semibold">{totalPrice} đ</h2>
                       </div>
                     </div>
                     <Link to="/cartDetail" className="flex justify-center items-center bg-primary-color rounded-[8px] py-[8px] px-[20px] hover:opacity-[0.8]">
