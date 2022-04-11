@@ -7,7 +7,8 @@ function CartDetail() {
   const init = useContext(InitContext)
 
   const [isCheckedAll, setIsCheckedAll] = useState(false)
-
+  const [qty, setQty] = useState(1);
+ 
   const onAdd = (item) => {
     const exist = init.cartItems.find(x => x.id === item.id)
     if (exist) {
@@ -76,6 +77,10 @@ function CartDetail() {
   }, [init.cartItems])
 
 
+  // const onKeyPressQty = (item) => {
+    
+  // }
+
   const itemsPrice = init.cartItems.reduce((a, c) => c.isChecked ? (a + c.qty * c.price) : a, 0)
 
   return (
@@ -116,10 +121,10 @@ function CartDetail() {
                       onClick={handleOnCheckedAll}
                     />
                   </div>
-                  <div className="flex basis-[62%] font-medium">
+                  <div className="flex basis-[59%] font-medium">
                     Chọn Tất Cả ({init.cartItems.length} sản phẩm)
                   </div>
-                  <div className="flex basis-[13%] font-medium">
+                  <div className="flex basis-[15%] font-medium">
                     Số Lượng
                   </div>
                   <div className="flex basis-[17%] font-medium">
@@ -149,7 +154,7 @@ function CartDetail() {
                           </div>
                         </Link>
                         <div className="basis-[68%] flex">
-                          <div className="flex basis-[65%] px-[20px] py-[10px] flex-col justify-between">
+                          <div className="flex basis-[60%] px-[20px] py-[10px] flex-col justify-between">
                             <Link to="/menuChildren"
                               className="w-[100%] font-semibold hover:text-primary-color"
                               onClick={() => init.handleClickMenuChildren(item.id)}
@@ -160,7 +165,7 @@ function CartDetail() {
                               <h2 className="font-bold ">{item.price.toLocaleString()} đ</h2>
                             </div>
                           </div>
-                          <div className="flex basis-[35%] m-auto justify-center items-center">
+                          <div className="flex basis-[40%] m-auto justify-center items-center">
                             <div className="flex-[2] px-[10px]">
                               <div className="h-[30px] border-E0E rounded-[5px] flex justify-center items-center ">
                                 <button
@@ -172,6 +177,7 @@ function CartDetail() {
                                 <input type="text"
                                   value={item.qty}
                                   className="px-[4px] w-[30px] flex justify-center items-center text-center border-E0E-x h-[100%]"
+                                  // onKeyPress={() => onKeyPressQty(item)}
                                 />
                                 <button
                                   className="px-[6px] text-[24px] leading-[30px] hover:text-primary-color"
