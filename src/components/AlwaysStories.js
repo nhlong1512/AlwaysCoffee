@@ -1,7 +1,9 @@
 import { React, useContext } from 'react';
 import { Link } from "react-router-dom"
 import InitContext from '../store/InitContext'
-function AlwaysStories() {
+import AlwaysStory from './AlwaysStory'
+
+function AlwaysStories(alwaysStories) {
   const init = useContext(InitContext)
   return (
     <div className="bg-[#f0f0f0] pb-[80px] pt-[120px] flex justify-center"
@@ -19,10 +21,22 @@ function AlwaysStories() {
               key={storyItem.id}
               onClick={() => init.setActiveId(storyItem.id)}
             >
-              <a href="" className="button-tab-story">{storyItem.content}</a>
+              {init.activeId === storyItem.id ? (
+                <a href="" className="button-tab-story bg-primary-color">{storyItem.content}</a>
+              ) : (
+                <a href="" className="button-tab-story hover:bg-primary-color">{storyItem.content}</a>
+              )}
             </Link>
           ))}
         </ul>
+      </div>
+      <div>
+        {alwaysStories.map(alwaysStory => (
+          <AlwaysStory
+            key={alwaysStory.id}
+            alwaysStory={alwaysStory}
+          />
+        ))}
       </div>
     </div>
   )

@@ -9,6 +9,9 @@ import MenuChildren from './components/MenuChildren'
 import InitMenu from './components/InitMenu'
 import CartDetail from './components/CartDetail'
 import AlwaysStories from './components/AlwaysStories'
+import Coffeeholic from './components/Coffeeholic'
+import Teaholic from './components/Teaholic'
+import Blog from './components/Blog'
 function App() {
   return (
     <Routes >
@@ -21,6 +24,10 @@ function App() {
       <Route path="/menuChildren" element={<MenuChildren />} />
       <Route path="/cartDetail" element={<CartDetail />} />
       <Route path="/alwaysStories" element={<AlwaysStories />} />
+      <Route path="/alwaysCoffeeholic" element={<Coffeeholic />} />
+      <Route path="/alwaysTeaholic" element={<Teaholic />} />
+      <Route path="/alwaysBlog" element={<Blog />} />
+      
     </Routes>
   );
 }

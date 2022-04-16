@@ -65,9 +65,14 @@ function Header() {
                   ))}
                 </ul>
               </Link>
-              <Link to="/alwaysStories" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[25px]">
+              <Link to="/alwaysCoffeeholic" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[25px]">
                 <div className="flex items-center leading-[24px]">
-                  <a className="after-always-story" href="">Always Chuyện</a>
+                  <a
+                    className="after-always-story"
+                    onClick={() => init.setActiveId(0)}
+                  >
+                    Always Chuyện
+                  </a>
                   <span className="text-[10px] pt-[4px] pl-[4px]" ><IoCaretDownOutline /></span>
                 </div>
                 <ul className="fadeIn03 menu-navbar-hover-list hidden">
@@ -75,7 +80,7 @@ function Header() {
                     <Link to={storyItem.link}
                       className="menu-navbar-li"
                       key={storyItem.id}
-                      onClick={() => init.setActiveId(storyItem.id)}
+                      // onClick={() => init.setActiveId(storyItem.id)}
                     >
                       <a className="menu-navbar-a">{storyItem.content}</a>
                       <ul>
@@ -194,7 +199,7 @@ function Header() {
             <Link to="/another" className="leading-[40px] list-none hover:text-white">
               <a href="">Món Khác</a>
             </Link>
-            <Link to="/alwaysStories" className="leading-[40px] list-none hover:text-white">
+            <Link to="/alwaysCoffeeholic" className="leading-[40px] list-none hover:text-white">
               <a href="">Always Chuyện</a>
             </Link>
             <Link to="/" className="leading-[40px] list-none hover:text-white">

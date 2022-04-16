@@ -1060,7 +1060,233 @@ export const ProviderContext = ({ children }) => {
       type: 'Các Món Khác',
     },
   ])
+  const [initStory, setInitStory] = useState([
+    {
+      id: 0,
+      title: 'CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ ROBUSTA NGUYÊN CHẤT DỄ DÀNG NHẤT',
+      subtitle: 'Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng, không quá khó để có thể nhận ra hương vị của loại cà phê trứ danh này.',
+      image: 'https://file.hstatic.net/1000075078/article/thecoffehouse_ca_phe_01_b4adbd88db6e4ca3b7c2c5934d1a1ed9_master.jpg',
+      type: 'coffeeholic'
+    },
+    {
+      id: 1,
+      title: 'CÁCH PHA CÀ PHÊ PHIN THƠM NGON TRÒN VỊ',
+      subtitle: 'Có nhiều cách để pha một ly cà phê ngon, nhưng đối với nhiều người Việt giây phút đợi chờ những giọt cà phê rơi từ chiếc phin đã trở thành nét văn hóa ăn sâu trong tiềm thức. Để tạo nên một ly cà phê phin chuẩn vị, không chỉ cần sự tinh tế trong cách chọn loại cà phê mà còn cả sự tỉ mỉ trong từng bước pha.',
+      imgae: 'https://file.hstatic.net/1000075078/article/thecoffeehouse_caphe_2_aacf152c62064c40ab804a66ffc706d1_master.jpg',
+      type: 'coffeeholic'
+    },
+    {
+      id: 2,
+      title: '8 LỢI ÍCH BẤT NGỜ CỦA CÀ PHÊ COLD BREW',
+      subtitle: 'Cold brew là thức uống rất được yêu thích trong thời gian gần đây. Không chỉ có hương thơm đặc trưng và vị lôi cuốn, nó còn có nhiều lợi ích cho sức khỏe. Cùng The Coffee House tìm hiểu 8 lợi ích nổi bật của loại cà phê lạnh siêu hot này. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/img_8668_grande-1_accad1e4fa37487881277df2fae1ef4a_master.jpg',
+      type: 'coffeeholic'
+    },
+    {
+      id: 3,
+      title: 'TẠI SAO CÀ PHÊ CÓ VỊ CHUA?',
+      subtitle: 'Nhiều người khi uống cà phê cảm thấy có vị chua thường e ngại rằng cà phê hỏng, kém chất lượng hay gặp các vấn đề trong quá trình pha chế và bảo quản. Tuy nhiên, điều này chưa chính xác. Cả hương vị của Arabica hay Robusta nguyên chất, trải qua quá trình chế biến, rang xay đều có vị chua nhẹ. Vậy nên, cà phê có vị chua chua, vẫn giữ được hương thơm đặc trưng vốn có của nó thì bạn có thể yên tâm đó không phải là cà phê hỏng. The Coffee House sẽ chỉ ra những lý do khiến cà phê có vị chua tự nhiên. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61e6d5a3a5d26_7b6959cb5b1e4716a4a60869dae53074_master.jpg',
+      type: 'coffeeholic'
+    },
+    {
+      id: 4,
+      title: 'KỸ THUẬT TRỒNG CÂY CÀ PHÊ NĂNG SUẤT, CHẤT LƯỢNG CAO',
+      subtitle: 'Cà phê sẽ càng ngon khi được trồng ở vùng đất cao nguyên, nơi có khí hậu nhiệt đới nóng ẩm, mưa nhiều, đất đai màu mỡ. Nó có khả năng phát triển tốt ở nơi có nhiều ánh sáng, độ pH lý tưởng ở mức 6 - 6.5, đặc biệt để hạt cà phê cho năng suất và chất lượng cao, cần phải lưu ý các kỹ thuật  trồng trọt sau. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61e2dbe1d15cb_f703352d67824cd298ff927cdba56aa9_master.jpg',
+      type: 'coffeeholic'
+    },
+    {
+      id: 5,
+      title: 'CHỌN NHIỆT ĐỘ NƯỚC ĐỂ PHA TRÀ ĐÚNG CHUẨN CHUYÊN GIA',
+      subtitle: 'Tùy thuộc vào từng loại trà, cần sử dụng nước sôi với nhiệt độ tương thích để khi pha chế có thể khơi dậy đầy đủ hương vị thơm ngon của trà. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/thecoffeehouse_nuoc_pha_tra_07_4aff69297bfa4bbab42f18b27c2c11f0_master.jpg',
+      type: 'teaholic'
+    },
+    {
+      id: 6,
+      title: 'CÁCH KHAI ẤM TỬ SA ĐỂ GỢI VỊ NGON CỦA TRÀ',
+      subtitle: 'Đối với giới trà đạo đã quá quen thuộc với ấm tử sa vì nó nổi tiếng là loại ấm pha trà ngon bậc nhất. Pha trà bằng ấm tử sa thì hương vị của trà được hấp thụ một cách trọn vẹn và nếu như đã thưởng thức một lần thì thật khó quên. Thế nhưng, để đạt được điều tuyệt vời đó, việc đầu tiên và rất quan trọng đó là phải biết khai ấm tử sa đúng cách. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/thecoffeehouse_amtusa_07_e9d40a62b6524ed7b5c3232c5031a493_master.jpg',
+      type: 'teaholic'
+    },
+    {
+      id: 7,
+      title: 'KHÁC BIỆT CƠ BẢN GIỮA TRÀ XANH VÀ TRÀ ĐEN',
+      subtitle: 'Trà xanh và trà đen đều được tạo nên từ lá của cây trà có tên khoa học là Camellia Sinensis. Tuy nhiên, hai loại trà này có những khác biệt rõ rệt về đặc tính, thành phần các chất, cũng như công dụng của nó. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61e809d69a53a_f3ffc07df648474987f58d0233790230_master.jpg',
+      type: 'teaholic'
+    },
+    {
+      id: 8,
+      title: 'BẠN CÓ HIỂU ĐÚNG VỀ TRÀ TƯƠI VÀ TRÀ KHÔ?',
+      subtitle: 'Nhắc đến trà là nhắc đến một thế giới sống động, phong phú với đầy những sắc màu, hương vị và đa dạng các thể loại. Trong đó, trà tươi và trà khô là hai loại đối lập nhau về trạng thái. Để bạn có cái nhìn chính xác về hai loại trà này, The Coffee House có những chia sẻ như sau: . ',
+      imgae: 'https://file.hstatic.net/1000075078/article/1_24f8b1dda3f3488bacd70cab9accc20a_master.jpg',
+      type: 'teaholic'
+    },
+    {
+      id: 9,
+      title: 'VĂN HÓA THƯỞNG THỨC CÀ PHÊ CỦA NGƯỜI CHÂU Á',
+      subtitle: 'Văn hoá cà phê sẽ phụ thuộc vào những yếu tố liên quan đến “hình thái và phong cách” của làn sóng cà phê mà quốc gia đó chịu ảnh hưởng. Ngoài ra, chính nhịp sống, những đặc điểm riêng của mỗi vùng đất và sở thích, tính cách của những người dân bản địa sẽ quyết định trực tiếp đến văn hoá cà phê. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61dfea3c26b86_7a3a3396efc34d0899ef4e8ac516034d_master.jpg',
+      type: 'teaholic'
+    },
+    {
+      id: 10,
+      title: 'CÁC LOẠI CÀ PHÊ TƯƠNG ỨNG VỚI 12 CUNG HOÀNG ĐẠO',
+      subtitle: 'Dương Cưu là những con người nhiệt huyết, nhanh nhẹn, năng động và đầy tham vọng. Vậy nên, một tách Espresso đậm đà với đặc tính pha chế nhanh gọn, tức thì sẽ ngay lập tức mang đến cho Bạch Dương một trải nghiệm hài lòng, sẵn sàng chiến đấu với những thử thách mới.  ',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61d56ddd190dd_82f9f42332e745a6b12b1b02f84f4876_master.jpg',
+      type: 'blog'
+    },
+    {
+      id: 11,
+      title: '5 MÓN ĂN CỰC NGON ĐƯỢC CHẾ BIẾN ĐƠN GIẢN TỪ CÀ PHÊ',
+      subtitle: 'Hương cà phê thơm đặc trưng, vị đắng nhẹ và ngọt ngào khi kết hợp cùng đường, sữa và các nguyên liệu khác đã làm nên những món ăn hấp dẫn mà nhiều người yêu thích. Những món dưới đây thường được những bạn trẻ và các “mẹ đảm” làm vì cực ngon và khá dễ, cùng làm thử tay nghề và thưởng thức với cả nhà nhé.',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61ca8ea1c1b14_3da462b21ff04e15b9d8d8fc69357e9a_master.jpg',
+      type: 'blog'
+    },
+    {
+      id: 12,
+      title: 'MÊ MẨN CÁC MÓN ĂN TỪ TRÀ XANH',
+      subtitle: 'Bên cạnh những thức uống từ trà xanh được yêu thích như Matcha đá xay, Matcha Latte, Trà sữa Matcha thì còn rất nhiều món ăn từ trà xanh khác cực kỳ hấp dẫn và được rất nhiều người yêu thích. Hương thơm dễ chịu, vị đắng ngọt nhẹ nhàng, màu sắc bắt mắt và tươi mát là những đặc trưng cuốn hút rất riêng của các món ăn được chế biến từ trà xanh matcha. Những món dưới đây đã khiến rất nhiều người say đắm, nếu chưa từng thưởng thức thì thử ngay bạn nhé. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/blog_892d5f75b50242c2a805a4d5808b2596_master.jpg',
+      type: 'blog'
+    },
+    {
+      id: 13,
+      title: 'THÓI QUEN ĐỌC SÁCH CỦA NGƯỜI TRẺ',
+      subtitle: 'Vốn dĩ người trẻ thích “bay nhảy”, thích sự hiện đại, sôi nổi, năng động và thích trải nghiệm những cái mới. Vậy nên đọc sách tại quán cà phê đã dần trở thành phong cách và xu hướng thịnh hành trong giới trẻ hiện nay.',
+      imgae: 'https://file.hstatic.net/1000075078/article/110020568_2721011564839519_1954095004206714116_n_5c329f4c019a4ab49f3b199f8bc7cf81_master.jpg',
+      type: 'blog'
+    },
+    {
+      id: 14,
+      title: 'SỐNG XANH CÙNG CÀ PHÊ',
+      subtitle: '“Sống xanh” là khái niệm sống thân thiện với môi trường, ưu tiên sử dụng nguồn nguyên liệu xanh, những vật dụng, sản phẩm có thể tái chế… từ đó đảm bảo một cuộc sống phát triển bền vững. Khái niệm sống xanh vẫn đang rất nóng và đáng mừng khi có nhiều người ý thức và chung tay đồng hành. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/3_84a7b01b11534be8a28b78d26f2b502c_master.jpg',
+      type: 'blog'
+    },
+  ])
+
+  const [coffeeholic, setCoffeeholic] = useState([
+    {
+      id: 0,
+      title: 'CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ ROBUSTA NGUYÊN CHẤT DỄ DÀNG NHẤT',
+      subtitle: 'Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng, không quá khó để có thể nhận ra hương vị của loại cà phê trứ danh này.',
+      image: 'https://file.hstatic.net/1000075078/article/thecoffehouse_ca_phe_01_b4adbd88db6e4ca3b7c2c5934d1a1ed9_master.jpg',
+      type: 'coffeeholic'
+    },
+    {
+      id: 1,
+      title: 'CÁCH PHA CÀ PHÊ PHIN THƠM NGON TRÒN VỊ',
+      subtitle: 'Có nhiều cách để pha một ly cà phê ngon, nhưng đối với nhiều người Việt giây phút đợi chờ những giọt cà phê rơi từ chiếc phin đã trở thành nét văn hóa ăn sâu trong tiềm thức. Để tạo nên một ly cà phê phin chuẩn vị, không chỉ cần sự tinh tế trong cách chọn loại cà phê mà còn cả sự tỉ mỉ trong từng bước pha.',
+      imgae: 'https://file.hstatic.net/1000075078/article/thecoffeehouse_caphe_2_aacf152c62064c40ab804a66ffc706d1_master.jpg',
+      type: 'coffeeholic'
+    },
+    {
+      id: 2,
+      title: '8 LỢI ÍCH BẤT NGỜ CỦA CÀ PHÊ COLD BREW',
+      subtitle: 'Cold brew là thức uống rất được yêu thích trong thời gian gần đây. Không chỉ có hương thơm đặc trưng và vị lôi cuốn, nó còn có nhiều lợi ích cho sức khỏe. Cùng The Coffee House tìm hiểu 8 lợi ích nổi bật của loại cà phê lạnh siêu hot này. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/img_8668_grande-1_accad1e4fa37487881277df2fae1ef4a_master.jpg',
+      type: 'coffeeholic'
+    },
+    {
+      id: 3,
+      title: 'TẠI SAO CÀ PHÊ CÓ VỊ CHUA?',
+      subtitle: 'Nhiều người khi uống cà phê cảm thấy có vị chua thường e ngại rằng cà phê hỏng, kém chất lượng hay gặp các vấn đề trong quá trình pha chế và bảo quản. Tuy nhiên, điều này chưa chính xác. Cả hương vị của Arabica hay Robusta nguyên chất, trải qua quá trình chế biến, rang xay đều có vị chua nhẹ. Vậy nên, cà phê có vị chua chua, vẫn giữ được hương thơm đặc trưng vốn có của nó thì bạn có thể yên tâm đó không phải là cà phê hỏng. The Coffee House sẽ chỉ ra những lý do khiến cà phê có vị chua tự nhiên. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61e6d5a3a5d26_7b6959cb5b1e4716a4a60869dae53074_master.jpg',
+      type: 'coffeeholic'
+    },
+    {
+      id: 4,
+      title: 'KỸ THUẬT TRỒNG CÂY CÀ PHÊ NĂNG SUẤT, CHẤT LƯỢNG CAO',
+      subtitle: 'Cà phê sẽ càng ngon khi được trồng ở vùng đất cao nguyên, nơi có khí hậu nhiệt đới nóng ẩm, mưa nhiều, đất đai màu mỡ. Nó có khả năng phát triển tốt ở nơi có nhiều ánh sáng, độ pH lý tưởng ở mức 6 - 6.5, đặc biệt để hạt cà phê cho năng suất và chất lượng cao, cần phải lưu ý các kỹ thuật  trồng trọt sau. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61e2dbe1d15cb_f703352d67824cd298ff927cdba56aa9_master.jpg',
+      type: 'coffeeholic'
+    },
+  ])
+
+  const [teaholic, setTeaholic] = useState([
+    {
+      id: 5,
+      title: 'CHỌN NHIỆT ĐỘ NƯỚC ĐỂ PHA TRÀ ĐÚNG CHUẨN CHUYÊN GIA',
+      subtitle: 'Tùy thuộc vào từng loại trà, cần sử dụng nước sôi với nhiệt độ tương thích để khi pha chế có thể khơi dậy đầy đủ hương vị thơm ngon của trà. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/thecoffeehouse_nuoc_pha_tra_07_4aff69297bfa4bbab42f18b27c2c11f0_master.jpg',
+      type: 'teaholic'
+    },
+    {
+      id: 6,
+      title: 'CÁCH KHAI ẤM TỬ SA ĐỂ GỢI VỊ NGON CỦA TRÀ',
+      subtitle: 'Đối với giới trà đạo đã quá quen thuộc với ấm tử sa vì nó nổi tiếng là loại ấm pha trà ngon bậc nhất. Pha trà bằng ấm tử sa thì hương vị của trà được hấp thụ một cách trọn vẹn và nếu như đã thưởng thức một lần thì thật khó quên. Thế nhưng, để đạt được điều tuyệt vời đó, việc đầu tiên và rất quan trọng đó là phải biết khai ấm tử sa đúng cách. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/thecoffeehouse_amtusa_07_e9d40a62b6524ed7b5c3232c5031a493_master.jpg',
+      type: 'teaholic'
+    },
+    {
+      id: 7,
+      title: 'KHÁC BIỆT CƠ BẢN GIỮA TRÀ XANH VÀ TRÀ ĐEN',
+      subtitle: 'Trà xanh và trà đen đều được tạo nên từ lá của cây trà có tên khoa học là Camellia Sinensis. Tuy nhiên, hai loại trà này có những khác biệt rõ rệt về đặc tính, thành phần các chất, cũng như công dụng của nó. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61e809d69a53a_f3ffc07df648474987f58d0233790230_master.jpg',
+      type: 'teaholic'
+    },
+    {
+      id: 8,
+      title: 'BẠN CÓ HIỂU ĐÚNG VỀ TRÀ TƯƠI VÀ TRÀ KHÔ?',
+      subtitle: 'Nhắc đến trà là nhắc đến một thế giới sống động, phong phú với đầy những sắc màu, hương vị và đa dạng các thể loại. Trong đó, trà tươi và trà khô là hai loại đối lập nhau về trạng thái. Để bạn có cái nhìn chính xác về hai loại trà này, The Coffee House có những chia sẻ như sau: . ',
+      imgae: 'https://file.hstatic.net/1000075078/article/1_24f8b1dda3f3488bacd70cab9accc20a_master.jpg',
+      type: 'teaholic'
+    },
+    {
+      id: 9,
+      title: 'VĂN HÓA THƯỞNG THỨC CÀ PHÊ CỦA NGƯỜI CHÂU Á',
+      subtitle: 'Văn hoá cà phê sẽ phụ thuộc vào những yếu tố liên quan đến “hình thái và phong cách” của làn sóng cà phê mà quốc gia đó chịu ảnh hưởng. Ngoài ra, chính nhịp sống, những đặc điểm riêng của mỗi vùng đất và sở thích, tính cách của những người dân bản địa sẽ quyết định trực tiếp đến văn hoá cà phê. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61dfea3c26b86_7a3a3396efc34d0899ef4e8ac516034d_master.jpg',
+      type: 'teaholic'
+    },
+  ])
+
+  const [blog, setBlog] = useState([
+    {
+      id: 10,
+      title: 'CÁC LOẠI CÀ PHÊ TƯƠNG ỨNG VỚI 12 CUNG HOÀNG ĐẠO',
+      subtitle: 'Dương Cưu là những con người nhiệt huyết, nhanh nhẹn, năng động và đầy tham vọng. Vậy nên, một tách Espresso đậm đà với đặc tính pha chế nhanh gọn, tức thì sẽ ngay lập tức mang đến cho Bạch Dương một trải nghiệm hài lòng, sẵn sàng chiến đấu với những thử thách mới.  ',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61d56ddd190dd_82f9f42332e745a6b12b1b02f84f4876_master.jpg',
+      type: 'blog'
+    },
+    {
+      id: 11,
+      title: '5 MÓN ĂN CỰC NGON ĐƯỢC CHẾ BIẾN ĐƠN GIẢN TỪ CÀ PHÊ',
+      subtitle: 'Hương cà phê thơm đặc trưng, vị đắng nhẹ và ngọt ngào khi kết hợp cùng đường, sữa và các nguyên liệu khác đã làm nên những món ăn hấp dẫn mà nhiều người yêu thích. Những món dưới đây thường được những bạn trẻ và các “mẹ đảm” làm vì cực ngon và khá dễ, cùng làm thử tay nghề và thưởng thức với cả nhà nhé.',
+      imgae: 'https://file.hstatic.net/1000075078/article/_downloader.la_-61ca8ea1c1b14_3da462b21ff04e15b9d8d8fc69357e9a_master.jpg',
+      type: 'blog'
+    },
+    {
+      id: 12,
+      title: 'MÊ MẨN CÁC MÓN ĂN TỪ TRÀ XANH',
+      subtitle: 'Bên cạnh những thức uống từ trà xanh được yêu thích như Matcha đá xay, Matcha Latte, Trà sữa Matcha thì còn rất nhiều món ăn từ trà xanh khác cực kỳ hấp dẫn và được rất nhiều người yêu thích. Hương thơm dễ chịu, vị đắng ngọt nhẹ nhàng, màu sắc bắt mắt và tươi mát là những đặc trưng cuốn hút rất riêng của các món ăn được chế biến từ trà xanh matcha. Những món dưới đây đã khiến rất nhiều người say đắm, nếu chưa từng thưởng thức thì thử ngay bạn nhé. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/blog_892d5f75b50242c2a805a4d5808b2596_master.jpg',
+      type: 'blog'
+    },
+    {
+      id: 13,
+      title: 'THÓI QUEN ĐỌC SÁCH CỦA NGƯỜI TRẺ',
+      subtitle: 'Vốn dĩ người trẻ thích “bay nhảy”, thích sự hiện đại, sôi nổi, năng động và thích trải nghiệm những cái mới. Vậy nên đọc sách tại quán cà phê đã dần trở thành phong cách và xu hướng thịnh hành trong giới trẻ hiện nay.',
+      imgae: 'https://file.hstatic.net/1000075078/article/110020568_2721011564839519_1954095004206714116_n_5c329f4c019a4ab49f3b199f8bc7cf81_master.jpg',
+      type: 'blog'
+    },
+    {
+      id: 14,
+      title: 'SỐNG XANH CÙNG CÀ PHÊ',
+      subtitle: '“Sống xanh” là khái niệm sống thân thiện với môi trường, ưu tiên sử dụng nguồn nguyên liệu xanh, những vật dụng, sản phẩm có thể tái chế… từ đó đảm bảo một cuộc sống phát triển bền vững. Khái niệm sống xanh vẫn đang rất nóng và đáng mừng khi có nhiều người ý thức và chung tay đồng hành. ',
+      imgae: 'https://file.hstatic.net/1000075078/article/3_84a7b01b11534be8a28b78d26f2b502c_master.jpg',
+      type: 'blog'
+    },
+  ])
+
   const [menuChildren, setMenuChildren] = useLocalStorage('DETAILS_MENU_CHILDREN', [
+  ])
+
+  const [alwaysStories, setAlwaysStories] = useState([
+
   ])
   const handleClickMenuChildren = (id) => {
     setMenuChildren(initMenu.filter(menu => menu.id === id))
@@ -1073,13 +1299,12 @@ export const ProviderContext = ({ children }) => {
     { id: 4, content: 'Món Khác', link: '/another', contentItems: ['Đá Xay', 'Matcha - Sô cô la',], },
   ]
 
-  const storyItems= [
-    { id: 0, content: 'Tất Cả', link: '/alwaysStories', contentItems: [], },
-    { id: 1, content: 'Coffeeholic', link: '/alwaysCoffeeholic', contentItems: ['#chuyencaphe', '#phacaphe'], },
-    { id: 2, content: 'Teaholic', link: '/alwaysTeaholic', contentItems: ['#cauchuyenvetra', '#phatra'], },
-    { id: 3, content: 'Blog', link: '/alwaysBlog', contentItems: ['#inthemood', '#review'], },
+  const storyItems = [
+    { id: 0, content: 'Coffeeholic', link: '/alwaysCoffeeholic', contentItems: ['#chuyencaphe', '#phacaphe'], },
+    { id: 1, content: 'Teaholic', link: '/alwaysTeaholic', contentItems: ['#cauchuyenvetra', '#phatra'], },
+    { id: 2, content: 'Blog', link: '/alwaysBlog', contentItems: ['#inthemood', '#review'], },
   ]
-  
+
   const [cartItems, setCartItems] = useLocalStorage('CART_ITEMS', [
   ])
   const onAdd = (item) => {
@@ -1105,7 +1330,7 @@ export const ProviderContext = ({ children }) => {
   }
 
   return (
-    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems, onAdd, onRemove, storyItems }}>
+    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems, onAdd, onRemove, storyItems, alwaysStories, setAlwaysStories, initStory, setInitStory, coffeeholic, setCoffeeholic, teaholic, setTeaholic, blog, setBlog }}>
       {children}
     </InitContext.Provider>
   )
