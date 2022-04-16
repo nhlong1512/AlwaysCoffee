@@ -6,9 +6,8 @@ import { Link } from "react-router-dom"
 function CartDetail() {
   const init = useContext(InitContext)
 
-  const [isCheckedAll, setIsCheckedAll] = useState(false)
-  const [qty, setQty] = useState(1);
- 
+  // const [isCheckedAll, setIsCheckedAll] = useState(false)
+
   const onAdd = (item) => {
     const exist = init.cartItems.find(x => x.id === item.id)
     if (exist) {
@@ -36,24 +35,24 @@ function CartDetail() {
   }
 
   //Handle On Checked All
-  const handleOnCheckedAll = () => {
-    setIsCheckedAll(!isCheckedAll)
-  }
+  // const handleOnCheckedAll = () => {
+  //   setIsCheckedAll(!isCheckedAll)
+  // }
 
-  const handleOnCheckedAllToOnChecked = () => {
-    if (isCheckedAll === true) {
-      init.setCartItems(prev => prev.map(item => item.isChecked === false ? { ...item, isChecked: !item.isChecked } : item))
-    }
-    else {
-      if (init.cartItems.find(x => x.isChecked === false) === undefined) {
-        init.setCartItems(prev => prev.map(item => item.isChecked === true ? { ...item, isChecked: !item.isChecked } : item))
-      }
-    }
-  }
+  // const handleOnCheckedAllToOnChecked = () => {
+  //   if (isCheckedAll === true) {
+  //     init.setCartItems(prev => prev.map(item => item.isChecked === false ? { ...item, isChecked: !item.isChecked } : item))
+  //   }
+  //   else {
+  //     if (init.cartItems.find(x => x.isChecked === false) === undefined) {
+  //       init.setCartItems(prev => prev.map(item => item.isChecked === true ? { ...item, isChecked: !item.isChecked } : item))
+  //     }
+  //   }
+  // }
 
-  useEffect(() => {
-    handleOnCheckedAllToOnChecked();
-  }, [isCheckedAll])
+  // useEffect(() => {
+  //   handleOnCheckedAllToOnChecked();
+  // }, [isCheckedAll])
 
   // Handle On Checked Children
   const handleOnChecked = (id) => {
@@ -61,25 +60,21 @@ function CartDetail() {
     )
   }
 
-  const handleOnCheckedToOnCheckedAll = () => {
-    let flag = true;
-    if (init.cartItems.length === 0) flag = false;
-    for (let i = 0; i < init.cartItems.length; i++) {
-      if (init.cartItems[i].isChecked === false) {
-        flag = false;
-      }
-    }
-    setIsCheckedAll(flag);
-  }
-
-  useEffect(() => {
-    handleOnCheckedToOnCheckedAll();
-  }, [init.cartItems])
-
-
-  // const onKeyPressQty = (item) => {
-    
+  // function handleOnCheckedToOnCheckedAll() {
+  //   let flag = true;
+  //   if (init.cartItems.length === 0) flag = false;
+  //   for (let i = 0; i < init.cartItems.length; i++) {
+  //     if (init.cartItems[i].isChecked === false) {
+  //       flag = false;
+  //     }
+  //   }
+  //   return flag;
   // }
+
+  // useEffect(() => {
+  //   setIsCheckedAll(handleOnCheckedToOnCheckedAll());
+  // }, [init.cartItems])
+
 
   const itemsPrice = init.cartItems.reduce((a, c) => c.isChecked ? (a + c.qty * c.price) : a, 0)
 
@@ -114,15 +109,13 @@ function CartDetail() {
               <div className="w-[66.666%] rounded-[8px]">
                 <div className="flex mb-[16px] rounded-[8px] py-[10px] bg-[#fff]">
                   <div className="flex basis-[8%] justify-center items-center ">
-                    <input
+                    {/* <input
                       type="checkbox"
                       className="checkbox-add-cart"
-                      checked={isCheckedAll}
-                      onClick={handleOnCheckedAll}
-                    />
+                    /> */}
                   </div>
                   <div className="flex basis-[59%] font-medium">
-                    Chọn Tất Cả ({init.cartItems.length} sản phẩm)
+                    Tất Cả Sản Phẩm ({init.cartItems.length} sản phẩm)
                   </div>
                   <div className="flex basis-[15%] font-medium">
                     Số Lượng
@@ -177,7 +170,6 @@ function CartDetail() {
                                 <input type="text"
                                   value={item.qty}
                                   className="px-[4px] w-[30px] flex justify-center items-center text-center border-E0E-x h-[100%]"
-                                  // onKeyPress={() => onKeyPressQty(item)}
                                 />
                                 <button
                                   className="px-[6px] text-[24px] leading-[30px] hover:text-primary-color"
@@ -243,3 +235,5 @@ function CartDetail() {
   )
 }
 export default CartDetail;
+
+
