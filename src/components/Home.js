@@ -88,7 +88,7 @@ function Home() {
                   </div>
                   <div>
                     <img
-                      src="https://scontent.fsgn8-1.fna.fbcdn.net/v/t39.30808-6/216500312_1431202730612723_8052427917213494357_n.jpg?_nc_cat=102&_nc_map=control&ccb=1-5&_nc_sid=174925&_nc_ohc=FUJD-KeeTrQAX_cYy3T&_nc_ht=scontent.fsgn8-1.fna&oh=00_AT-zpwF1c67KKRfn9Pw-mq-KoEJJnaC4MDzpHMdb5dKiXg&oe=625206C4" alt="Long-Image"
+                      src="https://scontent-hkt1-1.xx.fbcdn.net/v/t39.30808-6/216500312_1431202730612723_8052427917213494357_n.jpg?_nc_cat=102&_nc_map=control&ccb=1-5&_nc_sid=174925&_nc_ohc=1dCoz1gkrpkAX81tsqS&_nc_ht=scontent-hkt1-1.xx&oh=00_AT9e7IQ3U96GmOmH_77G03ncHHLCkL7vDLjLevuzhpaQ2Q&oe=625FDE84" alt="Long-Image"
                       className="w-[150px] rounded-[100px]" />
                   </div>
                 </div>
@@ -111,7 +111,7 @@ function Home() {
                   </div>
                   <div>
                     <img
-                      src="https://scontent.fsgn8-2.fna.fbcdn.net/v/t39.30808-6/273207302_1790112117992087_6199733184652810403_n.jpg?_nc_cat=100&_nc_map=control&ccb=1-5&_nc_sid=730e14&_nc_ohc=gsui0qzcd9EAX-0TFYV&_nc_ht=scontent.fsgn8-2.fna&oh=00_AT99wF6gt3VisJIM1opa1BPZEUBEec-S1nvRJuAewUNtog&oe=6252346E" alt="Son-Image"
+                      src="https://scontent-hkt1-2.xx.fbcdn.net/v/t39.30808-6/273207302_1790112117992087_6199733184652810403_n.jpg?_nc_cat=100&_nc_map=control&ccb=1-5&_nc_sid=730e14&_nc_ohc=F4JKCQfXX3MAX-VhsEi&_nc_ht=scontent-hkt1-2.xx&oh=00_AT8En2FO58OZ9jPiJDblM8nRMho0p8Fb62cE-lcFjCbJfA&oe=62600C2E" alt="Son-Image"
                       className="w-[150px] h-[150px] rounded-[100px]" />
                   </div>
                 </div>
