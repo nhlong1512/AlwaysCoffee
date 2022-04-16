@@ -302,3 +302,13 @@ input.checkbox-add-cart[type="checkbox"]:checked:after {
 .fadeIn03{
   animation: fadeIn ease-in 0.3s;
 }
+
+.title-chuyen:after{
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 3px;
+  left: calc(50% - 12px);
+  bottom: 0;
+  background: #E57905;
+}

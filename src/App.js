@@ -8,6 +8,7 @@ import Another from './components/Another'
 import MenuChildren from './components/MenuChildren'
 import InitMenu from './components/InitMenu'
 import CartDetail from './components/CartDetail'
+import AlwaysStories from './components/AlwaysStories'
 function App() {
   return (
     <Routes >
@@ -19,6 +20,7 @@ function App() {
       <Route path="/another" element={<Another />} />
       <Route path="/menuChildren" element={<MenuChildren />} />
       <Route path="/cartDetail" element={<CartDetail />} />
+      <Route path="/alwaysStories" element={<AlwaysStories />} />
     </Routes>
   );
 }

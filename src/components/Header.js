@@ -65,45 +65,30 @@ function Header() {
                   ))}
                 </ul>
               </Link>
-              <Link to="/" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[25px]">
+              <Link to="/alwaysStories" className="menu-navbar px-[12px] hover:text-primary-color flex items-center py-[25px]">
                 <div className="flex items-center leading-[24px]">
                   <a className="after-always-story" href="">Always Chuyện</a>
                   <span className="text-[10px] pt-[4px] pl-[4px]" ><IoCaretDownOutline /></span>
                 </div>
                 <ul className="fadeIn03 menu-navbar-hover-list hidden">
-                  <li className="menu-navbar-li">
-                    <a className="menu-navbar-a" href="">Coffeeholic</a>
-                    <ul>
-                      <li className="">
-                        <a className="navbar-a-child" href="">#chuyencaphe</a>
-                      </li>
-                      <li>
-                        <a className="navbar-a-child" href="">#phacaphe</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-navbar-li">
-                    <a className="menu-navbar-a" href="">Teaholic</a>
-                    <ul>
-                      <li>
-                        <a className="navbar-a-child" href="">#cauchuyenvetra</a>
-                      </li>
-                      <li>
-                        <a className="navbar-a-child" href="">#phatra</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-navbar-li">
-                    <a className="menu-navbar-a" href="">Blog</a>
-                    <ul>
-                      <li>
-                        <a className="navbar-a-child" href="">#inthemood</a>
-                      </li>
-                      <li>
-                        <a className="navbar-a-child" href="">#review</a>
-                      </li>
-                    </ul>
-                  </li>
+                  {init.storyItems.map((storyItem) => (
+                    <Link to={storyItem.link}
+                      className="menu-navbar-li"
+                      key={storyItem.id}
+                      onClick={() => init.setActiveId(storyItem.id)}
+                    >
+                      <a className="menu-navbar-a">{storyItem.content}</a>
+                      <ul>
+                        {storyItem.contentItems.map((contentItem => (
+                          <li
+                            key={contentItem.id}
+                          >
+                            <a className="navbar-a-child">{contentItem}</a>
+                          </li>
+                        )))}
+                      </ul>
+                    </Link>
+                  ))}
                 </ul>
               </Link>
               <Link to="/" className="px-[12px] hover:text-primary-color py-[25px]">
@@ -152,7 +137,7 @@ function Header() {
                               <h2 className="text-[14px] font-medium text-primary-color ">{item.price.toLocaleString()} đ</h2>
                               <h2 className="text-[9px] text-[#333] mx-[4px]">x</h2>
                               <h2 className="text-[12px] text-[#333]">{item.qty}</h2>
-                            </div> 
+                            </div>
                           </div>
                         </div>
                       </Link>
@@ -209,7 +194,7 @@ function Header() {
             <Link to="/another" className="leading-[40px] list-none hover:text-white">
               <a href="">Món Khác</a>
             </Link>
-            <Link to="/" className="leading-[40px] list-none hover:text-white">
+            <Link to="/alwaysStories" className="leading-[40px] list-none hover:text-white">
               <a href="">Always Chuyện</a>
             </Link>
             <Link to="/" className="leading-[40px] list-none hover:text-white">

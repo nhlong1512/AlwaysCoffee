@@ -1072,6 +1072,14 @@ export const ProviderContext = ({ children }) => {
     { id: 3, content: 'Bánh & Snack', link: '/cakeAndSnack', contentItems: ['Bánh Mặn', 'Bánh Ngọt', 'Snack'], },
     { id: 4, content: 'Món Khác', link: '/another', contentItems: ['Đá Xay', 'Matcha - Sô cô la',], },
   ]
+
+  const storyItems= [
+    { id: 0, content: 'Tất Cả', link: '/alwaysStories', contentItems: [], },
+    { id: 1, content: 'Coffeeholic', link: '/alwaysCoffeeholic', contentItems: ['#chuyencaphe', '#phacaphe'], },
+    { id: 2, content: 'Teaholic', link: '/alwaysTeaholic', contentItems: ['#cauchuyenvetra', '#phatra'], },
+    { id: 3, content: 'Blog', link: '/alwaysBlog', contentItems: ['#inthemood', '#review'], },
+  ]
+  
   const [cartItems, setCartItems] = useLocalStorage('CART_ITEMS', [
   ])
   const onAdd = (item) => {
@@ -1097,7 +1105,7 @@ export const ProviderContext = ({ children }) => {
   }
 
   return (
-    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems, onAdd, onRemove, }}>
+    <InitContext.Provider value={{ isOpenHamburger, setIsOpenHamburger, menuList, setMenuList, coffee, setCoffee, tea, setTea, cakeAndSnack, setCakeAndSnack, another, setAnother, handleClickMenuChildren, setMenuChildren, menuChildren, initMenu, setInitMenu, ourMenu, setOurMenu, activeId, setActiveId, cartItems, setCartItems, navItems, onAdd, onRemove, storyItems }}>
       {children}
     </InitContext.Provider>
   )
